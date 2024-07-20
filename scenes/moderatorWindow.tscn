@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/moderator_window.gd" id="2_1thri"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7yg86"]
 
-[node name="ModeratorWindow" type="Window"]
+[node name="ModeratorWindow" type="Window" node_paths=PackedStringArray("reports", "history", "username", "post", "okay", "delete", "ban")]
 title = "Y Moderator"
 position = Vector2i(100, 24)
 size = Vector2i(1000, 900)
@@ -12,6 +12,13 @@ max_size = Vector2i(1000, 900)
 keep_title_visible = true
 theme = ExtResource("1_icn2s")
 script = ExtResource("2_1thri")
+reports = NodePath("HBoxContainer/TabContainer/Reports")
+history = NodePath("HBoxContainer/TabContainer/History")
+username = NodePath("HBoxContainer/Selected Report/Content/Content/Profile/Name")
+post = NodePath("HBoxContainer/Selected Report/Content/Content/Post")
+okay = NodePath("HBoxContainer/Selected Report/Controlls/Buttons/Okay_Button")
+delete = NodePath("HBoxContainer/Selected Report/Controlls/Buttons/Delete_Button")
+ban = NodePath("HBoxContainer/Selected Report/Controlls/Buttons/Ban_Button")
 
 [node name="Container" type="AspectRatioContainer" parent="."]
 anchors_preset = 15
@@ -89,17 +96,17 @@ layout_mode = 2
 theme_override_constants/separation = 25
 alignment = 1
 
-[node name="Button" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
+[node name="Okay_Button" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 text = "Kein Verstoß"
 
-[node name="Button2" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
+[node name="Delete_Button" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 text = "Post löschen"
 
-[node name="Button3" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
+[node name="Ban_Button" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 text = "User Sperren"
