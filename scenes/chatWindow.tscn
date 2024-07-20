@@ -7,7 +7,7 @@
 
 [node name="Chat" type="Window"]
 title = "Thats Upp Chat"
-position = Vector2i(0, 36)
+position = Vector2i(0, 26)
 size = Vector2i(820, 900)
 theme = ExtResource("1_3wmun")
 

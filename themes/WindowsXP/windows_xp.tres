@@ -1,8 +1,12 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c74ffppbp6j7i"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c74ffppbp6j7i"]
 
 [ext_resource type="FontFile" uid="uid://veq2dfga8nsx" path="res://themes/WindowsXP/Fonts/TAHOMA.TTF" id="1_dbqs1"]
 [ext_resource type="StyleBox" uid="uid://d33ampj7suar4" path="res://themes/WindowsXP/Styles/Buttons/y_b_Normal.tres" id="2_0urqq"]
+[ext_resource type="FontFile" uid="uid://b80gd2ppl44tw" path="res://themes/WindowsXP/Fonts/TAHOMABD.TTF" id="3_5axuf"]
 [ext_resource type="StyleBox" uid="uid://b74m1hmoot0t2" path="res://themes/WindowsXP/Styles/Windows/Panel.tres" id="3_ubg1h"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tlcop"]
+load_path = "res://.godot/imported/X-Button.png-e0f1f769a02d346d29bb53fe900fd407.ctex"
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
@@ -11,4 +15,7 @@ Button/colors/icon_pressed_color = Color(1, 0, 1, 1)
 Button/fonts/font = ExtResource("1_dbqs1")
 Button/styles/hover = ExtResource("2_0urqq")
 Button/styles/normal = ExtResource("2_0urqq")
+Window/constants/title_height = 26
+Window/fonts/title_font = ExtResource("3_5axuf")
+Window/icons/close = SubResource("CompressedTexture2D_tlcop")
 Window/styles/embedded_border = ExtResource("3_ubg1h")
