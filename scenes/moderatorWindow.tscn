@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmutxnmvl1k4h"]
+
+[ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="1_icn2s"]
+
+[node name="ModeratorWindow" type="Window"]
+title = "Y Moderator"
+position = Vector2i(100, 80)
+size = Vector2i(1000, 900)
+theme = ExtResource("1_icn2s")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+
+[node name="Reports" type="ItemList" parent="AspectRatioContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 700)
+layout_mode = 2
+item_count = 2
+item_0/text = " #001 - Comment Report"
+item_1/text = " #002 - Comment Report"
+
+[node name="Issue" type="VBoxContainer" parent="AspectRatioContainer/HBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="AspectRatioContainer/HBoxContainer/Issue"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Heyyy!"
+
+[node name="Buttons" type="HBoxContainer" parent="AspectRatioContainer/HBoxContainer/Issue"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="AspectRatioContainer/HBoxContainer/Issue/Buttons"]
+layout_mode = 2
+text = "Kein Verstoß"
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/HBoxContainer/Issue/Buttons"]
+layout_mode = 2
+text = "Post löschen"
+
+[node name="Button3" type="Button" parent="AspectRatioContainer/HBoxContainer/Issue/Buttons"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "User Sperren"

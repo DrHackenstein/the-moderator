@@ -1,16 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=5 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
+[ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
+[ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
+[ext_resource type="PackedScene" uid="uid://5cxhjhshwq71" path="res://scenes/chatWindow.tscn" id="3_34at8"]
 
 [node name="main" type="Node2D"]
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Desktop" type="AspectRatioContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_h84kw")
 
-[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
+[node name="TextureRect" type="TextureRect" parent="Desktop"]
 layout_mode = 2
 texture = ExtResource("1_amy15")
 
-[node name="MenuBar" type="MenuBar" parent="AspectRatioContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Desktop"]
+visible = false
 layout_mode = 2
+
+[node name="MenuBar" type="MenuBar" parent="Desktop"]
+visible = false
+layout_mode = 2
+theme = ExtResource("2_h84kw")
+
+[node name="Chat" parent="." instance=ExtResource("3_34at8")]
+
+[node name="ModeratorWindow2" parent="." instance=ExtResource("3_7q355")]

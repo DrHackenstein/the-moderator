@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://5cxhjhshwq71"]
+
+[ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="1_lsxdy"]
+
+[node name="Chat" type="Window"]
+title = "Thats Upp Chat"
+position = Vector2i(1000, 120)
+size = Vector2i(800, 900)
+theme = ExtResource("1_lsxdy")
