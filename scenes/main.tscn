@@ -21,10 +21,10 @@ visible = false
 layout_mode = 2
 
 [node name="MenuBar" type="MenuBar" parent="Desktop"]
-visible = false
 layout_mode = 2
 theme = ExtResource("2_h84kw")
 
 [node name="Chat" parent="." instance=ExtResource("3_34at8")]
+position = Vector2i(324, 24)
 
-[node name="ModeratorWindow2" parent="." instance=ExtResource("3_7q355")]
+[node name="ModeratorWindow" parent="." instance=ExtResource("3_7q355")]
