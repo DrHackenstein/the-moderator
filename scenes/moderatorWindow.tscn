@@ -101,11 +101,3 @@ text = "Post löschen"
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 text = "User Sperren"
-
-[node name="Container" type="AspectRatioContainer" parent="HBoxContainer"]
-layout_mode = 2
-stretch_mode = 3
-
-[node name="Background Color" type="ColorRect" parent="HBoxContainer/Container"]
-layout_mode = 2
-color = Color(0.752941, 0.752941, 0.752941, 1)

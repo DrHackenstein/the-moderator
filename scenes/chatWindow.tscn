@@ -1,9 +1,330 @@
-[gd_scene load_steps=2 format=3 uid="uid://5cxhjhshwq71"]
+[gd_scene load_steps=3 format=3 uid="uid://5cxhjhshwq71"]
 
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="1_lsxdy"]
+[ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7u2cp"]
 
 [node name="Chat" type="Window"]
 title = "Thats Upp Chat"
 position = Vector2i(1000, 120)
-size = Vector2i(800, 900)
+size = Vector2i(820, 900)
 theme = ExtResource("1_lsxdy")
+
+[node name="Background" type="AspectRatioContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 3
+
+[node name="Background Color" type="ColorRect" parent="Background"]
+layout_mode = 2
+color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[node name="Content" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(700, 900)
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tabs" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+
+[node name="Doro" type="HBoxContainer" parent="Content/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content/Tabs/Doro"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Doro"
+icon = ExtResource("2_7u2cp")
+expand_icon = true
+
+[node name="Peter" type="HBoxContainer" parent="Content/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content/Tabs/Peter"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Peter"
+icon = ExtResource("2_7u2cp")
+expand_icon = true
+
+[node name="Chat" type="AspectRatioContainer" parent="Content"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="Background Color" type="ColorRect" parent="Content/Chat"]
+layout_mode = 2
+color = Color(0.977937, 0.977937, 0.977937, 1)
+
+[node name="Doro_Chat" type="ScrollContainer" parent="Content/Chat"]
+clip_contents = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content/Chat/Doro_Chat"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer"]
+custom_minimum_size = Vector2(780, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="Message" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="Message2" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message2"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message2/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="Message3" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message3"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message3/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="Message4" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message4"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message4/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="Message5" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message5"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message5/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="Message6" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message6"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message6/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="Message7" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message7"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content/Chat/Doro_Chat/VBoxContainer/Content/Message7/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="MarginContainer" type="MarginContainer" parent="Content/Chat/Doro_Chat/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Answers" type="VBoxContainer" parent="Content/Chat/Doro_Chat/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(780, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Button" type="Button" parent="Content/Chat/Doro_Chat/VBoxContainer/MarginContainer/Answers"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Antwort 1"
+
+[node name="Button2" type="Button" parent="Content/Chat/Doro_Chat/VBoxContainer/MarginContainer/Answers"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Antwort 2"
+
+[node name="Button3" type="Button" parent="Content/Chat/Doro_Chat/VBoxContainer/MarginContainer/Answers"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Antwort 3"
+
+[node name="Content New" type="VBoxContainer" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Tabs" type="HBoxContainer" parent="Content New"]
+layout_mode = 2
+
+[node name="Doro" type="HBoxContainer" parent="Content New/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content New/Tabs/Doro"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Doro"
+icon = ExtResource("2_7u2cp")
+expand_icon = true
+
+[node name="Peter" type="HBoxContainer" parent="Content New/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content New/Tabs/Peter"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Peter"
+icon = ExtResource("2_7u2cp")
+expand_icon = true
+
+[node name="Background Color" type="ColorRect" parent="Content New"]
+layout_mode = 2
+color = Color(0.977937, 0.977937, 0.977937, 1)
+
+[node name="Doro_Chat" type="ScrollContainer" parent="Content New/Background Color"]
+clip_contents = false
+layout_mode = 2
+offset_top = 4.0
+offset_right = 820.0
+offset_bottom = 4.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Content New/Background Color/Doro_Chat"]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Content New/Background Color/Doro_Chat/VBoxContainer"]
+custom_minimum_size = Vector2(780, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="Message" type="MarginContainer" parent="Content New/Background Color/Doro_Chat/VBoxContainer/Content"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Content" type="HBoxContainer" parent="Content New/Background Color/Doro_Chat/VBoxContainer/Content/Message"]
+layout_mode = 2
+
+[node name="Message" type="RichTextLabel" parent="Content New/Background Color/Doro_Chat/VBoxContainer/Content/Message/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+theme = ExtResource("1_lsxdy")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Heyyy!"
+
+[node name="MarginContainer" type="MarginContainer" parent="Content New/Background Color/Doro_Chat/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Answers" type="VBoxContainer" parent="Content New/Background Color/Doro_Chat/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(780, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="Button" type="Button" parent="Content New/Background Color/Doro_Chat/VBoxContainer/MarginContainer/Answers"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Antwort 1"
+
+[node name="Button2" type="Button" parent="Content New/Background Color/Doro_Chat/VBoxContainer/MarginContainer/Answers"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Antwort 2"
+
+[node name="Button3" type="Button" parent="Content New/Background Color/Doro_Chat/VBoxContainer/MarginContainer/Answers"]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Antwort 3"
