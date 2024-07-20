@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmutxnmvl1k4h"]
+[gd_scene load_steps=4 format=3 uid="uid://dmutxnmvl1k4h"]
 
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="1_icn2s"]
+[ext_resource type="Script" path="res://scenes/moderatorWindow.gd" id="2_2kucl"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7yg86"]
 
 [node name="ModeratorWindow" type="Window"]
@@ -10,6 +11,7 @@ size = Vector2i(1000, 900)
 max_size = Vector2i(1000, 900)
 keep_title_visible = true
 theme = ExtResource("1_icn2s")
+script = ExtResource("2_2kucl")
 
 [node name="Container" type="AspectRatioContainer" parent="."]
 anchors_preset = 15
