@@ -1,16 +1,67 @@
-[gd_scene load_steps=2 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=6 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
+[ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
+[ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
+[ext_resource type="PackedScene" uid="uid://5cxhjhshwq71" path="res://scenes/chatWindow.tscn" id="3_34at8"]
+[ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
 
 [node name="main" type="Node2D"]
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Desktop" type="AspectRatioContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_h84kw")
 
-[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
+[node name="Wallpaper" type="TextureRect" parent="Desktop"]
 layout_mode = 2
 texture = ExtResource("1_amy15")
 
-[node name="MenuBar" type="MenuBar" parent="AspectRatioContainer"]
+[node name="Task Bar" type="ColorRect" parent="Desktop"]
+custom_minimum_size = Vector2(1920, 40)
 layout_mode = 2
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Desktop/Task Bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_h84kw")
+
+[node name="MenuButton" type="MenuButton" parent="Desktop/Task Bar/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("2_h84kw")
+text = "Start"
+
+[node name="Chat_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Thats Upp"
+script = ExtResource("3_ca5qh")
+window = NodePath("../../../../Chat_Window")
+
+[node name="Mod_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Y Moderator"
+script = ExtResource("3_ca5qh")
+window = NodePath("../../../../Mod_Window")
+
+[node name="Time" type="HBoxContainer" parent="Desktop/Task Bar/HBoxContainer"]
+custom_minimum_size = Vector2(1390, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="Desktop/Task Bar/HBoxContainer/Time"]
+layout_mode = 2
+text = "23:45"
+horizontal_alignment = 2
+
+[node name="Chat_Window" parent="." instance=ExtResource("3_34at8")]
+position = Vector2i(324, 24)
+
+[node name="Mod_Window" parent="." instance=ExtResource("3_7q355")]

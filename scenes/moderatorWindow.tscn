@@ -1,0 +1,103 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmutxnmvl1k4h"]
+
+[ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="1_icn2s"]
+[ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7yg86"]
+
+[node name="ModeratorWindow" type="Window"]
+title = "Y Moderator"
+position = Vector2i(100, 24)
+size = Vector2i(1000, 900)
+max_size = Vector2i(1000, 900)
+keep_title_visible = true
+theme = ExtResource("1_icn2s")
+
+[node name="Container" type="AspectRatioContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 3
+
+[node name="Background Color" type="ColorRect" parent="Container"]
+layout_mode = 2
+color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 1004.0
+offset_bottom = 1004.0
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("1_icn2s")
+
+[node name="TabContainer" type="TabContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Reports" type="ItemList" parent="HBoxContainer/TabContainer"]
+custom_minimum_size = Vector2(400, 700)
+layout_mode = 2
+item_count = 2
+item_0/text = " #001 - Comment Report"
+item_1/text = " #002 - Comment Report"
+
+[node name="History" type="ItemList" parent="HBoxContainer/TabContainer"]
+visible = false
+custom_minimum_size = Vector2(400, 700)
+layout_mode = 2
+item_count = 2
+item_0/text = " #001 - Comment Report"
+item_1/text = " #002 - Comment Report"
+
+[node name="Selected Report" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+
+[node name="Content" type="AspectRatioContainer" parent="HBoxContainer/Selected Report"]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="Content" type="VBoxContainer" parent="HBoxContainer/Selected Report/Content"]
+layout_mode = 2
+
+[node name="Profile" type="HBoxContainer" parent="HBoxContainer/Selected Report/Content/Content"]
+layout_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="HBoxContainer/Selected Report/Content/Content/Profile"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("2_7yg86")
+expand_mode = 1
+
+[node name="Name" type="Label" parent="HBoxContainer/Selected Report/Content/Content/Profile"]
+layout_mode = 2
+text = "Peter Lustig"
+
+[node name="Post" type="RichTextLabel" parent="HBoxContainer/Selected Report/Content/Content"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "Heyyy!"
+
+[node name="Controlls" type="AspectRatioContainer" parent="HBoxContainer/Selected Report"]
+layout_mode = 2
+alignment_vertical = 2
+
+[node name="Buttons" type="HBoxContainer" parent="HBoxContainer/Selected Report/Controlls"]
+layout_mode = 2
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="Button" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Kein Verstoß"
+
+[node name="Button2" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "Post löschen"
+
+[node name="Button3" type="Button" parent="HBoxContainer/Selected Report/Controlls/Buttons"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+text = "User Sperren"
