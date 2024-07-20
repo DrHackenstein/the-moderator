@@ -1,14 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2xfgsrf7dco6"]
+[gd_scene load_steps=5 format=3 uid="uid://c2xfgsrf7dco6"]
 
+[ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_3wmun"]
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="1_lsxdy"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7u2cp"]
 [ext_resource type="Theme" uid="uid://dbu0w6iqdok6s" path="res://themes/WindowsXP/thatsUp.tres" id="2_jocic"]
 
 [node name="Chat" type="Window"]
 title = "Thats Upp Chat"
-position = Vector2i(226, 24)
+position = Vector2i(0, 36)
 size = Vector2i(820, 900)
-theme = ExtResource("1_lsxdy")
+theme = ExtResource("1_3wmun")
 
 [node name="Background" type="AspectRatioContainer" parent="."]
 anchors_preset = 15
