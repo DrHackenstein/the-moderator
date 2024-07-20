@@ -10,6 +10,7 @@
 [node name="main" type="Node2D"]
 
 [node name="Content_Manager" type="Node" parent="." node_paths=PackedStringArray("mod_window")]
+unique_name_in_owner = true
 script = ExtResource("1_hvhdk")
 mod_window = NodePath("../Mod_Window")
 
