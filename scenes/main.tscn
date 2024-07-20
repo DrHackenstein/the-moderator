@@ -1,12 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=7 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
+[ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
 [ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
 [ext_resource type="PackedScene" uid="uid://5cxhjhshwq71" path="res://scenes/chatWindow.tscn" id="3_34at8"]
 [ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
 
 [node name="main" type="Node2D"]
+
+[node name="Content_Manager" type="Node" parent="." node_paths=PackedStringArray("mod_window")]
+script = ExtResource("1_hvhdk")
+mod_window = NodePath("../Mod_Window")
 
 [node name="Desktop" type="AspectRatioContainer" parent="."]
 offset_right = 1920.0
