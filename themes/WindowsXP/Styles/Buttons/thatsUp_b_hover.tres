@@ -1,7 +1,7 @@
-[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://d33ampj7suar4"]
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://bh5718rqcdcbm"]
 
 [sub_resource type="Gradient" id="Gradient_1q4ci"]
-colors = PackedColorArray(2.76752e-06, 0.498262, 0.212154, 1, 1, 1, 1, 1)
+colors = PackedColorArray(0.0588235, 0.372549, 0.172549, 1, 0.145098, 0.827451, 0.4, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_3dux2"]
 gradient = SubResource("Gradient_1q4ci")
@@ -12,4 +12,4 @@ fill_to = Vector2(0, 0)
 
 [resource]
 texture = SubResource("GradientTexture2D_3dux2")
-modulate_color = Color(0.145098, 0.827451, 0.4, 1)
+modulate_color = Color(0.104439, 0.56165, 0.268011, 1)

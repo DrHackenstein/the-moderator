@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bwa1kmmwdjcf8"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f4gye"]
+load_path = "res://.godot/imported/thatsUp_bubble.png-870a996ae46e7178a79ba4ab7698b0bd.ctex"
+
+[resource]
+texture = SubResource("CompressedTexture2D_f4gye")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+expand_margin_left = 32.0
+expand_margin_top = 32.0
+expand_margin_right = 32.0
+expand_margin_bottom = 23.0
+modulate_color = Color(0.145098, 0.827451, 0.4, 1)

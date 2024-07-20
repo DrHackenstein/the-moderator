@@ -1,0 +1,38 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://bt7s63fmh2rlb"]
+
+[ext_resource type="FontFile" uid="uid://cmcn3x680k3wc" path="res://themes/WindowsXP/Fonts/arial.ttf" id="1_bfjky"]
+[ext_resource type="FontFile" uid="uid://b3s034ywbnebc" path="res://themes/WindowsXP/Fonts/arialbd.ttf" id="2_bko55"]
+[ext_resource type="StyleBox" uid="uid://bh5718rqcdcbm" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_b_hover.tres" id="3_dwnvi"]
+[ext_resource type="StyleBox" uid="uid://crikph0fjxn8e" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_b_normal.tres" id="4_13b8j"]
+[ext_resource type="StyleBox" uid="uid://bdymwspolgdo2" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_b_pressed.tres" id="5_od58h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ys7t2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sts15"]
+load_path = "res://.godot/imported/thatsUp_bubble.png-870a996ae46e7178a79ba4ab7698b0bd.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkuug"]
+texture = SubResource("CompressedTexture2D_sts15")
+texture_margin_left = 32.0
+texture_margin_top = 32.0
+texture_margin_right = 32.0
+texture_margin_bottom = 32.0
+modulate_color = Color(0.145098, 0.827451, 0.4, 1)
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 0)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 0)
+Button/fonts/font = ExtResource("1_bfjky")
+Button/fonts/font_hover = ExtResource("2_bko55")
+Button/styles/focus = SubResource("StyleBoxEmpty_ys7t2")
+Button/styles/hover = ExtResource("3_dwnvi")
+Button/styles/normal = ExtResource("4_13b8j")
+Button/styles/pressed = ExtResource("5_od58h")
+Label/colors/font_color = Color(0, 0, 1, 1)
+Panel/styles/panel = SubResource("StyleBoxTexture_mkuug")
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/fonts/normal_font = ExtResource("1_bfjky")
