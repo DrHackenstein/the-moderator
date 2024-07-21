@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://crg5vuhksagc6"]
+[gd_scene load_steps=3 format=3 uid="uid://be6p71ag1seum"]
 
 [ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="1_4gmo0"]
 [ext_resource type="Script" path="res://scripts/chat_message.gd" id="2_odrhu"]

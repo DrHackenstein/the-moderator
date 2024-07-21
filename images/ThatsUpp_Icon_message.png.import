@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjg84g6jhr3lr"
-path="res://.godot/imported/ThatsUpp_Icon.png-26ee6d38b36cbfe1841f0d9eb311442f.ctex"
+uid="uid://gxie5l774pwy"
+path="res://.godot/imported/ThatsUpp_Icon_message.png-f524215e24e549392198c966fccdc26b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://themes/WindowsXP/Styles/Buttons/ThatsUpp_Icon.png"
-dest_files=["res://.godot/imported/ThatsUpp_Icon.png-26ee6d38b36cbfe1841f0d9eb311442f.ctex"]
+source_file="res://images/ThatsUpp_Icon_message.png"
+dest_files=["res://.godot/imported/ThatsUpp_Icon_message.png-f524215e24e549392198c966fccdc26b.ctex"]
 
 [params]
 

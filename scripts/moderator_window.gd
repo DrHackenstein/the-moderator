@@ -10,8 +10,11 @@ extends Window
 @export var delete : Button
 @export var ban : Button
 
+@export var task_button : Button
+
 @onready var content_manager = %Content_Manager
 
+var id = "mod"
 var content = []
 var active : Content
 var active_id = -1
@@ -44,6 +47,7 @@ func load(new_content : Content):
 	content.append(new_content)
 	reports.add_item(prefix + new_content.id)
 	wait_time -= time
+	task_button.set_notification( true )
 
 func select(i : int):
 	print("Selected ", i)
@@ -94,6 +98,12 @@ func clear():
 	okay.hide()
 	delete.hide()
 	ban.hide()
+
+func _process(delta):
+	if has_focus():
+		task_button.set_notification( false )
+		if Globals.focus != id:
+			Globals.focus = id
 
 var debug = false
 func _input(event):

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcwtswg3mpcsp"
-path="res://.godot/imported/Yps_profile_white.png-248d4bd55540ad199f8cf23ea9268b39.ctex"
+uid="uid://bjg84g6jhr3lr"
+path="res://.godot/imported/ThatsUpp_Icon.png-49e6113e51aafe32063df4938ed3a7d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://themes/WindowsXP/Styles/Buttons/Yps_profile_white.png"
-dest_files=["res://.godot/imported/Yps_profile_white.png-248d4bd55540ad199f8cf23ea9268b39.ctex"]
+source_file="res://images/ThatsUpp_Icon.png"
+dest_files=["res://.godot/imported/ThatsUpp_Icon.png-49e6113e51aafe32063df4938ed3a7d0.ctex"]
 
 [params]
 
