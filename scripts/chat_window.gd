@@ -84,9 +84,8 @@ func add(content : Content, message : Node, container : VBoxContainer, response 
 			responses.append(message)
 		
 		await get_tree().process_frame
-		scrollcontainer = container.get_parent()
-		scrollbar = scrollcontainer.get_v_scroll_bar()
-		scrollcontainer.scroll_vertical = scrollbar.max_value
+		scrolldown(container)
+
 
 func add_response(content : Content):
 		if content.wid == "Doro":
@@ -103,10 +102,17 @@ func remove_response_buttons():
 func toggle_doro():
 	doro_chat.show()
 	basti_chat.hide()
+	scrolldown(doro_chat_container)
 	
 func toggle_basti():
 	basti_chat.show()
 	doro_chat.hide()
+	scrolldown(basti_container)
+
+func scrolldown(container : VBoxContainer):
+	scrollcontainer = container.get_parent()
+	scrollbar = scrollcontainer.get_v_scroll_bar()
+	scrollcontainer.scroll_vertical = scrollbar.max_value
 
 var debug = false
 func _input(event):
