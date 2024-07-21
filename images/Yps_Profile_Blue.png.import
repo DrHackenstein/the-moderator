@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl8kr375sj710"
-path="res://.godot/imported/Yps_Icon.png-bea60376d355b79ef9d753757b248e6c.ctex"
+uid="uid://b7wakx3vkc37v"
+path="res://.godot/imported/Yps_Profile_Blue.png-d1a53526f47253a7aac64f9e6fd013dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://themes/WindowsXP/Styles/Buttons/Yps_Icon.png"
-dest_files=["res://.godot/imported/Yps_Icon.png-bea60376d355b79ef9d753757b248e6c.ctex"]
+source_file="res://images/Yps_Profile_Blue.png"
+dest_files=["res://.godot/imported/Yps_Profile_Blue.png-d1a53526f47253a7aac64f9e6fd013dc.ctex"]
 
 [params]
 

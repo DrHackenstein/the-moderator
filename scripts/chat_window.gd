@@ -8,6 +8,9 @@ extends Window
 @export var basti_chat : Control
 @export var basti_container : VBoxContainer
 
+@export var task_button : Button
+
+var id = "chat"
 var message_player
 var message_other
 var message_response
@@ -82,6 +85,8 @@ func add(content : Content, message : Node, container : VBoxContainer, response 
 				remove_response_buttons()
 				
 			responses.append(message)
+		else:
+			task_button.set_notification( true )
 		
 		scrolldown(container)
 
@@ -114,12 +119,11 @@ func scrolldown(container : VBoxContainer):
 	scrollbar = scrollcontainer.get_v_scroll_bar()
 	scrollcontainer.scroll_vertical = scrollbar.max_value
 
-var focus = false
 func _process(delta):
 	if has_focus():
-		focus = true
-	else:
-		focus = false
+		task_button.set_notification( false )
+		if Globals.focus != id:
+			Globals.focus = id
 
 var debug = false
 func _input(event):

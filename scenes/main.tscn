@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=9 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
 [ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
 [ext_resource type="PackedScene" uid="uid://c2xfgsrf7dco6" path="res://scenes/chatWindow.tscn" id="3_34at8"]
 [ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
+[ext_resource type="Texture2D" uid="uid://b7wakx3vkc37v" path="res://images/Yps_Profile_Blue.png" id="4_o165v"]
+[ext_resource type="Texture2D" uid="uid://bjg84g6jhr3lr" path="res://images/ThatsUpp_Icon.png" id="6_kb71b"]
 
 [node name="main" type="Node2D"]
 
@@ -44,19 +46,25 @@ layout_mode = 2
 theme = ExtResource("2_h84kw")
 text = "Start"
 
-[node name="Chat_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-text = "Thats Upp"
-script = ExtResource("3_ca5qh")
-window = NodePath("../../../../Chat_Window")
-
 [node name="Mod_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Y Moderator"
+icon = ExtResource("4_o165v")
+alignment = 0
+expand_icon = true
 script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Mod_Window")
+
+[node name="Chat_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Thats Upp"
+icon = ExtResource("6_kb71b")
+alignment = 0
+expand_icon = true
+script = ExtResource("3_ca5qh")
+window = NodePath("../../../../Chat_Window")
 
 [node name="Time" type="HBoxContainer" parent="Desktop/Task Bar/HBoxContainer"]
 custom_minimum_size = Vector2(1390, 0)
