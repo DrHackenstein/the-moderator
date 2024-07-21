@@ -14,13 +14,18 @@ func _ready():
 func handle_click():
 	if window_visible:
 		if Globals.focus == window.id:
-			window_visible = false
-			window.hide()
+			close()
 		else:
 			window.grab_focus()
 	else:
 		window_visible = true
 		window.show()
+		window.grab_focus()
+
+func close():
+	Globals.focus = "None"
+	window_visible = false
+	window.hide()
 
 func set_notification(notify : bool):
 	if notify:

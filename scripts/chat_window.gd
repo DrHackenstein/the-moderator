@@ -33,7 +33,8 @@ func _ready():
 	load_message_nodes()
 	doro_button.button_down.connect(toggle_doro)
 	basti_button.button_down.connect(toggle_basti)
-
+	close_requested.connect(task_button.close)
+	
 func load_message_nodes():
 	if message_other == null:
 		message_other = load("res://scenes/chat_messages_other.tscn")
