@@ -41,7 +41,7 @@ func _ready():
 	
 	self.load_content(content["1"].id, true)
 
-func load_content( id : String, follow : bool ):
+func load_content( id : String, follow : bool, parent : String = "" ):
 	
 	# Catch Loading Errors 
 	if !self.content.has(id):
@@ -49,6 +49,9 @@ func load_content( id : String, follow : bool ):
 		return
 		
 	var content = self.content[id]
+	
+	if parent != "":
+		content.parent = parent
 	
 	#Inform Windows
 	match content.wid:
@@ -64,6 +67,6 @@ func load_content( id : String, follow : bool ):
 	#Load Follow Ups
 	if ( follow ):
 		for i in content.follow:
-			load_content( i, false )
+			load_content( i, false, id )
 	
 	
