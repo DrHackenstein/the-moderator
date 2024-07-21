@@ -15,6 +15,7 @@ var message_response
 var scrollbar
 var scrollcontainer
 var responses = []
+var waiting_list = [0, 0]
 
 func _ready():
 	load_message_nodes()
@@ -35,20 +36,32 @@ func load(content : Content):
 	print("Loading Chat: " + content.id + " " + content.text)
 	
 	load_message_nodes()
-	var message
 	
-	if content.uid == "Doro":
-		add(content, message_other.instantiate(), doro_chat_container)
-		
-	if content.uid == "Basti":
-		add(content, message_other.instantiate(), basti_container)
-		
-	if content.uid == "Player":
-		if content.wid == "Doro":
-			add(content, message_response.instantiate(), doro_chat_container, true)
+	var message
+	var wait_time
+	
+	match content.uid:
+		"Doro":
+			wait_time = randf_range(1.0, 3.0)
+			waiting_list[0] += wait_time
+			await get_tree().create_timer(waiting_list[0]).timeout
+			add(content, message_other.instantiate(), doro_chat_container)
+			waiting_list[0] -= wait_time
+		"Basti":
+			wait_time = randf_range(1.0, 3.0)
+			waiting_list[1] += wait_time
+			await get_tree().create_timer(waiting_list[1]).timeout
+			add(content, message_other.instantiate(), basti_container)
+			waiting_list[1] -= wait_time
+		"Player":
+			match content.wid:
+				"Doro":
+					await get_tree().create_timer(waiting_list[0]+0.4).timeout
+					add(content, message_response.instantiate(), doro_chat_container, true)
 			
-		if content.wid == "Basti":
-			add(content, message_response.instantiate(), basti_container, true)
+				"Basti":
+					await get_tree().create_timer(waiting_list[1]+0.4).timeout
+					add(content, message_response.instantiate(), basti_container, true)
 			
 
 func add(content : Content, message : Node, container : VBoxContainer, response : bool = false):
