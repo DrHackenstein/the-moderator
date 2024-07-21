@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://bej7wn3rk48lk"]
+[gd_scene load_steps=8 format=3 uid="uid://5j564stlgfm6"]
 
 [ext_resource type="Theme" uid="uid://dcnjggid7l0pw" path="res://themes/WindowsXP/message_us.tres" id="1_5pmib"]
 [ext_resource type="Script" path="res://scripts/chat_messages_player_button.gd" id="2_jd5e1"]
 [ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="3_l66lu"]
-[ext_resource type="StyleBox" uid="uid://bw2yhyb8prigf" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message_normal.tres" id="4_665b6"]
-[ext_resource type="StyleBox" uid="uid://bcw1okgtlv117" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message.tres" id="4_sya0x"]
+[ext_resource type="StyleBox" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message_normal.tres" id="4_665b6"]
+[ext_resource type="StyleBox" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message.tres" id="4_sya0x"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2bpg"]
 

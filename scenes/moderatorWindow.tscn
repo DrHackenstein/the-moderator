@@ -3,8 +3,8 @@
 [ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_7sitn"]
 [ext_resource type="Script" path="res://scripts/moderator_window.gd" id="2_1thri"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7yg86"]
-[ext_resource type="Theme" uid="uid://c76fhgh480i20" path="res://themes/WindowsXP/Ypsilon_Moderator.tres" id="3_grr14"]
-[ext_resource type="StyleBox" uid="uid://ccmf54xkd0726" path="res://themes/WindowsXP/Styles/Yps_Post_Panel.tres" id="4_87v73"]
+[ext_resource type="Theme" uid="uid://28npjwl47rvs" path="res://themes/WindowsXP/Ypsilon_Moderator.tres" id="3_grr14"]
+[ext_resource type="StyleBox" path="res://themes/WindowsXP/Styles/Yps_Post_Panel.tres" id="4_87v73"]
 [ext_resource type="FontFile" uid="uid://b3s034ywbnebc" path="res://themes/WindowsXP/Fonts/arialbd.ttf" id="6_dgl0o"]
 [ext_resource type="FontFile" uid="uid://cmcn3x680k3wc" path="res://themes/WindowsXP/Fonts/arial.ttf" id="7_8loks"]
 
@@ -43,8 +43,9 @@ modulate_color = Color(0.811765, 0, 0, 1)
 
 [node name="ModeratorWindow" type="Window" node_paths=PackedStringArray("reports", "history", "username", "post", "okay", "delete", "ban")]
 title = "Y Moderator"
-position = Vector2i(0, 26)
+position = Vector2i(50, 40)
 size = Vector2i(1000, 900)
+min_size = Vector2i(1000, 900)
 max_size = Vector2i(1000, 900)
 keep_title_visible = true
 theme = ExtResource("1_7sitn")

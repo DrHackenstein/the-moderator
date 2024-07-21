@@ -10,8 +10,9 @@
 
 [node name="Chat" type="Window" node_paths=PackedStringArray("doro_button", "basti_button", "doro_chat", "doro_chat_container", "basti_chat", "basti_container")]
 title = "Thats Upp Chat"
-position = Vector2i(0, 26)
+position = Vector2i(900, 100)
 size = Vector2i(820, 900)
+min_size = Vector2i(820, 900)
 max_size = Vector2i(820, 900)
 theme = ExtResource("1_3wmun")
 script = ExtResource("2_pouvr")

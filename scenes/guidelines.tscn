@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqoifvv46hybw"]
+
+[ext_resource type="Script" path="res://scripts/guideline.gd" id="1_w7a4l"]
+
+[node name="Guideline" type="Window"]
+title = "Guideline"
+position = Vector2i(1000, 200)
+size = Vector2i(500, 600)
+script = ExtResource("1_w7a4l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Y Community Guidelines
+
+(1) Verfassungsfeindliche Symbole: Die Darstellung und Verbreitung verfassungsfeindlicher Symbole ist gesetzlich verboten. Sie dürfen auf Y nicht gepostet werden.
+
+Beispiele: Hakenkreuz, SS-Runen, …
+
+
+(2) Hassrede: Es ist verboten, gegen eine nationale, religiöse oder durch ihre ethnische Herkunft bestimmte Gruppe, gegen Teile der Bevölkerung oder gegen einen Einzelnen wegen dessen Zugehörigkeit zu einer Gruppe zu hetzen oder zu Gewalt gegen sie aufzufordern. Posts, die die Menschenwürde angreifen, sind auf Y nicht gestattet.
+
+Beispiele: Aufforderung zu Gewalt gegen andere Menschen, z.B. aufgrund ihrer Hautfarbe, ihres Geschlechts, ihrer sexuellen Orientierung oder anderen Merkmalen; Absprechen des Existenzrechts bestimmter Gruppen und Aufforderungen zu ihrer Auslöschung; Auch: Leugnung von Verbrechen gegen die Menschlichkeit, z.B. Holocaustleugnung
+
+
+(3) Androhung von Gewalt: Es ist verboten, anderen Personen mit Gewalt gegen ihr Leben oder ihre körperliche und psychische Unversehrtheit zu drohen.
+
+Beispiele: Todesdrohungen, Ankündigung von Vewaltverbrechen
+
+
+(4) Sexuelle Inhalte und Nacktbilder: Die Darstellung und Verbreitung sexueller Inhalte ist auf Y nicht gestattet.
+
+Beispiele: Nacktbilder, pornografische Bilder, Videos und Texte"

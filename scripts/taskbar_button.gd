@@ -5,7 +5,7 @@ extends Button
 @export var icon_notification : Texture2D
 @export var sfx : AudioStreamPlayer
 
-var window_visible = true
+@export var window_visible = true
 
 func _ready():
 	self.pressed.connect(self.handle_click)
@@ -29,7 +29,10 @@ func close():
 
 func set_notification(notify : bool):
 	if notify:
-		set_button_icon(icon_notification)
-		sfx.play()
+		if(icon_notification != null):
+			set_button_icon(icon_notification)
+		if(sfx != null):
+			sfx.play()
 	else:
-		set_button_icon(icon_normal)
+		if(icon_normal != null):
+			set_button_icon(icon_normal)
