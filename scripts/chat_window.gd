@@ -83,7 +83,6 @@ func add(content : Content, message : Node, container : VBoxContainer, response 
 				
 			responses.append(message)
 		
-		await get_tree().process_frame
 		scrolldown(container)
 
 
@@ -110,9 +109,17 @@ func toggle_basti():
 	scrolldown(basti_container)
 
 func scrolldown(container : VBoxContainer):
+	await get_tree().process_frame
 	scrollcontainer = container.get_parent()
 	scrollbar = scrollcontainer.get_v_scroll_bar()
 	scrollcontainer.scroll_vertical = scrollbar.max_value
+
+var focus = false
+func _process(delta):
+	if has_focus():
+		focus = true
+	else:
+		focus = false
 
 var debug = false
 func _input(event):
