@@ -1,8 +1,9 @@
 extends Button
 
 @export var window : Node
-var icon_normal : Texture2D
-var icon_notification : Texture2D
+@export var icon_normal : Texture2D
+@export var icon_notification : Texture2D
+@export var sfx : AudioStreamPlayer
 
 var window_visible = true
 
@@ -24,5 +25,7 @@ func handle_click():
 func set_notification(notify : bool):
 	if notify:
 		set_button_icon(icon_notification)
+		if Globals.focus != window.id:
+			sfx.play()
 	else:
 		set_button_icon(icon_normal)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=13 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
 [ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
 [ext_resource type="Texture2D" uid="uid://b7wakx3vkc37v" path="res://images/Yps_Profile_Blue.png" id="4_o165v"]
 [ext_resource type="Texture2D" uid="uid://bjg84g6jhr3lr" path="res://images/ThatsUpp_Icon.png" id="6_kb71b"]
+[ext_resource type="Texture2D" uid="uid://362cj6pwddw3" path="res://images/Yps_Profile_Blue_message.png" id="6_xti5r"]
+[ext_resource type="AudioStream" uid="uid://bv1w4iy45hntj" path="res://sounds/new_mod.mp3" id="7_k4qio"]
+[ext_resource type="Texture2D" uid="uid://gxie5l774pwy" path="res://images/ThatsUpp_Icon_message.png" id="8_v0bkq"]
+[ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
 
 [node name="main" type="Node2D"]
 
@@ -46,7 +50,7 @@ layout_mode = 2
 theme = ExtResource("2_h84kw")
 text = "Start"
 
-[node name="Mod_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
+[node name="Mod_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window", "sfx")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Y Moderator"
@@ -55,8 +59,14 @@ alignment = 0
 expand_icon = true
 script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Mod_Window")
+icon_normal = ExtResource("4_o165v")
+icon_notification = ExtResource("6_xti5r")
+sfx = NodePath("AudioStreamPlayer")
 
-[node name="Chat_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window")]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Task Bar/HBoxContainer/Mod_Button"]
+stream = ExtResource("7_k4qio")
+
+[node name="Chat_Button" type="Button" parent="Desktop/Task Bar/HBoxContainer" node_paths=PackedStringArray("window", "sfx")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Thats Upp"
@@ -65,6 +75,12 @@ alignment = 0
 expand_icon = true
 script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Chat_Window")
+icon_normal = ExtResource("6_kb71b")
+icon_notification = ExtResource("8_v0bkq")
+sfx = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Task Bar/HBoxContainer/Chat_Button"]
+stream = ExtResource("10_d856s")
 
 [node name="Time" type="HBoxContainer" parent="Desktop/Task Bar/HBoxContainer"]
 custom_minimum_size = Vector2(1390, 0)
