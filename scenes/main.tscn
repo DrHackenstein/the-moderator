@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=22 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
 [ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://b7wakx3vkc37v" path="res://images/Yps_Profile_Blue.png" id="4_o165v"]
 [ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="5_g1xgh"]
 [ext_resource type="Texture2D" uid="uid://bjg84g6jhr3lr" path="res://images/ThatsUpp_Icon.png" id="6_kb71b"]
-[ext_resource type="Texture2D" uid="uid://362cj6pwddw3" path="res://images/Yps_Profile_Blue_message.png" id="6_xti5r"]
 [ext_resource type="AudioStream" uid="uid://bv1w4iy45hntj" path="res://sounds/new_mod.mp3" id="7_k4qio"]
 [ext_resource type="Texture2D" uid="uid://gxie5l774pwy" path="res://images/ThatsUpp_Icon_message.png" id="8_v0bkq"]
 [ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
@@ -43,6 +42,12 @@ texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
 modulate_color = Color(6.01634e-07, 0.710683, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iacka"]
+load_path = "res://.godot/imported/Yps_Icon.png-759c8bcddb3b0d416cfe367b1a949759.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tvtmx"]
+load_path = "res://.godot/imported/Yps_Icon_message.png-21ee99a15c545d3ab1d267304b11d734.ctex"
 
 [node name="main" type="Node2D"]
 
@@ -107,8 +112,8 @@ alignment = 0
 expand_icon = true
 script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Mod_Window")
-icon_normal = ExtResource("4_o165v")
-icon_notification = ExtResource("6_xti5r")
+icon_normal = SubResource("CompressedTexture2D_iacka")
+icon_notification = SubResource("CompressedTexture2D_tvtmx")
 sfx = NodePath("AudioStreamPlayer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
