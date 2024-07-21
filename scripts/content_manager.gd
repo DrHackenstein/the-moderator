@@ -9,10 +9,14 @@ var content = {}
 func _ready():
 	
 	var count = 0
-	var file = FileAccess.open("res://content/The Moderator - Act_1.csv", FileAccess.READ)
+	var file = FileAccess.open("res://content/content.csv.txt", FileAccess.READ)
 	var data
 	var start_id
 	var skip = true
+	
+	if file == null:
+		print("Couldn't load csv!")
+		return
 	
 	while !file.eof_reached():
 		
