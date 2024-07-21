@@ -57,6 +57,11 @@ func select(i : int):
 	active = content[i]
 	username.text = active.uid
 	post.text = active.text
+	
+	if(active.follow.size() > 0):
+		content_manager.load_content(active.follow[0], true)
+		active.follow.clear()
+	
 	okay.show()
 	delete.show()
 	ban.show()
