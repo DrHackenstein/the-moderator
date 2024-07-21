@@ -1,0 +1,31 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://c76fhgh480i20"]
+
+[ext_resource type="FontFile" uid="uid://veq2dfga8nsx" path="res://themes/WindowsXP/Fonts/TAHOMA.TTF" id="1_0gxqe"]
+[ext_resource type="StyleBox" uid="uid://x4hhjcqe3h2" path="res://themes/WindowsXP/Styles/Buttons/yps_b_hover.tres" id="2_hve6m"]
+[ext_resource type="FontFile" uid="uid://b80gd2ppl44tw" path="res://themes/WindowsXP/Fonts/TAHOMABD.TTF" id="3_ibwub"]
+[ext_resource type="StyleBox" uid="uid://b2x1ohj52cyhl" path="res://themes/WindowsXP/Styles/Buttons/yps_b_normal.tres" id="3_y80xa"]
+[ext_resource type="StyleBox" uid="uid://b74m1hmoot0t2" path="res://themes/WindowsXP/Styles/Windows/Panel.tres" id="4_q26xl"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ntpf0"]
+load_path = "res://.godot/imported/y_rounded_corner.png-f8a90e97eb82b2464412cc8135503451.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pti67"]
+texture = SubResource("CompressedTexture2D_ntpf0")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tlcop"]
+load_path = "res://.godot/imported/X-Button.png-e0f1f769a02d346d29bb53fe900fd407.ctex"
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/fonts/font = ExtResource("1_0gxqe")
+Button/styles/hover = ExtResource("2_hve6m")
+Button/styles/normal = ExtResource("3_y80xa")
+Panel/styles/panel = SubResource("StyleBoxTexture_pti67")
+Window/constants/title_height = 26
+Window/fonts/title_font = ExtResource("3_ibwub")
+Window/icons/close = SubResource("CompressedTexture2D_tlcop")
+Window/styles/embedded_border = ExtResource("4_q26xl")
