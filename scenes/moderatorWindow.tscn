@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/moderator_window.gd" id="2_1thri"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7yg86"]
 [ext_resource type="Theme" uid="uid://c76fhgh480i20" path="res://themes/WindowsXP/Ypsilon_Moderator.tres" id="3_grr14"]
-[ext_resource type="StyleBox" uid="uid://ccmf54xkd0726" path="res://Yps_Post_Panel.tres" id="4_87v73"]
+[ext_resource type="StyleBox" uid="uid://ccmf54xkd0726" path="res://themes/WindowsXP/Styles/Yps_Post_Panel.tres" id="4_87v73"]
 [ext_resource type="FontFile" uid="uid://b3s034ywbnebc" path="res://themes/WindowsXP/Fonts/arialbd.ttf" id="6_dgl0o"]
 [ext_resource type="FontFile" uid="uid://cmcn3x680k3wc" path="res://themes/WindowsXP/Fonts/arial.ttf" id="7_8loks"]
 

@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bej7wn3rk48lk"]
+[gd_scene load_steps=8 format=3 uid="uid://bej7wn3rk48lk"]
 
 [ext_resource type="Theme" uid="uid://dcnjggid7l0pw" path="res://themes/WindowsXP/message_us.tres" id="1_5pmib"]
 [ext_resource type="Script" path="res://scripts/chat_messages_player_button.gd" id="2_jd5e1"]
 [ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="3_l66lu"]
-[ext_resource type="StyleBox" uid="uid://bw2yhyb8prigf" path="res://thatsUp_button_message_normal.tres" id="4_665b6"]
-[ext_resource type="StyleBox" uid="uid://bcw1okgtlv117" path="res://thatsUp_button_message.tres" id="4_sya0x"]
+[ext_resource type="StyleBox" uid="uid://bw2yhyb8prigf" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message_normal.tres" id="4_665b6"]
+[ext_resource type="StyleBox" uid="uid://bcw1okgtlv117" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message.tres" id="4_sya0x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2bpg"]
 
 [sub_resource type="Theme" id="Theme_tj7gw"]
 
@@ -23,11 +25,12 @@ message = NodePath("Panel/Content/Button")
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
 theme = ExtResource("1_5pmib")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v2bpg")
 
 [node name="Content" type="HBoxContainer" parent="Panel"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
-offset_left = 1.0
+offset_left = 51.0
 offset_right = 779.0
 offset_bottom = 100.0
 theme = ExtResource("3_l66lu")
@@ -36,7 +39,7 @@ theme = ExtResource("3_l66lu")
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_tj7gw")
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = ExtResource("4_665b6")
 theme_override_styles/hover = ExtResource("4_sya0x")

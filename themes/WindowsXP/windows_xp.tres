@@ -1,10 +1,12 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://c74ffppbp6j7i"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c74ffppbp6j7i"]
 
 [ext_resource type="FontFile" uid="uid://veq2dfga8nsx" path="res://themes/WindowsXP/Fonts/TAHOMA.TTF" id="1_dbqs1"]
-[ext_resource type="StyleBox" uid="uid://d33ampj7suar4" path="res://themes/WindowsXP/Styles/Buttons/y_b_Normal.tres" id="2_0urqq"]
+[ext_resource type="StyleBox" uid="uid://bokyv0tvarjjw" path="res://themes/WindowsXP/Styles/Buttons/win_xp_taskleiste_button_pressed.tres" id="2_jtwov"]
 [ext_resource type="FontFile" uid="uid://b80gd2ppl44tw" path="res://themes/WindowsXP/Fonts/TAHOMABD.TTF" id="3_5axuf"]
-[ext_resource type="StyleBox" uid="uid://ddy0xpccuynfa" path="res://win_xp_active_window.tres" id="4_pm1dg"]
-[ext_resource type="StyleBox" uid="uid://dg15bu12u5243" path="res://win_xp_INactive_window.tres" id="5_ok5bt"]
+[ext_resource type="StyleBox" uid="uid://xfsy6mr1ufph" path="res://themes/WindowsXP/Styles/Buttons/win_xp_taskleiste_button_highlight.tres" id="3_g880e"]
+[ext_resource type="StyleBox" uid="uid://bt0ct6w5k8k5r" path="res://themes/WindowsXP/Styles/Buttons/win_xp_taskleiste_button.tres" id="4_h4158"]
+[ext_resource type="StyleBox" uid="uid://ddy0xpccuynfa" path="res://themes/WindowsXP/Styles/Windows/win_xp_active_window.tres" id="4_pm1dg"]
+[ext_resource type="StyleBox" uid="uid://dg15bu12u5243" path="res://themes/WindowsXP/Styles/Windows/win_xp_INactive_window.tres" id="5_ok5bt"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tlcop"]
 load_path = "res://.godot/imported/x-button_24x24.png-04e5e84c684aa0dfb2076be918de308c.ctex"
@@ -13,10 +15,12 @@ load_path = "res://.godot/imported/x-button_24x24.png-04e5e84c684aa0dfb2076be918
 load_path = "res://.godot/imported/x_button_20x20.png-078432e20af55a53ae09dda9776e0dbc.ctex"
 
 [resource]
-Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/fonts/font = ExtResource("1_dbqs1")
-Button/styles/hover = ExtResource("2_0urqq")
-Button/styles/normal = ExtResource("2_0urqq")
+Button/styles/focus = ExtResource("2_jtwov")
+Button/styles/hover = ExtResource("3_g880e")
+Button/styles/normal = ExtResource("4_h4158")
+Button/styles/pressed = ExtResource("2_jtwov")
 Window/constants/title_height = 26
 Window/fonts/title_font = ExtResource("3_5axuf")
 Window/icons/close = SubResource("CompressedTexture2D_tlcop")

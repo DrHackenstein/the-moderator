@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bokyv0tvarjjw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_l4hae"]
+load_path = "res://.godot/imported/win_xp_taskleiste_button_selected.png-3316a5c2fc9d1a294536b21a95141a7b.ctex"
+
+[resource]
+texture = SubResource("CompressedTexture2D_l4hae")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0

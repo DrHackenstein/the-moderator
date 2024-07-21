@@ -4,13 +4,13 @@
 [ext_resource type="Script" path="res://scripts/chat_message.gd" id="2_odrhu"]
 
 [node name="Message" type="MarginContainer" node_paths=PackedStringArray("message")]
-custom_minimum_size = Vector2(800, 120)
+custom_minimum_size = Vector2(800, 50)
 offset_right = 800.0
 offset_bottom = 120.0
 theme = ExtResource("1_4gmo0")
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
+theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 10
 script = ExtResource("2_odrhu")
 message = NodePath("Panel/Content/MarginContainer/Message")
@@ -20,7 +20,7 @@ layout_mode = 2
 theme = ExtResource("1_4gmo0")
 
 [node name="Content" type="HBoxContainer" parent="Panel"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 offset_left = 20.0
 offset_right = 763.0
@@ -37,7 +37,7 @@ theme_override_constants/margin_right = 15
 
 [node name="Message" type="RichTextLabel" parent="Panel/Content/MarginContainer"]
 clip_contents = false
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
