@@ -70,8 +70,7 @@ horizontal_alignment = 2
 
 [node name="Mod_Window" parent="." instance=ExtResource("3_7q355")]
 unique_name_in_owner = true
-position = Vector2i(100, 40)
 
 [node name="Chat_Window" parent="." instance=ExtResource("3_34at8")]
 unique_name_in_owner = true
-position = Vector2i(900, 100)
+position = Vector2i(159, 26)

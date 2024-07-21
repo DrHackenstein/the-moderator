@@ -1,10 +1,59 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://c76fhgh480i20"]
+[gd_resource type="Theme" load_steps=29 format=3 uid="uid://c76fhgh480i20"]
 
 [ext_resource type="FontFile" uid="uid://veq2dfga8nsx" path="res://themes/WindowsXP/Fonts/TAHOMA.TTF" id="1_0gxqe"]
 [ext_resource type="StyleBox" uid="uid://x4hhjcqe3h2" path="res://themes/WindowsXP/Styles/Buttons/yps_b_hover.tres" id="2_hve6m"]
 [ext_resource type="FontFile" uid="uid://b80gd2ppl44tw" path="res://themes/WindowsXP/Fonts/TAHOMABD.TTF" id="3_ibwub"]
 [ext_resource type="StyleBox" uid="uid://b2x1ohj52cyhl" path="res://themes/WindowsXP/Styles/Buttons/yps_b_normal.tres" id="3_y80xa"]
 [ext_resource type="StyleBox" uid="uid://b74m1hmoot0t2" path="res://themes/WindowsXP/Styles/Windows/Panel.tres" id="4_q26xl"]
+[ext_resource type="FontFile" uid="uid://cmcn3x680k3wc" path="res://themes/WindowsXP/Fonts/arial.ttf" id="4_r5uff"]
+[ext_resource type="FontFile" uid="uid://b3s034ywbnebc" path="res://themes/WindowsXP/Fonts/arialbd.ttf" id="5_3b840"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mnwua"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6ilt"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_30tlr"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7yxt"]
+texture = SubResource("CompressedTexture2D_30tlr")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.831373, 0.831373, 0.831373, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2xdxb"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shc7u"]
+texture = SubResource("CompressedTexture2D_2xdxb")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_plt2i"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vr33"]
+texture = SubResource("CompressedTexture2D_plt2i")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.113725, 0.631373, 0.94902, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_gkfpq"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24n5d"]
+texture = SubResource("CompressedTexture2D_gkfpq")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.113725, 0.631373, 0.94902, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ntpf0"]
 load_path = "res://.godot/imported/y_rounded_corner.png-f8a90e97eb82b2464412cc8135503451.ctex"
@@ -16,15 +65,78 @@ texture_margin_top = 16.0
 texture_margin_right = 16.0
 texture_margin_bottom = 16.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_58uoo"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jxip3"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fa5d7"]
+load_path = "res://.godot/imported/yps_tab_header.png-44f265af9de097c2f29cb26561224781.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s8y60"]
+texture = SubResource("CompressedTexture2D_fa5d7")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_owpib"]
+load_path = "res://.godot/imported/yps_tab_header.png-44f265af9de097c2f29cb26561224781.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04vre"]
+texture = SubResource("CompressedTexture2D_owpib")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(0.113725, 0.631373, 0.94902, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6jv4w"]
+load_path = "res://.godot/imported/yps_tab_header.png-44f265af9de097c2f29cb26561224781.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1y3t"]
+texture = SubResource("CompressedTexture2D_6jv4w")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tlcop"]
 load_path = "res://.godot/imported/X-Button.png-e0f1f769a02d346d29bb53fe900fd407.ctex"
 
 [resource]
 Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 2
 Button/fonts/font = ExtResource("1_0gxqe")
+Button/styles/focus = SubResource("StyleBoxEmpty_mnwua")
 Button/styles/hover = ExtResource("2_hve6m")
 Button/styles/normal = ExtResource("3_y80xa")
+Button/styles/pressed = ExtResource("3_y80xa")
+ItemList/colors/font_color = Color(0, 0, 0, 1)
+ItemList/colors/font_hovered_color = Color(0, 0, 0, 1)
+ItemList/colors/font_selected_color = Color(1, 1, 1, 1)
+ItemList/constants/line_separation = 5
+ItemList/constants/v_separation = 10
+ItemList/font_sizes/font_size = 20
+ItemList/fonts/font = ExtResource("4_r5uff")
+ItemList/styles/focus = SubResource("StyleBoxEmpty_c6ilt")
+ItemList/styles/hovered = SubResource("StyleBoxTexture_o7yxt")
+ItemList/styles/panel = SubResource("StyleBoxTexture_shc7u")
+ItemList/styles/selected = SubResource("StyleBoxTexture_5vr33")
+ItemList/styles/selected_focus = SubResource("StyleBoxTexture_24n5d")
 Panel/styles/panel = SubResource("StyleBoxTexture_pti67")
+TabContainer/colors/font_hovered_color = Color(0, 0, 0, 1)
+TabContainer/colors/font_unselected_color = Color(0.831373, 0.831373, 0.831373, 1)
+TabContainer/font_sizes/font_size = 24
+TabContainer/fonts/font = ExtResource("5_3b840")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_58uoo")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_jxip3")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_s8y60")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_04vre")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_f1y3t")
 Window/constants/title_height = 26
 Window/fonts/title_font = ExtResource("3_ibwub")
 Window/icons/close = SubResource("CompressedTexture2D_tlcop")

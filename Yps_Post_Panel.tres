@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ccmf54xkd0726"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fj22o"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[resource]
+texture = SubResource("CompressedTexture2D_fj22o")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0

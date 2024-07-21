@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgrdo1b1jxjrn"]
+[gd_scene load_steps=4 format=3 uid="uid://drgphoiyglq1b"]
 
 [ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="1_ftmcu"]
 [ext_resource type="Theme" uid="uid://dcnjggid7l0pw" path="res://themes/WindowsXP/message_us.tres" id="1_t6f7k"]
