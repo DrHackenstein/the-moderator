@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://dg15bu12u5243"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w2bnh"]
+load_path = "res://.godot/imported/win_xp_inactive_panel.png-aa7b46170080fc345a24b0a63d1f7f52.ctex"
+
+[resource]
+texture = SubResource("CompressedTexture2D_w2bnh")
+texture_margin_left = 6.0
+texture_margin_top = 24.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+expand_margin_left = 4.0
+expand_margin_top = 24.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 14, 32)
