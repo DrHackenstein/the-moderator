@@ -4,6 +4,7 @@ var id : String
 var uid : String
 var wid : String
 var sid : String
+var parent : String
 
 var text : String
 

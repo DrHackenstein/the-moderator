@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_7sitn"]
 [ext_resource type="Script" path="res://scripts/moderator_window.gd" id="2_1thri"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7yg86"]
-[ext_resource type="Theme" uid="uid://c76fhgh480i20" path="res://themes/WindowsXP/Ypsilon_Moderator.tres" id="3_grr14"]
+[ext_resource type="Theme" uid="uid://28npjwl47rvs" path="res://themes/WindowsXP/Ypsilon_Moderator.tres" id="3_grr14"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oecmr"]
 load_path = "res://.godot/imported/y_b_normal.png-806ce7831534c0aff4f94292ebcb3c36.ctex"
