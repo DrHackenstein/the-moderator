@@ -25,7 +25,6 @@ func handle_click():
 func set_notification(notify : bool):
 	if notify:
 		set_button_icon(icon_notification)
-		if Globals.focus != window.id:
-			sfx.play()
+		sfx.play()
 	else:
 		set_button_icon(icon_normal)

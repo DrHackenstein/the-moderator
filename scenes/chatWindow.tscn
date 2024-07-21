@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2xfgsrf7dco6"]
+[gd_scene load_steps=8 format=3 uid="uid://c2xfgsrf7dco6"]
 
 [ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_3wmun"]
 [ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7u2cp"]
 [ext_resource type="Theme" uid="uid://dbu0w6iqdok6s" path="res://themes/WindowsXP/thatsUp.tres" id="2_jocic"]
 [ext_resource type="Script" path="res://scripts/chat_window.gd" id="2_pouvr"]
+[ext_resource type="Texture2D" uid="uid://cuklxlqxn3m1s" path="res://images/avatar02_notification.png" id="4_51kxr"]
+[ext_resource type="Texture2D" uid="uid://b2o1hryt02ubu" path="res://images/avatar02.png" id="4_cabl4"]
+[ext_resource type="Texture2D" uid="uid://w2mlncrhlf5g" path="res://images/avatar01_notification.png" id="6_e64m4"]
 
 [node name="Chat" type="Window" node_paths=PackedStringArray("doro_button", "basti_button", "doro_chat", "doro_chat_container", "basti_chat", "basti_container")]
 title = "Thats Upp Chat"
@@ -11,6 +14,10 @@ position = Vector2i(0, 26)
 size = Vector2i(820, 900)
 theme = ExtResource("1_3wmun")
 script = ExtResource("2_pouvr")
+doro_avatar = ExtResource("4_cabl4")
+doro_avatar_notification = ExtResource("4_51kxr")
+basti_avatar = ExtResource("2_7u2cp")
+basti_avatar_notification = ExtResource("6_e64m4")
 doro_button = NodePath("Content/Tabs/Doro/Button")
 basti_button = NodePath("Content/Tabs/Basti/Button")
 doro_chat = NodePath("Content/Chat/Doro_Chat")
@@ -51,7 +58,7 @@ size_flags_horizontal = 0
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Doro"
-icon = ExtResource("2_7u2cp")
+icon = ExtResource("4_cabl4")
 expand_icon = true
 
 [node name="Basti" type="HBoxContainer" parent="Content/Tabs"]
