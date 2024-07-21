@@ -1,5 +1,10 @@
 extends Window
 
+@export var doro_avatar : Texture2D
+@export var doro_avatar_notification : Texture2D
+@export var basti_avatar : Texture2D
+@export var basti_avatar_notification : Texture2D
+
 @export var doro_button : Button
 @export var basti_button : Button
 
@@ -28,7 +33,8 @@ func _ready():
 	load_message_nodes()
 	doro_button.button_down.connect(toggle_doro)
 	basti_button.button_down.connect(toggle_basti)
-
+	close_requested.connect(task_button.close)
+	
 func load_message_nodes():
 	if message_other == null:
 		message_other = load("res://scenes/chat_messages_other.tscn")
@@ -86,7 +92,13 @@ func add(content : Content, message : Node, container : VBoxContainer, response 
 				
 			responses.append(message)
 		else:
-			task_button.set_notification( true )
+			if ! has_focus() || ((content.uid == "Doro" && ! doro_chat.is_visible()) || (content.uid == "Basti" && ! basti_chat.is_visible()) ):
+				if content.uid == "Doro":
+					doro_button.set_button_icon(doro_avatar_notification)
+				if content.uid == "Basti":
+					basti_button.set_button_icon(basti_avatar_notification)
+					
+				task_button.set_notification( true )
 		
 		scrolldown(container)
 
@@ -106,11 +118,13 @@ func remove_response_buttons():
 func toggle_doro():
 	doro_chat.show()
 	basti_chat.hide()
+	doro_button.set_button_icon(doro_avatar)
 	scrolldown(doro_chat_container)
 	
 func toggle_basti():
 	basti_chat.show()
 	doro_chat.hide()
+	basti_button.set_button_icon(basti_avatar)
 	scrolldown(basti_container)
 
 func scrolldown(container : VBoxContainer):
@@ -124,6 +138,10 @@ func _process(delta):
 		task_button.set_notification( false )
 		if Globals.focus != id:
 			Globals.focus = id
+			if doro_chat.is_visible():
+				doro_button.set_button_icon(doro_avatar)
+			else:
+				basti_button.set_button_icon(basti_avatar)
 
 var debug = false
 func _input(event):

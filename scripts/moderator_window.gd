@@ -38,6 +38,9 @@ func _ready():
 	ban.button_down.connect(ban_report)
 	
 	clear()
+	
+	close_requested.connect(task_button.close)
+
 
 func load(new_content : Content):
 	print("Loading " + new_content.id)
