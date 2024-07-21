@@ -14,23 +14,33 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 script = ExtResource("2_gyh5s")
-message = NodePath("Panel/Content/Message")
+message = NodePath("Panel/Content/MarginContainer/Message")
 
 [node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 theme = ExtResource("1_t6f7k")
 
 [node name="Content" type="HBoxContainer" parent="Panel"]
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 offset_left = 20.0
 offset_right = 763.0
 offset_bottom = 100.0
 theme = ExtResource("1_ftmcu")
 
-[node name="Message" type="RichTextLabel" parent="Panel/Content"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Content"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+
+[node name="Message" type="RichTextLabel" parent="Panel/Content/MarginContainer"]
 clip_contents = false
-custom_minimum_size = Vector2(250, 100)
+custom_minimum_size = Vector2(250, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
