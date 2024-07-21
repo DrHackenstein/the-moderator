@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://crg5vuhksagc6"]
+[gd_scene load_steps=3 format=3 uid="uid://be6p71ag1seum"]
 
 [ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="1_4gmo0"]
+[ext_resource type="Script" path="res://scripts/chat_message.gd" id="2_odrhu"]
 
-[node name="Message" type="MarginContainer"]
+[node name="Message" type="MarginContainer" node_paths=PackedStringArray("message")]
+custom_minimum_size = Vector2(800, 120)
 offset_right = 800.0
 offset_bottom = 120.0
 theme = ExtResource("1_4gmo0")
@@ -10,6 +12,8 @@ theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
+script = ExtResource("2_odrhu")
+message = NodePath("Panel/Content/Message")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
