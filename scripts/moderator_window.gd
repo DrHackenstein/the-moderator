@@ -33,18 +33,18 @@ func _ready():
 	clear()
 	
 	# Test
-	var test = Content.new()
-	test.text = "YEEES!"
-	test.uid = "Bernd"
-	test.id = "0001"
-	test.buttons = ["30","30","30"]
-	self.load(test)
-	
-	test = Content.new()
-	test.text = "NOOOOO!"
-	test.uid = "Beate"
-	test.id = "0002"
-	self.load(test)
+	#var test = Content.new()
+	#test.text = "YEEES!"
+	#test.uid = "Bernd"
+	#test.id = "0001"
+	#test.buttons = ["30","30","30"]
+	#self.load(test)
+	#
+	#test = Content.new()
+	#test.text = "NOOOOO!"
+	#test.uid = "Beate"
+	#test.id = "0002"
+	#self.load(test)
 
 func load(new_content : Content):
 	print("Loading " + new_content.id)
@@ -63,19 +63,19 @@ func select(i : int):
 	
 func okay_report():
 	print("Okay")
-	if(!active.buttons.is_empty()):
+	if(active.buttons.size() > 0):
 		content_manager.load_content(active.buttons[0], true)
 	process_active()
 	
 func delete_report():
 	print("Delete")
-	if(!active.buttons.is_empty()):
+	if(active.buttons.size() > 1):
 		content_manager.load_content(active.buttons[1], true)
 	process_active()
 	
 func ban_report():
 	print("Ban")
-	if(!active.buttons.is_empty()):
+	if(active.buttons.size() > 2):
 		content_manager.load_content(active.buttons[2], true)
 	process_active()
 	

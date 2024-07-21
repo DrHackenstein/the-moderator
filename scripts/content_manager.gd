@@ -55,8 +55,11 @@ func load_content( id : String, follow : bool ):
 		'Mod':
 			self.mod_window.load(content)
 		'Basti', 'Doro':
-			#self.chat_window.load(content)
-			pass
+			self.chat_window.load(content)
+			if content.uid == 'Player':
+				follow = false
+			else:
+				follow = true
 	
 	#Load Follow Ups
 	if ( follow ):

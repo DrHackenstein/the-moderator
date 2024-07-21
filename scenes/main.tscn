@@ -4,15 +4,16 @@
 [ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
 [ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
-[ext_resource type="PackedScene" uid="uid://5cxhjhshwq71" path="res://scenes/chatWindow.tscn" id="3_34at8"]
+[ext_resource type="PackedScene" uid="uid://c2xfgsrf7dco6" path="res://scenes/chatWindow.tscn" id="3_34at8"]
 [ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
 
 [node name="main" type="Node2D"]
 
-[node name="Content_Manager" type="Node" parent="." node_paths=PackedStringArray("mod_window")]
+[node name="Content_Manager" type="Node" parent="." node_paths=PackedStringArray("mod_window", "chat_window")]
 unique_name_in_owner = true
 script = ExtResource("1_hvhdk")
 mod_window = NodePath("../Mod_Window")
+chat_window = NodePath("../Chat_Window")
 
 [node name="Desktop" type="AspectRatioContainer" parent="."]
 offset_right = 1920.0
@@ -67,7 +68,10 @@ layout_mode = 2
 text = "23:45"
 horizontal_alignment = 2
 
-[node name="Chat_Window" parent="." instance=ExtResource("3_34at8")]
-position = Vector2i(324, 24)
-
 [node name="Mod_Window" parent="." instance=ExtResource("3_7q355")]
+unique_name_in_owner = true
+position = Vector2i(100, 40)
+
+[node name="Chat_Window" parent="." instance=ExtResource("3_34at8")]
+unique_name_in_owner = true
+position = Vector2i(900, 100)
