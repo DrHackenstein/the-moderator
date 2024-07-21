@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://x4hhjcqe3h2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g66x5"]
+load_path = "res://.godot/imported/y_b_normal.png-806ce7831534c0aff4f94292ebcb3c36.ctex"
+
+[resource]
+texture = SubResource("CompressedTexture2D_g66x5")
+texture_margin_left = 32.0
+texture_margin_right = 32.0
+expand_margin_left = 8.0
+expand_margin_right = 8.0
+modulate_color = Color(0.145098, 0.827451, 0.4, 1)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0uucw6f5xxnq"
-path="res://.godot/imported/X-Button.png-e0f1f769a02d346d29bb53fe900fd407.ctex"
+uid="uid://m4seawub7l6f"
+path="res://.godot/imported/y_rounded_corner.png-f8a90e97eb82b2464412cc8135503451.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://themes/WindowsXP/Styles/Windows/X-Button.png"
-dest_files=["res://.godot/imported/X-Button.png-e0f1f769a02d346d29bb53fe900fd407.ctex"]
+source_file="res://themes/WindowsXP/Styles/Buttons/y_rounded_corner.png"
+dest_files=["res://.godot/imported/y_rounded_corner.png-f8a90e97eb82b2464412cc8135503451.ctex"]
 
 [params]
 
@@ -30,5 +30,5 @@ process/premult_alpha=false
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
-process/size_limit=32
+process/size_limit=0
 detect_3d/compress_to=1
