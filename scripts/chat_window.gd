@@ -66,7 +66,8 @@ func load(content : Content):
 				"Basti":
 					await get_tree().create_timer(waiting_list[1]+0.4).timeout
 					add(content, message_response.instantiate(), basti_container, true)
-			
+		_:
+			print("Couldn't match uid: " + content.uid + " for id " + content.id)
 
 func add(content : Content, message : Node, container : VBoxContainer, response : bool = false):
 		
