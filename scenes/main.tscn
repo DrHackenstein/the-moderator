@@ -76,9 +76,11 @@ layout_mode = 2
 text = "23:45"
 horizontal_alignment = 2
 
-[node name="Mod_Window" parent="." instance=ExtResource("3_7q355")]
+[node name="Mod_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_7q355")]
 unique_name_in_owner = true
+task_button = NodePath("../Desktop/Task Bar/HBoxContainer/Mod_Button")
 
-[node name="Chat_Window" parent="." instance=ExtResource("3_34at8")]
+[node name="Chat_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_34at8")]
 unique_name_in_owner = true
 position = Vector2i(159, 26)
+task_button = NodePath("../Desktop/Task Bar/HBoxContainer/Chat_Button")
