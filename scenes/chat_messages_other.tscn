@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://scripts/chat_message.gd" id="2_odrhu"]
 
 [node name="Message" type="MarginContainer" node_paths=PackedStringArray("message")]
-custom_minimum_size = Vector2(800, 50)
+custom_minimum_size = Vector2(800, 100)
 offset_right = 800.0
 offset_bottom = 120.0
 theme = ExtResource("1_4gmo0")
@@ -16,6 +16,7 @@ script = ExtResource("2_odrhu")
 message = NodePath("Panel/Content/MarginContainer/Message")
 
 [node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 theme = ExtResource("1_4gmo0")
 
@@ -29,8 +30,10 @@ theme = ExtResource("1_4gmo0")
 alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel/Content"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 4
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15

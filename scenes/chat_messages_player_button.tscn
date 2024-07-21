@@ -11,7 +11,7 @@
 [sub_resource type="Theme" id="Theme_tj7gw"]
 
 [node name="Message" type="MarginContainer" node_paths=PackedStringArray("message")]
-custom_minimum_size = Vector2(800, 120)
+custom_minimum_size = Vector2(800, 100)
 offset_right = 800.0
 offset_bottom = 120.0
 theme = ExtResource("1_5pmib")
@@ -49,7 +49,7 @@ alignment = 0
 [node name="Message" type="RichTextLabel" parent="Panel/Content"]
 visible = false
 clip_contents = false
-custom_minimum_size = Vector2(250, 150)
+custom_minimum_size = Vector2(250, 100)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
