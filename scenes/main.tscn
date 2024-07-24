@@ -28,7 +28,6 @@ texture_margin_left = 8.0
 texture_margin_top = 8.0
 texture_margin_right = 8.0
 texture_margin_bottom = 8.0
-expand_margin_left = 16.0
 modulate_color = Color(1.05888e-06, 0.69624, 1.15514e-06, 1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8al4j"]
@@ -154,22 +153,31 @@ window = NodePath("../../../../Guideline")
 window_visible = false
 
 [node name="Time" type="HBoxContainer" parent="Desktop/Taskleiste/HBoxContainer"]
-custom_minimum_size = Vector2(1390, 0)
 layout_mode = 2
+size_flags_horizontal = 3
 alignment = 2
 
-[node name="Label" type="Label" parent="Desktop/Taskleiste/HBoxContainer/Time"]
+[node name="MarginContainer" type="MarginContainer" parent="Desktop/Taskleiste/HBoxContainer/Time"]
 layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="Label" parent="Desktop/Taskleiste/HBoxContainer/Time/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
 text = "23:45"
 horizontal_alignment = 2
 
 [node name="Mod_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_7q355")]
 unique_name_in_owner = true
-position = Vector2i(40, 40)
+position = Vector2i(0, 26)
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Mod_Button")
 
 [node name="Chat_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_34at8")]
 unique_name_in_owner = true
+position = Vector2i(0, 26)
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Chat_Button")
 
 [node name="Guideline" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("15_lif84")]
