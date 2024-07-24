@@ -172,7 +172,6 @@ horizontal_alignment = 2
 
 [node name="Mod_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_7q355")]
 unique_name_in_owner = true
-position = Vector2i(50, 26)
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Mod_Button")
 
 [node name="Chat_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_34at8")]
@@ -181,5 +180,4 @@ visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Chat_Button")
 
 [node name="Guideline" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("15_lif84")]
-position = Vector2i(1000, 129)
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Guideline_Button")
