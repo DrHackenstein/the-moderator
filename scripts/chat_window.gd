@@ -1,5 +1,7 @@
 extends Window
 
+@export var task_button : Button
+
 @export var doro_avatar : Texture2D
 @export var doro_avatar_notification : Texture2D
 @export var basti_avatar : Texture2D
@@ -13,7 +15,7 @@ extends Window
 @export var basti_chat : Control
 @export var basti_container : VBoxContainer
 
-@export var task_button : Button
+signal on_notification_received
 
 var id = "chat"
 var message_player
@@ -33,7 +35,6 @@ func _ready():
 	load_message_nodes()
 	doro_button.button_down.connect(toggle_doro)
 	basti_button.button_down.connect(toggle_basti)
-	close_requested.connect(task_button.close)
 	
 func load_message_nodes():
 	if message_other == null:
@@ -97,8 +98,8 @@ func add(content : Content, message : Node, container : VBoxContainer, response 
 					doro_button.set_button_icon(doro_avatar_notification)
 				if content.uid == "Basti":
 					basti_button.set_button_icon(basti_avatar_notification)
-					
-				task_button.set_notification( true )
+				on_notification_received.emit()
+				print("Chat sends NOTIFY")
 		
 		scrolldown(container)
 
@@ -135,13 +136,10 @@ func scrolldown(container : VBoxContainer):
 
 func _process(delta):
 	if has_focus():
-		task_button.set_notification( false )
-		if Globals.focus != id:
-			Globals.focus = id
-			if doro_chat.is_visible():
-				doro_button.set_button_icon(doro_avatar)
-			else:
-				basti_button.set_button_icon(basti_avatar)
+		if doro_chat.is_visible():
+			doro_button.set_button_icon(doro_avatar)
+		else:
+			basti_button.set_button_icon(basti_avatar)
 
 var debug = false
 func _input(event):

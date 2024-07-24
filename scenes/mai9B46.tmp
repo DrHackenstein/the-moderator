@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
 [ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
-[ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderator_window.tscn" id="3_7q355"]
-[ext_resource type="PackedScene" uid="uid://c2xfgsrf7dco6" path="res://scenes/chat_window.tscn" id="3_34at8"]
+[ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
+[ext_resource type="PackedScene" uid="uid://c2xfgsrf7dco6" path="res://scenes/chatWindow.tscn" id="3_34at8"]
 [ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
 [ext_resource type="FontFile" uid="uid://ckfm02qvtyuvl" path="res://themes/WindowsXP/Fonts/arialbi.ttf" id="4_l6o04"]
 [ext_resource type="Texture2D" uid="uid://b7wakx3vkc37v" path="res://images/Yps_Profile_Blue.png" id="4_o165v"]
@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bv1w4iy45hntj" path="res://sounds/new_mod.mp3" id="7_k4qio"]
 [ext_resource type="Texture2D" uid="uid://gxie5l774pwy" path="res://images/ThatsUpp_Icon_message.png" id="8_v0bkq"]
 [ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
-[ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines_window.tscn" id="15_lif84"]
+[ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines.tscn" id="15_lif84"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k2wey"]
 load_path = "res://.godot/imported/win_xp_taskleiste.png-9ffd69933ef5c50057b1bea4b98d979c.ctex"
@@ -179,6 +179,7 @@ task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Mod_Button")
 unique_name_in_owner = true
 visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Chat_Button")
+on_notification_received = Signal()
 
 [node name="Guideline" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("15_lif84")]
 position = Vector2i(1000, 129)

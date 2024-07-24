@@ -1,5 +1,9 @@
 extends Window
 
+@export var task_button : Button
+
+@export var content_lock : Node
+
 @export var reports : ItemList
 @export var history : ItemList
 
@@ -10,9 +14,9 @@ extends Window
 @export var delete : Button
 @export var ban : Button
 
-@export var task_button : Button
-
 @onready var content_manager = %Content_Manager
+
+signal on_notification_received
 
 var id = "mod"
 var content = []
@@ -37,9 +41,11 @@ func _ready():
 	delete.button_down.connect(delete_report)
 	ban.button_down.connect(ban_report)
 	
+	# Clear Example Content
 	clear()
 	
-	close_requested.connect(task_button.close)
+	# Overlay Locked State
+	content_lock.show()
 
 
 func load(new_content : Content):
@@ -50,7 +56,7 @@ func load(new_content : Content):
 	content.append(new_content)
 	reports.add_item(prefix + new_content.id)
 	wait_time -= time
-	task_button.set_notification( true )
+	on_notification_received.emit()
 
 func select(i : int):
 	print("Selected ", i)
@@ -63,6 +69,7 @@ func select(i : int):
 		content_manager.load_content(active.follow[0], true)
 		active.follow.clear()
 	
+	content_lock.hide()
 	okay.show()
 	delete.show()
 	ban.show()
@@ -101,12 +108,6 @@ func clear():
 	okay.hide()
 	delete.hide()
 	ban.hide()
-
-func _process(delta):
-	if has_focus():
-		task_button.set_notification( false )
-		if Globals.focus != id:
-			Globals.focus = id
 
 var debug = false
 func _input(event):

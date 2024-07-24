@@ -1,11 +1,12 @@
 extends MarginContainer
 
-@export var message : Button
+@export var button : Button
+@export var message : RichTextLabel
  
 var content : Content
 
 func _ready():
-	message.button_down.connect(select)
+	button.button_down.connect(select)
 
 func load(new_content : Content):
 	content = new_content
