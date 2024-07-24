@@ -1,58 +1,57 @@
-[gd_scene load_steps=8 format=3 uid="uid://5j564stlgfm6"]
+[gd_scene load_steps=6 format=3 uid="uid://5j564stlgfm6"]
 
 [ext_resource type="Theme" uid="uid://dcnjggid7l0pw" path="res://themes/WindowsXP/message_us.tres" id="1_5pmib"]
 [ext_resource type="Script" path="res://scripts/chat_messages_player_button.gd" id="2_jd5e1"]
 [ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="3_l66lu"]
-[ext_resource type="StyleBox" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message_normal.tres" id="4_665b6"]
-[ext_resource type="StyleBox" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message.tres" id="4_sya0x"]
+[ext_resource type="StyleBox" uid="uid://bw2yhyb8prigf" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message_normal.tres" id="4_665b6"]
+[ext_resource type="StyleBox" uid="uid://bcw1okgtlv117" path="res://themes/WindowsXP/Styles/Buttons/thatsUp_button_message.tres" id="4_sya0x"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2bpg"]
-
-[sub_resource type="Theme" id="Theme_tj7gw"]
-
-[node name="Message" type="MarginContainer" node_paths=PackedStringArray("message")]
+[node name="Message" type="MarginContainer" node_paths=PackedStringArray("button", "message")]
 custom_minimum_size = Vector2(800, 100)
 offset_right = 800.0
 offset_bottom = 120.0
 theme = ExtResource("1_5pmib")
-theme_override_constants/margin_left = 10
+theme_override_constants/margin_left = 50
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 script = ExtResource("2_jd5e1")
-message = NodePath("Panel/Content/Button")
+button = NodePath("Button")
+message = NodePath("Button/Content/MarginContainer/Message")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 2
-theme = ExtResource("1_5pmib")
-theme_override_styles/panel = SubResource("StyleBoxEmpty_v2bpg")
-
-[node name="Content" type="HBoxContainer" parent="Panel"]
-custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-offset_left = 51.0
-offset_right = 779.0
-offset_bottom = 100.0
-theme = ExtResource("3_l66lu")
-
-[node name="Button" type="Button" parent="Panel/Content"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = SubResource("Theme_tj7gw")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_styles/normal = ExtResource("4_665b6")
 theme_override_styles/hover = ExtResource("4_sya0x")
-text = "Woop woop"
 alignment = 0
 
-[node name="Message" type="RichTextLabel" parent="Panel/Content"]
-visible = false
-clip_contents = false
-custom_minimum_size = Vector2(250, 100)
+[node name="Content" type="HBoxContainer" parent="Button"]
+layout_mode = 2
+offset_left = 20.0
+offset_right = 718.0
+offset_bottom = 99.0
+mouse_filter = 2
+theme = ExtResource("3_l66lu")
+
+[node name="MarginContainer" type="MarginContainer" parent="Button/Content"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+
+[node name="Message" type="RichTextLabel" parent="Button/Content/MarginContainer"]
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
 theme = ExtResource("1_5pmib")
 text = "Woop woop
 "
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+theme = ExtResource("1_5pmib")
