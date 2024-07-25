@@ -26,7 +26,6 @@ func _process(delta):
 	if window.has_focus():
 		if focused != window.name:
 			focused = window.name
-			print("Focus ", window.name)
 		
 		if in_focus == false:
 			set_focus(true)
@@ -41,14 +40,10 @@ func _process(delta):
 		in_focus = false
 
 func handle_click():
-	print("Handle click on  ", window.name, " button")
 	if window.is_visible():
-		print("Window is visible ", window.name)
 		if focused == window.name:
-			print("Close ", window.name)
 			close()
 		else:
-			print("Focus ", window.name)
 			focus()
 			
 	else:
@@ -61,6 +56,7 @@ func focus():
 func close():
 	window.hide()
 	set_focus(false)
+	release_focus()
 	
 func open():
 	window.show()
@@ -73,7 +69,6 @@ func set_focus(focus : bool):
 			remove_theme_stylebox_override("normal")
 
 func notify():
-	print(name, ": NOTIFY!")
 	set_notification(true)
 
 func set_notification(notify : bool):
