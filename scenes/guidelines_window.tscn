@@ -25,16 +25,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 1
 theme_override_constants/margin_bottom = 1
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
 layout_mode = 2
-
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/ScrollContainer"]
-clip_contents = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+theme = ExtResource("1_utq46")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Y Community Guidelines
 

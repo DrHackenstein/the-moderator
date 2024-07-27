@@ -16,6 +16,7 @@ load_path = "res://.godot/imported/x_button_20x20.png-078432e20af55a53ae09dda977
 
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(0.95, 0.95, 0.95, 1)
 Button/fonts/font = ExtResource("1_dbqs1")
 Button/styles/focus = ExtResource("2_jtwov")
 Button/styles/hover = ExtResource("3_g880e")
