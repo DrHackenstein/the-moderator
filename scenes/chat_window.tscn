@@ -10,10 +10,10 @@
 
 [node name="Chat" type="Window" node_paths=PackedStringArray("doro_button", "basti_button", "doro_chat", "doro_chat_container", "basti_chat", "basti_container")]
 title = "Thats Upp Chat"
-position = Vector2i(900, 100)
-size = Vector2i(820, 900)
-min_size = Vector2i(820, 900)
-max_size = Vector2i(820, 900)
+position = Vector2i(866, 26)
+size = Vector2i(820, 875)
+min_size = Vector2i(820, 875)
+max_size = Vector2i(820, 875)
 theme = ExtResource("1_3wmun")
 script = ExtResource("2_pouvr")
 doro_avatar = ExtResource("4_cabl4")
@@ -40,11 +40,9 @@ layout_mode = 2
 color = Color(0.0602228, 0.37406, 0.170975, 1)
 
 [node name="Content" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(700, 900)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_jocic")
@@ -75,9 +73,7 @@ icon = ExtResource("2_7u2cp")
 expand_icon = true
 
 [node name="Chat" type="AspectRatioContainer" parent="Content"]
-clip_contents = true
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 3
 theme = ExtResource("2_jocic")
 alignment_horizontal = 0
