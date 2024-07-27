@@ -57,6 +57,7 @@ func load(new_content : Content):
 	reports.add_item(prefix + new_content.id)
 	wait_time -= time
 	on_notification_received.emit()
+	content_lock.hide()
 
 func select(i : int):
 	print("Selected ", i)
@@ -69,7 +70,6 @@ func select(i : int):
 		content_manager.load_content(active.follow[0], true)
 		active.follow.clear()
 	
-	content_lock.hide()
 	okay.show()
 	delete.show()
 	ban.show()
