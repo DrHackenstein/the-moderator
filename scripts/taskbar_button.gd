@@ -1,6 +1,6 @@
 extends Button
 
-@export var window : Node
+@export var window : Window
 @export var icon_normal : Texture2D
 @export var icon_notification : Texture2D
 @export var sfx : AudioStreamPlayer
@@ -10,7 +10,8 @@ var hover_style
 var focus_style
 
 static var focused = ""
-var in_focus = false
+static var visible_windows = []
+static var hidden_windows = []
 
 func _ready():
 	normal_style = get_theme_stylebox("normal", "Button")
@@ -20,28 +21,35 @@ func _ready():
 	window.close_requested.connect(close)
 	window.on_notification_received.connect(notify)
 	
+	if window.is_visible():
+		visible_windows.append(self)
+	else:
+		hidden_windows.append(self)
+	
 	pressed.connect(handle_click)
 
 func _process(delta):
-	if window.has_focus():
-		if focused != window.name:
-			focused = window.name
+	if !window.is_visible():
+		return
 		
-		if in_focus == false:
-			set_focus(true)
+	if window.has_focus():
+		if visible_windows.front() != self:
+			print(window.name, " has gained focus (button focus: ",has_focus(), ")")
+			focus()
 		
 		set_notification( false )
-		in_focus = true
 		
 	else:
-		if in_focus == true:
-			set_focus(false)
-			
-		in_focus = false
+		if visible_windows.front() == self:
+			print(window.name, " has lost focus (button focus: ",has_focus(), ")")
+			set_button_style_focused(false)
+		release_focus()
+			#if visible_windows.front() != null:
+				#visible_windows.front().focus()
 
 func handle_click():
 	if window.is_visible():
-		if focused == window.name:
+		if visible_windows.front() == self:
 			close()
 		else:
 			focus()
@@ -51,18 +59,41 @@ func handle_click():
 
 func focus():
 	window.grab_focus()
-	set_focus(true)
+	set_button_style_focused(true)
+	
+	if visible_windows.front() != null:
+		visible_windows.front().unfocus()
+		
+	visible_windows.erase(self)
+	visible_windows.push_front(self)
+
+func unfocus():
+	set_button_style_focused(false)
 
 func close():
 	window.hide()
-	set_focus(false)
 	release_focus()
+	set_button_style_focused(false)
+	
+	visible_windows.erase(self)
+	hidden_windows.append(self)
+	
+	if visible_windows.front() != null:
+		visible_windows.front().focus()
 	
 func open():
 	window.show()
+	window.grab_focus()
 	focus()
+	hidden_windows.erase(self)
+	
+	if visible_windows.front() != null:
+		visible_windows.front().unfocus()
+		
+	visible_windows.push_front(self)
 
-func set_focus(focus : bool):
+func set_button_style_focused(focus : bool):
+	print(name, " SET BUTTON FOCUS STYLE ", focus)
 	if(focus):
 			add_theme_stylebox_override("normal", focus_style)
 	else:
@@ -73,12 +104,13 @@ func notify():
 
 func set_notification(notify : bool):
 	if notify:
+		add_theme_stylebox_override("normal", hover_style)
 		if(icon_notification != null):
 			set_button_icon(icon_notification)
-			add_theme_stylebox_override("normal", hover_style)
 		if(sfx != null):
 			sfx.play()
 	else:
-		if(icon_normal != null):
+		if(get_theme_stylebox("normal") == hover_style):
 			remove_theme_stylebox_override("normal")
+		if(icon_normal != null):
 			set_button_icon(icon_normal)
