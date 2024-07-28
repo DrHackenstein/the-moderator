@@ -15,7 +15,7 @@ func _ready():
 	load_content_file()
 
 	#Load Start Message
-	self.load_content(content["G1"].id, true)
+	self.load_content(content[start].id, true)
 	#self.load_content(content["M2b"].id, true)
 	#self.load_content(content["C1"].id, true)
 	#self.load_content(content["E1"].id, true)
