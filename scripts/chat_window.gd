@@ -29,8 +29,8 @@ var responses = []
 var waiting_times = [0, 0]
 var typing_messages = [null, null]
 
-var wait_min_mod = 0.2
-var wait_max_mod = 0.6
+var wait_min_mod = 0.25
+var wait_max_mod = 0.7
 var wait_backup = [wait_min_mod, wait_max_mod]
 
 func _ready():
@@ -77,6 +77,9 @@ func load(content : Content):
 
 func load_message_others(id : int, content : Content):
 	var wait_time = content.text.split(" ").size() * randf_range(wait_min_mod, wait_max_mod)
+	if ! debug:
+		wait_time += 1
+	
 	waiting_times[id] += wait_time
 	
 	await get_tree().create_timer(waiting_times[id] - wait_time + 0.5).timeout
