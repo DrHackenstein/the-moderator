@@ -99,9 +99,10 @@ func display_message(content : Content, message : Node, container : VBoxContaine
 		container.add_child(message)
 		
 		if( response ):
+			# Remove Previous responses
 			if responses.size() > 0 and responses[0].content.parent != message.content.parent:
 				remove_response_buttons()
-				
+			print("DISPLAY RESPONSE")
 			responses.append(message)
 		else:
 			if ! has_focus() || ((content.uid == "Doro" && ! doro_chat.is_visible()) || (content.uid == "Basti" && ! basti_chat.is_visible()) ):
@@ -110,7 +111,6 @@ func display_message(content : Content, message : Node, container : VBoxContaine
 				if content.uid == "Basti":
 					basti_button.set_button_icon(basti_avatar_notification)
 				on_notification_received.emit()
-				print("Chat sends NOTIFY")
 		
 		scrolldown(container)
 
@@ -122,7 +122,7 @@ func add_typing( id : int ):
 func remove_typing(id : int):
 	typing_messages[id].queue_free()
 
-func add_response(content : Content):
+func add_response_text(content : Content):
 		if content.wid == "Doro":
 			display_message(content, message_player.instantiate(), doro_chat_container)
 			

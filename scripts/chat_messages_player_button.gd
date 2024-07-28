@@ -18,7 +18,7 @@ func select():
 	
 	# Add self as response message
 	var chat_window = get_tree().current_scene.get_node("%Chat_Window")
-	chat_window.add_response(content)
+	chat_window.add_response_text(content)
 	
 	# Delete buttons
 	chat_window.remove_response_buttons()

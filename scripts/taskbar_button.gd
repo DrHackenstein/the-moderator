@@ -34,14 +34,14 @@ func _process(delta):
 		
 	if window.has_focus():
 		if visible_windows.front() != self:
-			print(window.name, " has gained focus (button focus: ",has_focus(), ")")
+			#print(window.name, " has gained focus (button focus: ",has_focus(), ")")
 			focus()
 		
 		set_notification( false )
 		
 	else:
 		if visible_windows.front() == self:
-			print(window.name, " has lost focus (button focus: ",has_focus(), ")")
+			#print(window.name, " has lost focus (button focus: ",has_focus(), ")")
 			set_button_style_focused(false)
 		release_focus()
 			#if visible_windows.front() != null:
@@ -93,7 +93,7 @@ func open():
 	visible_windows.push_front(self)
 
 func set_button_style_focused(focus : bool):
-	print(name, " SET BUTTON FOCUS STYLE ", focus)
+	#print(name, " SET BUTTON FOCUS STYLE ", focus)
 	if(focus):
 			add_theme_stylebox_override("normal", focus_style)
 	else:
