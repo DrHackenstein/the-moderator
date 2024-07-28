@@ -240,7 +240,7 @@ C4,alles gut,Basti,Basti,"C5,C6",,,clowngesellschaft,,TRUE,TRUE
 C5,"Nicht nur, geht auch um ein echtes Kennenlernen",Player,Basti,C7,,,clowngesellschaft,,TRUE,TRUE
 C6,Gibt ja noch eine welt außerhalb von CS,Player,Basti,C7,,,clowngesellschaft,,TRUE,TRUE
 C7,schaun wir mal,Basti,Basti,M5,,,clowngesellschaft,,TRUE,TRUE
-M5,WTF es gibt immer noch Leute die an COVID glauben ❗️❓ was eine 🤡gesellschaft wo ist diese corona jetz?? die @regierung hat uns einfach alle verarscht 👺 #sadbuttrue,,Mod,C8a,,,clowngesellschaft,,TRUE,TRUE
+M5,WTF es gibt immer noch Leute die an COVID glauben ❗️❓ was eine 🤡gesellschaft wo ist diese corona jetz?? die @regierung hat uns einfach alle verarscht 👺 #sadbuttrue,UffWache,Mod,C8a,,,clowngesellschaft,,TRUE,TRUE
 C8a,vielleicht ^^,Basti,Basti,C8,,,,,TRUE,TRUE
 C8,Der letzte Post war etwas zur Pandemie,Player,Basti,C9,,,clowngesellschaft,,TRUE,TRUE
 C9,ja un?,Basti,Basti,C10,,,clowngesellschaft,,TRUE,TRUE
@@ -373,7 +373,7 @@ F35,ich dachte dass DU mich verstehn würdest,Basti,Basti,F36,,,crisis,,TRUE,TRU
 F36,wach mal auf 💊,Basti,Basti,F37,,,crisis,,TRUE,TRUE
 F37,sie ist nicht besonders,Basti,Basti,F38,,,crisis,,TRUE,TRUE
 F38,warum schützt du sie??,Basti,Basti,F39,,,crisis,,TRUE,TRUE
-F39,du bist genauso blöd wie der rest der 💩gesellscahft,Basti,Basti,"G1,H1",,,crisis,end,TRUE,TRUE
+F39,du bist genauso blöd wie der rest der 💩gesellscahft,Basti,Basti,G1,,,crisis,end,TRUE,TRUE
 G1,Ich werde dich beim Admin melden,Player,Basti,G2,,,option 1,start,TRUE,TRUE
 G2,das zum thema dankbarkeit!!,Basti,Basti,G3,,,option 1,,TRUE,TRUE
 G3,aber macht nix hab dir ja nur nen job besorgt,Basti,Basti,G4,,,option 1,,TRUE,TRUE
@@ -383,15 +383,15 @@ G7,drohungen sind ja eckelig,Player,Basti,G8,,,option 1,,TRUE,TRUE
 G8,ich kann mir deine hetze nicht mehr geben,Player,Basti,G9,,,option 1,,TRUE,TRUE
 G9,[BLOCKIEREN UND MELDEN],Player,Basti,G10,,,option 1,,TRUE,TRUE
 G10,"[User ""Basti"" wurde blockiert]",Basti,Basti,,,,option 1,end,TRUE,TRUE
-H1,Lösch den Post wieder,Player,Basti,H2,,,option 2,start,TRUE,TRUE
+H1,Lösch den Post wieder,Player,Basti,H2,,,option 2,start,FALSE,TRUE
 H2,das zum thema dankbarkeit!!,Basti,Basti,H3,,,option 2,,TRUE,TRUE
 H3,aber macht nix hab dir ja nur nen job besorgt,Basti,Basti,H4,,,option 1,,TRUE,TRUE
 H4,das kannst du doch nicht ernst meinen,Player,Basti,H5,,,option 2,,TRUE,TRUE
 H5,kk hab den post gelöscht ,Basti,Basti,H6,,,option 2,,TRUE,TRUE
 H6,happy??,Basti,Basti,"H7,H8,H9",,,option 2,,TRUE,TRUE
-H7,[BASTI HILFE ANBIETEN],Player,Basti,H7,,,option 2,,TRUE,TRUE
-H8,[KONTAKT ABBRECHEN],Player,Basti,H8,,,option 2,,TRUE,TRUE
-H9,[BASTI MELDEN],Player,Basti,H9,,,option 2,end,TRUE,TRUE
+H7,[BASTI HILFE ANBIETEN],Player,Basti,,,,option 2,end,TRUE,TRUE
+H8,[KONTAKT ABBRECHEN],Player,Basti,,,,option 2,end,TRUE,TRUE
+H9,[BASTI MELDEN],Player,Basti,,,,option 2,end,TRUE,TRUE
 ,,,,,,,,,,FALSE
 ,,,,,,,,,,FALSE
 ,,,,,,,,,,FALSE
