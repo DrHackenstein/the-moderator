@@ -26,7 +26,8 @@ func _ready():
 		if skip:
 			skip = false
 			continue
-			
+		
+		#Read Line
 		var line = Content.new()
 		line.id = data[0]
 		line.text = data[1]
@@ -38,20 +39,26 @@ func _ready():
 		line.sid = data[7]
 		line.trigger = data[8]
 		
+		#Add line to content library
 		content[ line.id ] = line
 		#print(line.text)
 			
 	file.close()
 	
+	#Load Start Message
 	self.load_content(content["1"].id, true)
+	#self.load_content(content["M2b"].id, true)
+	#self.load_content(content["E1"].id, true)
 
 func load_content( id : String, follow : bool, parent : String = "" ):
 	
 	# Catch Loading Errors 
-	if !self.content.has(id):
-		print("Couldn't find ", id)
+	if !content.has(id):
+		print("Couldn't find ", id, " (Parent=",parent,")")
 		return
-		
+	
+	print("Loading ", id)
+	
 	var content = self.content[id]
 	
 	if parent != "":
@@ -69,7 +76,8 @@ func load_content( id : String, follow : bool, parent : String = "" ):
 				follow = true
 	
 	#Load Follow Ups
-	if ( follow ):
+	if follow && content.follow.size() > 0:
+		print("Loading follows of ", id, ":")
 		for i in content.follow:
 			load_content( i, false, id )
 	
