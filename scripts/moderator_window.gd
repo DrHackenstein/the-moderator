@@ -18,7 +18,6 @@ extends Window
 
 signal on_notification_received
 
-var id = "mod"
 var content = []
 var active : Content
 var active_id = -1

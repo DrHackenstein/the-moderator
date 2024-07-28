@@ -50,17 +50,6 @@ theme = ExtResource("2_jocic")
 [node name="Tabs" type="HBoxContainer" parent="Content"]
 layout_mode = 2
 
-[node name="Doro" type="HBoxContainer" parent="Content/Tabs"]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="Button" type="Button" parent="Content/Tabs/Doro"]
-custom_minimum_size = Vector2(200, 50)
-layout_mode = 2
-text = "Doro"
-icon = ExtResource("4_cabl4")
-expand_icon = true
-
 [node name="Basti" type="HBoxContainer" parent="Content/Tabs"]
 layout_mode = 2
 size_flags_horizontal = 0
@@ -70,6 +59,17 @@ custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
 text = "Basti"
 icon = ExtResource("2_7u2cp")
+expand_icon = true
+
+[node name="Doro" type="HBoxContainer" parent="Content/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content/Tabs/Doro"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+text = "Doro"
+icon = ExtResource("4_cabl4")
 expand_icon = true
 
 [node name="Chat" type="AspectRatioContainer" parent="Content"]

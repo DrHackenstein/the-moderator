@@ -17,22 +17,23 @@ extends Window
 
 signal on_notification_received
 
-var id = "chat"
 var message_player
 var message_other
+var message_other_typing
 var message_response
 
 var scrollbar
 var scrollcontainer
+@onready var containers = [doro_chat_container, basti_container]
 var responses = []
-var waiting_list = [0, 0]
+var waiting_times = [0, 0]
+var typing_messages = [null, null]
 
-var wait_min = 1
-var wait_max = 3
-var wait_backup = [wait_min, wait_max]
+var wait_min_mod = 0.2
+var wait_max_mod = 0.6
+var wait_backup = [wait_min_mod, wait_max_mod]
 
 func _ready():
-	load_message_nodes()
 	doro_button.button_down.connect(toggle_doro)
 	basti_button.button_down.connect(toggle_basti)
 	
@@ -45,41 +46,48 @@ func load_message_nodes():
 		
 	if message_response == null:
 		message_response = load("res://scenes/chat_messages_player_button.tscn")
+		
+	if message_other_typing == null:
+		message_other_typing = load("res://scenes/chat_messages_other_typing.tscn")
 
 func load(content : Content):
 	print("Loading Chat: " + content.id + " " + content.text)
+	await get_tree().create_timer(0.5).timeout
 	
 	load_message_nodes()
 	
-	var message
-	var wait_time
-	
 	match content.uid:
 		"Doro":
-			wait_time = randf_range(wait_min, wait_max)
-			waiting_list[0] += wait_time
-			await get_tree().create_timer(waiting_list[0]).timeout
-			add(content, message_other.instantiate(), doro_chat_container)
-			waiting_list[0] -= wait_time
+			load_message_others(0, content)
+			
 		"Basti":
-			wait_time = randf_range(wait_min, wait_max)
-			waiting_list[1] += wait_time
-			await get_tree().create_timer(waiting_list[1]).timeout
-			add(content, message_other.instantiate(), basti_container)
-			waiting_list[1] -= wait_time
+			load_message_others(1, content)
+			
 		"Player":
 			match content.wid:
 				"Doro":
-					await get_tree().create_timer(waiting_list[0]+0.4).timeout
-					add(content, message_response.instantiate(), doro_chat_container, true)
+					await get_tree().create_timer(waiting_times[0]+1).timeout
+					display_message(content, message_response.instantiate(), doro_chat_container, true)
 			
 				"Basti":
-					await get_tree().create_timer(waiting_list[1]+0.4).timeout
-					add(content, message_response.instantiate(), basti_container, true)
+					await get_tree().create_timer(waiting_times[1]+1).timeout
+					display_message(content, message_response.instantiate(), basti_container, true)
 		_:
 			print("Couldn't match uid: " + content.uid + " for id " + content.id)
 
-func add(content : Content, message : Node, container : VBoxContainer, response : bool = false):
+func load_message_others(id : int, content : Content):
+	var wait_time = content.text.split(" ").size() * randf_range(wait_min_mod, wait_max_mod)
+	waiting_times[id] += wait_time
+	
+	await get_tree().create_timer(waiting_times[id] - wait_time + 0.5).timeout
+	add_typing(id)
+	await get_tree().create_timer(wait_time - 0.5).timeout
+	remove_typing(id)
+	
+	display_message(content, message_other.instantiate(), containers[id])
+	waiting_times[id] -= wait_time
+
+func display_message(content : Content, message : Node, container : VBoxContainer, response : bool = false):
 		
 		if debug:
 			content.text = content.id + ": " + content.text
@@ -103,13 +111,20 @@ func add(content : Content, message : Node, container : VBoxContainer, response 
 		
 		scrolldown(container)
 
+func add_typing( id : int ):
+	typing_messages[id] = message_other_typing.instantiate()
+	containers[id].add_child( typing_messages[id] )
+	scrolldown(containers[id])
+
+func remove_typing(id : int):
+	typing_messages[id].queue_free()
 
 func add_response(content : Content):
 		if content.wid == "Doro":
-			add(content, message_player.instantiate(), doro_chat_container)
+			display_message(content, message_player.instantiate(), doro_chat_container)
 			
 		if content.wid == "Basti":
-			add(content, message_player.instantiate(), basti_container)
+			display_message(content, message_player.instantiate(), basti_container)
 
 func remove_response_buttons():
 	for response in responses:
@@ -130,6 +145,7 @@ func toggle_basti():
 
 func scrolldown(container : VBoxContainer):
 	await get_tree().process_frame
+	await get_tree().process_frame
 	scrollcontainer = container.get_parent()
 	scrollbar = scrollcontainer.get_v_scroll_bar()
 	scrollcontainer.scroll_vertical = scrollbar.max_value
@@ -147,9 +163,9 @@ func _input(event):
 		debug = !debug
 		if debug:
 			print("ENABLE CHAT WINDOW DEBUG")
-			wait_min = 0
-			wait_max = 0
+			wait_min_mod = 0.1
+			wait_max_mod = 0.1
 		else:
 			print("DISABLE CHAT WINDOW DEBUG")
-			wait_min = wait_backup[0]
-			wait_max = wait_backup[1]
+			wait_min_mod = wait_backup[0]
+			wait_max_mod = wait_backup[1]
