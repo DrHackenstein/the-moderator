@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://cewvib0teen18"]
+
+[ext_resource type="Theme" uid="uid://bt7s63fmh2rlb" path="res://themes/WindowsXP/message_other.tres" id="1_077mw"]
+[ext_resource type="Script" path="res://scripts/chat_message.gd" id="2_gemo5"]
+[ext_resource type="Script" path="res://scenes/message_dots.gd" id="3_ox50b"]
+
+[node name="Message" type="MarginContainer" node_paths=PackedStringArray("message")]
+custom_minimum_size = Vector2(200, 100)
+offset_right = 200.0
+offset_bottom = 120.0
+theme = ExtResource("1_077mw")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+script = ExtResource("2_gemo5")
+message = NodePath("Panel/Content/MarginContainer/Message")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme = ExtResource("1_077mw")
+
+[node name="Content" type="HBoxContainer" parent="Panel"]
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+offset_left = 20.0
+offset_right = 763.0
+offset_bottom = 100.0
+theme = ExtResource("1_077mw")
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/Content"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+
+[node name="Message" type="RichTextLabel" parent="Panel/Content/MarginContainer" node_paths=PackedStringArray("timer")]
+clip_contents = false
+custom_minimum_size = Vector2(250, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_077mw")
+theme_override_font_sizes/normal_font_size = 20
+text = "..."
+scroll_active = false
+script = ExtResource("3_ox50b")
+timer = NodePath("../../../../Timer")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true

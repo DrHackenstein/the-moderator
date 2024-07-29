@@ -1,5 +1,9 @@
 extends Window
 
+@export var task_button : Button
+
+@export var content_lock : Node
+
 @export var reports : ItemList
 @export var history : ItemList
 
@@ -10,11 +14,10 @@ extends Window
 @export var delete : Button
 @export var ban : Button
 
-@export var task_button : Button
-
 @onready var content_manager = %Content_Manager
 
-var id = "mod"
+signal on_notification_received
+
 var content = []
 var active : Content
 var active_id = -1
@@ -37,29 +40,34 @@ func _ready():
 	delete.button_down.connect(delete_report)
 	ban.button_down.connect(ban_report)
 	
+	# Clear Example Content
 	clear()
 	
-	close_requested.connect(task_button.close)
+	# Overlay Locked State
+	content_lock.show()
 
 
 func load(new_content : Content):
-	print("Loading " + new_content.id)
+	print("Process Report  " + new_content.id + ": " + new_content.text)
 	var time = randf_range(wait_min, wait_max)
 	wait_time += time
 	await get_tree().create_timer(wait_time).timeout
 	content.append(new_content)
 	reports.add_item(prefix + new_content.id)
 	wait_time -= time
-	task_button.set_notification( true )
+	on_notification_received.emit()
+	content_lock.hide()
 
 func select(i : int):
-	print("Selected ", i)
 	active_id = i
 	active = content[i]
 	username.text = active.uid
 	post.text = active.text
 	
+	print("Select  Report  ", active.id)
+	
 	if(active.follow.size() > 0):
+		print("Loading Report  ", active.id, " followers:")
 		content_manager.load_content(active.follow[0], true)
 		active.follow.clear()
 	
@@ -68,19 +76,19 @@ func select(i : int):
 	ban.show()
 	
 func okay_report():
-	print("Okay")
+	print("Allow   Report  ", active.id)
 	if(active.buttons.size() > 0):
 		content_manager.load_content(active.buttons[0], true)
 	process_active()
 	
 func delete_report():
-	print("Delete")
+	print("Delete  Report  ", active.id)
 	if(active.buttons.size() > 1):
 		content_manager.load_content(active.buttons[1], true)
 	process_active()
 	
 func ban_report():
-	print("Ban")
+	print("BanUser Report  ", active.id)
 	if(active.buttons.size() > 2):
 		content_manager.load_content(active.buttons[2], true)
 	process_active()
@@ -101,12 +109,6 @@ func clear():
 	okay.hide()
 	delete.hide()
 	ban.hide()
-
-func _process(delta):
-	if has_focus():
-		task_button.set_notification( false )
-		if Globals.focus != id:
-			Globals.focus = id
 
 var debug = false
 func _input(event):

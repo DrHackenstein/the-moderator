@@ -1,9 +1,6 @@
 extends Window
 
-@export var doro_avatar : Texture2D
-@export var doro_avatar_notification : Texture2D
-@export var basti_avatar : Texture2D
-@export var basti_avatar_notification : Texture2D
+@export var task_button : Button
 
 @export var doro_button : Button
 @export var basti_button : Button
@@ -13,27 +10,30 @@ extends Window
 @export var basti_chat : Control
 @export var basti_container : VBoxContainer
 
-@export var task_button : Button
+signal on_notification_received
 
-var id = "chat"
 var message_player
 var message_other
+var message_other_typing
 var message_response
 
 var scrollbar
 var scrollcontainer
+@onready var containers = [doro_chat_container, basti_container]
 var responses = []
-var waiting_list = [0, 0]
+var waiting_times = [0, 0]
+var typing_messages = [null, null]
 
-var wait_min = 1
-var wait_max = 3
-var wait_backup = [wait_min, wait_max]
+var wait_min_mod = 0.25
+var wait_max_mod = 0.5
+var wait_backup = [wait_min_mod, wait_max_mod]
 
 func _ready():
-	load_message_nodes()
 	doro_button.button_down.connect(toggle_doro)
+	doro_button.hide()
 	basti_button.button_down.connect(toggle_basti)
-	close_requested.connect(task_button.close)
+	#basti_button.hide()
+	basti_button.focus()
 	
 func load_message_nodes():
 	if message_other == null:
@@ -44,71 +44,107 @@ func load_message_nodes():
 		
 	if message_response == null:
 		message_response = load("res://scenes/chat_messages_player_button.tscn")
+		
+	if message_other_typing == null:
+		message_other_typing = load("res://scenes/chat_messages_other_typing.tscn")
 
 func load(content : Content):
-	print("Loading Chat: " + content.id + " " + content.text)
+	print("Process Message " + content.id + ": " + content.text)
 	
 	load_message_nodes()
 	
-	var message
-	var wait_time
+	if content.uid == "Player" && responses.size() > 0:
+		pass #Special case when response options need to be replaced
+	elif debug:
+		await get_tree().create_timer(0.1).timeout
+	else:
+		await get_tree().create_timer(0.5).timeout
 	
 	match content.uid:
 		"Doro":
-			wait_time = randf_range(wait_min, wait_max)
-			waiting_list[0] += wait_time
-			await get_tree().create_timer(waiting_list[0]).timeout
-			add(content, message_other.instantiate(), doro_chat_container)
-			waiting_list[0] -= wait_time
-		"Basti":
-			wait_time = randf_range(wait_min, wait_max)
-			waiting_list[1] += wait_time
-			await get_tree().create_timer(waiting_list[1]).timeout
-			add(content, message_other.instantiate(), basti_container)
-			waiting_list[1] -= wait_time
-		"Player":
-			match content.wid:
-				"Doro":
-					await get_tree().create_timer(waiting_list[0]+0.4).timeout
-					add(content, message_response.instantiate(), doro_chat_container, true)
+			load_message_others(0, content)
 			
-				"Basti":
-					await get_tree().create_timer(waiting_list[1]+0.4).timeout
-					add(content, message_response.instantiate(), basti_container, true)
+		"Basti":
+			load_message_others(1, content)
+			
+		"Player":
+			load_message_player(content)
 		_:
-			print("Couldn't match uid: " + content.uid + " for id " + content.id)
+			print("Process Message " + content.id + ": FAILED! Couldn't match uid: " + content.uid)
 
-func add(content : Content, message : Node, container : VBoxContainer, response : bool = false):
+func load_message_others(id : int, content : Content):
 		
-		if debug:
-			content.text = content.id + ": " + content.text
+	var wait_time = content.text.split(" ").size() * randf_range(wait_min_mod, wait_max_mod)
+	
+	if ! debug:
+		wait_time += 1
+	
+	waiting_times[id] += wait_time
+	
+	await get_tree().create_timer(waiting_times[id] - wait_time + 0.5).timeout
+	add_typing(id)
+	await get_tree().create_timer(wait_time - 0.5).timeout
+	remove_typing(id)
+	
+	display_message(content, message_other.instantiate(), containers[id])
+	waiting_times[id] -= wait_time
+
+func load_message_player(content : Content):
+	var id = ""
+	match content.wid:
+		"Doro":
+			id = 0
+		"Basti":
+			id = 1
+	
+	if responses.size() > 0:
+		pass #Special case when response options need to be replaced
+	if debug:
+		await get_tree().create_timer(waiting_times[id]+0.1).timeout
+	else:
+		await get_tree().create_timer(waiting_times[id]+0.5).timeout
 		
-		message.load(content)
+	display_message(content, message_response.instantiate(), containers[id], true)
+
+func display_message(content : Content, message : Node, container : VBoxContainer, response : bool = false):
+		
+		message.load(content, debug)
 		container.add_child(message)
 		
 		if( response ):
+			# Remove Previous responses
 			if responses.size() > 0 and responses[0].content.parent != message.content.parent:
 				remove_response_buttons()
-				
 			responses.append(message)
 		else:
+			if content.uid == "Doro":
+				doro_button.show()
+			if content.uid == "Basti":
+				basti_button.show()
+				
 			if ! has_focus() || ((content.uid == "Doro" && ! doro_chat.is_visible()) || (content.uid == "Basti" && ! basti_chat.is_visible()) ):
 				if content.uid == "Doro":
-					doro_button.set_button_icon(doro_avatar_notification)
+					doro_button.notify()
 				if content.uid == "Basti":
-					basti_button.set_button_icon(basti_avatar_notification)
-					
-				task_button.set_notification( true )
+					basti_button.notify()
+				on_notification_received.emit()
 		
 		scrolldown(container)
 
+func add_typing( id : int ):
+	typing_messages[id] = message_other_typing.instantiate()
+	containers[id].add_child( typing_messages[id] )
+	scrolldown(containers[id])
 
-func add_response(content : Content):
+func remove_typing(id : int):
+	typing_messages[id].queue_free()
+
+func add_response_text(content : Content):
 		if content.wid == "Doro":
-			add(content, message_player.instantiate(), doro_chat_container)
+			display_message(content, message_player.instantiate(), doro_chat_container)
 			
 		if content.wid == "Basti":
-			add(content, message_player.instantiate(), basti_container)
+			display_message(content, message_player.instantiate(), basti_container)
 
 func remove_response_buttons():
 	for response in responses:
@@ -117,17 +153,20 @@ func remove_response_buttons():
 
 func toggle_doro():
 	doro_chat.show()
+	doro_button.focus()
 	basti_chat.hide()
-	doro_button.set_button_icon(doro_avatar)
+	basti_button.unfocus()
 	scrolldown(doro_chat_container)
 	
 func toggle_basti():
-	basti_chat.show()
 	doro_chat.hide()
-	basti_button.set_button_icon(basti_avatar)
+	doro_button.unfocus()
+	basti_chat.show()
+	basti_button.focus()
 	scrolldown(basti_container)
 
 func scrolldown(container : VBoxContainer):
+	await get_tree().process_frame
 	await get_tree().process_frame
 	scrollcontainer = container.get_parent()
 	scrollbar = scrollcontainer.get_v_scroll_bar()
@@ -135,13 +174,10 @@ func scrolldown(container : VBoxContainer):
 
 func _process(delta):
 	if has_focus():
-		task_button.set_notification( false )
-		if Globals.focus != id:
-			Globals.focus = id
-			if doro_chat.is_visible():
-				doro_button.set_button_icon(doro_avatar)
-			else:
-				basti_button.set_button_icon(basti_avatar)
+		if doro_chat.is_visible():
+			doro_button.set_notification(false)
+		else:
+			basti_button.set_notification(false)
 
 var debug = false
 func _input(event):
@@ -149,9 +185,9 @@ func _input(event):
 		debug = !debug
 		if debug:
 			print("ENABLE CHAT WINDOW DEBUG")
-			wait_min = 0
-			wait_max = 0
+			wait_min_mod = 0.1
+			wait_max_mod = 0.1
 		else:
 			print("DISABLE CHAT WINDOW DEBUG")
-			wait_min = wait_backup[0]
-			wait_max = wait_backup[1]
+			wait_min_mod = wait_backup[0]
+			wait_max_mod = wait_backup[1]

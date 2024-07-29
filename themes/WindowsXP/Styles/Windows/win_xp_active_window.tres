@@ -1,10 +1,9 @@
 [gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ddy0xpccuynfa"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w2bnh"]
-load_path = "res://.godot/imported/newPanel.png-5955d74183c0a2851df61fa014090111.ctex"
+[ext_resource type="Texture2D" uid="uid://wm3rckv7h6w3" path="res://themes/WindowsXP/Styles/Windows/win_xp_active_panel.png" id="1_4qjtt"]
 
 [resource]
-texture = SubResource("CompressedTexture2D_w2bnh")
+texture = ExtResource("1_4qjtt")
 texture_margin_left = 6.0
 texture_margin_top = 24.0
 texture_margin_right = 6.0

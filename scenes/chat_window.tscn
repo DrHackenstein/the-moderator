@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=3 uid="uid://c2xfgsrf7dco6"]
+
+[ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_3wmun"]
+[ext_resource type="Texture2D" uid="uid://bste3pf3yprmi" path="res://images/avatar01.png" id="2_7u2cp"]
+[ext_resource type="Theme" uid="uid://dbu0w6iqdok6s" path="res://themes/WindowsXP/thatsUp.tres" id="2_jocic"]
+[ext_resource type="Script" path="res://scripts/chat_window.gd" id="2_pouvr"]
+[ext_resource type="Texture2D" uid="uid://cuklxlqxn3m1s" path="res://images/avatar02_notification.png" id="4_51kxr"]
+[ext_resource type="Texture2D" uid="uid://b2o1hryt02ubu" path="res://images/avatar02.png" id="4_cabl4"]
+[ext_resource type="Texture2D" uid="uid://w2mlncrhlf5g" path="res://images/avatar01_notification.png" id="6_e64m4"]
+[ext_resource type="Script" path="res://scripts/chat_button.gd" id="8_trchi"]
+
+[node name="Chat" type="Window" node_paths=PackedStringArray("doro_button", "basti_button", "doro_chat", "doro_chat_container", "basti_chat", "basti_container")]
+title = "Thats Upp Chat"
+position = Vector2i(866, 76)
+size = Vector2i(820, 875)
+min_size = Vector2i(820, 875)
+max_size = Vector2i(820, 875)
+theme = ExtResource("1_3wmun")
+script = ExtResource("2_pouvr")
+doro_button = NodePath("Content/Tabs/Doro/Button")
+basti_button = NodePath("Content/Tabs/Basti/Button")
+doro_chat = NodePath("Content/Chat/Doro_Chat")
+doro_chat_container = NodePath("Content/Chat/Doro_Chat/Content")
+basti_chat = NodePath("Content/Chat/Basti_Chat")
+basti_container = NodePath("Content/Chat/Basti_Chat/Content")
+
+[node name="Background" type="AspectRatioContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 3
+
+[node name="Background Color" type="ColorRect" parent="Background"]
+layout_mode = 2
+color = Color(0.0602228, 0.37406, 0.170975, 1)
+
+[node name="Content" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_jocic")
+
+[node name="Tabs" type="HBoxContainer" parent="Content"]
+layout_mode = 2
+
+[node name="Basti" type="HBoxContainer" parent="Content/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content/Tabs/Basti" node_paths=PackedStringArray("timer")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme = ExtResource("2_jocic")
+action_mode = 0
+text = "Basti"
+icon = ExtResource("2_7u2cp")
+expand_icon = true
+script = ExtResource("8_trchi")
+icon_normal = ExtResource("2_7u2cp")
+icon_notification = ExtResource("6_e64m4")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="Content/Tabs/Basti/Button"]
+wait_time = 0.5
+
+[node name="Doro" type="HBoxContainer" parent="Content/Tabs"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Button" type="Button" parent="Content/Tabs/Doro" node_paths=PackedStringArray("timer")]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 2
+theme = ExtResource("2_jocic")
+action_mode = 0
+text = "Doro"
+icon = ExtResource("4_cabl4")
+expand_icon = true
+script = ExtResource("8_trchi")
+icon_normal = ExtResource("4_cabl4")
+icon_notification = ExtResource("4_51kxr")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="Content/Tabs/Doro/Button"]
+wait_time = 0.5
+
+[node name="Chat" type="AspectRatioContainer" parent="Content"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_jocic")
+alignment_horizontal = 0
+alignment_vertical = 0
+
+[node name="Background Color" type="ColorRect" parent="Content/Chat"]
+layout_mode = 2
+color = Color(0.831373, 0.831373, 0.831373, 1)
+
+[node name="Doro_Chat" type="ScrollContainer" parent="Content/Chat"]
+visible = false
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Content/Chat/Doro_Chat"]
+custom_minimum_size = Vector2(780, 0)
+layout_mode = 2
+alignment = 2
+
+[node name="Basti_Chat" type="ScrollContainer" parent="Content/Chat"]
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="Content/Chat/Basti_Chat"]
+custom_minimum_size = Vector2(780, 0)
+layout_mode = 2
+alignment = 2

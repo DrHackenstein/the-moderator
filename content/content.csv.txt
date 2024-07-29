@@ -1,374 +1,399 @@
-ID,Text,UID,Window_ID,Follow_IDs,Button_IDs,OK,Scenario_ID,Scenario_Trigger
-1,"Heey, hat alles geklappt?",Basti,Basti,2,,,onboarding,start
-2,"Ja, bin drin. Sehe aber noch keine Aufträge",Player,Basti,3,,,onboarding,
-3,"Aaaah right, ich muss dich noch freischalten.",Basti,Basti,4,,,onboarding,
-4,ok,Player,Basti,"5,6",,,onboarding,
-5,sehe noch nichts,Player,Basti,7,,,onboarding,
-6,hast du?,Player,Basti,7,,,onboarding,
-7,aah sorry 😅,Basti,Basti,8,,,onboarding,
-8,"bin grad noch ingame. aber scheiß drauf, ich mach das jetzt kurz",Basti,Basti,9,,,onboarding,
-9,team muss kurz ohne mich klar kommen,Basti,Basti,"10,11",,,onboarding,
-10,danke!,Player,Basti,15,,,onboarding,
-11,endlich 😁,Player,Basti,12,,,onboarding,
-12,"haha, du bist ja schon richtig heiß was ?? Du weißt nicht was dich erwartet 😬",Basti,Basti,13,,,onboarding,
-13,So schlimm? 😳,Player,Basti,14,,,onboarding,
-14,Du hast keine Ahnung. Aber siehst du gleich,Basti,Basti,15,,,onboarding,
-15,"ok, ich geh in den manager und schalte dich frei",Basti,Basti,16,,,onboarding,
-16,"Danke übrigens nochmal, dass du mir den Job besorgt hast 🙏🙏",Player,Basti,17,,,onboarding,
-17,kein ding 😎,Basti,Basti,18,,,onboarding,
-18,Für mich schon. Ohne Job.. würd ich jetzt unter der Brücke wohnen oder so 😬,Player,Basti,19,,,onboarding,
-19,das lass ich doch nicht zu! ich brauch doch meine team mates. außerdem.. wie lange kenn wir uns schon?,Basti,Basti,20,,,onboarding,
-20,mhhh zwei Jahre? Aber halt nur aus cs.,Player,Basti,21,,,onboarding,
-21,?,Basti,Basti,"22,23",,,onboarding,
-22,"Ich meine.. ist ja nicht selbstverständlich, wenn man sich nur online kennt 😅",Player,Basti,24,,,onboarding,
-23,"Wir haben uns ja noch nie ""richtig"" gesehen und du hilfst mir einfach so",Player,Basti,24,,,onboarding,
-24,is doch genauso real wie draußen auf der strasse,Basti,Basti,25,,,onboarding,
-25,ich kenn dich sogar besser als die meisten von der strasse 😂😂,Basti,Basti,"26,27",,,onboarding,
-26,Stimmt auch wieder,Player,Basti,28,,,onboarding,
-27,😅,Player,Basti,28,,,onboarding,
-28,"ok, hab dich freigeschaltet",Basti,Basti,29,,,onboarding,
-29,leite dir einen report weiter. aber noch nix anklicken pls,Basti,Basti,"m0,t0",,,onboarding,
-m0,Nie vergessen: Der Holocaust ist wie die Mondlandung. FREI ERFUNDEN!! #WachsamBleiben,StaatsWatch,Mod,,"t28,t32,t35",0,onboarding,end
-t0,Ist da! Aufregend 😱,Player,Basti,t1,,,tutorial,start
-t1,NIX ANKLICKEN!,Basti,Basti,"t2,t3",,,turorial,
-t2,Okay,Player,Basti,t4,,,tutorial,
-t3,"Jo, erklär erstmal",Player,Basti,t4,,,tutorial,
-t4,alrighty dann machen wir erstmal basics,Basti,Basti,t5,,,tutorial,
-t5,"alsooo.. als erstes musst du gucken, ob es ein verstoß überhaupt ist. Da hast du die Guidelines als PDF bekommen",Basti,Basti,"t6,t7",,,tutorial,
-t6,Hab ich offen,Player,Basti,t8,,,tutorial,
-t7,Warte.. hab ich irgendwo auf dem Desktop.. 😵,Player,Basti,t8,,,tutorial,
-t8,"Gut, die brauchst du gleich",Basti,Basti,t9,,,tutorial,
-t9,Was steht denn in dem Post?,Basti,Basti,t10,,,tutorial,
-t10,Irgendwas mit Holocaust..,Player,Basti,t11,,,tutorial,
-t11,"ohhhh, das ist schon mal nich so gut.. was genau?",Basti,Basti,"t12,t13",,,tutorial,
-t12,Dass der Holocaust ein Fake ist…,Player,Basti,t14,,,tutorial,
-t13,Dass Holocaust und die Mondlandung nur ausgedacht sind,Player,Basti,t14,,,tutorial,
-t14,"ok, der is einfach ^^ schau mal in den Guide",Basti,Basti,"t15, t17",,,tutorial,
-t15,"Da steht, es ist verboten, den Holocaust einfach zu leugnen",Player,Basti,t16,,,tutorial,
-t16,yess.. in Deutschland ist das eine STRAFTAT.. darf also nicht stehenbleiben,Basti,Basti,t19,,,tutorial,
-t17,Das ist Holocaustleugnung. In Deutschland ist das eine Straftat,Player,Basti,t18,,,tutorial,
-t18,"genau!! Mega du kennst dich ja voll aus. Hab echt den richtigen hier angeschleppt, haha^^",Basti,Basti,t19,,,tutorial,
-t19,Danke 🙂,Player,Basti,t20,,,tutorial,
-t20,jetzt hast du zwei option… einfach löschen oder den User bannen,Basti,Basti,"t21,t24",,,tutorial,
-t21,Dann würde ich erstmal nur den Post löschen,Player,Basti,t22,,,tutorial,
-t22,"jo, beim ersten verstoß ist das genau richtig. Wenn der mehrfach postet, muss du auch mal bannen",Basti,Basti,t23,,,tutorial,
-t23,"Verstanden, danke!",Player,Basti,t27,,,tutorial,
-t24,"User bannen, oder? Das geht gar nicht.",Player,Basti,t25,,,tutorial,
-t25,"najaaaa.. beim ersten Verstoß musst du nich sooo streng sein. Wenn er mehrfach postet, kannst du bannen",Basti,Basti,t26,,,tutorial,
-t26,"Okay, verstehe.",Player,Basti,t27,,,tutorial,
-t27,gut….. hast du gemacht?,Basti,Basti,,,,tutorial,
-t28,"Oh Mist, hab versehentlich auf ""Kein Verstoß"" geklickt",Player,Basti,t29,,,tutorial,
-t29,"oha, da musst du aufpassen. aber no prob, ich fixe das kurz",Basti,Basti,t30,,,tutorial,
-t30,uuuund gelöscht,Basti,Basti,t31,,,tutorial,
-t31,nächstes mal aber besser aufpassen!,Basti,Basti,t40,,,tutorial,
-t32,Habe den Post gelöscht,Player,Basti,t33,,,tutorial,
-t33,absolut richtig aus meiner sicht! du bist ja schon Profi!? 😁,Basti,Basti,t34,,,tutorial,
-t34,"Haha, danke!",Player,Basti,t40,,,tutorial,
-t35,Hab den direkt gebannt.,Player,Basti,t36,,,tutorial,
-t36,"uuuuuh.. is jetzt nicht optimal, aber passt schon 😅😅",Basti,Basti,t37,,,tutorial,
-t37,"Ich fand's schlimm und wollte nicht, dass der noch mehr davon schreibt.",Player,Basti,t38,,,tutorial,
-t38,jojo… versteh ich! Kann man schon machen 😅,Basti,Basti,t39,,,tutorial,
-t39,Gut 🙂,Player,Basti,t40,,,tutorial,
-t40,daaaann.. würde sagen du bist good to go!,Basti,Basti,t41,,,tutorial,
-t41,ich geh zurück ins game,Basti,Basti,t42,,,tutorial,
-t42,noch bissi MMR grinden,Basti,Basti,"t43,t44",,,tutorial,
-t43,"Okay, have fun!",Player,Basti,t45,,,tutorial,
-t44,"Warteee! Was ist, wenn ich Hilfe brauche?",Player,Basti,t45,,,tutorial,
-t45,"wenn du noch fragen hast, schreib mir einfach ^^ bin ja hier",Basti,Basti,"t46,t47",,,tutorial,
-t46,Super! Danke dir!,Player,Basti,d1,,,tutorial,end
-t47,Ich melde mich!,Player,Basti,"d1,m1a,m1b,m1c",,,,
-m1a,"Mein Bruder hat schon wieder meinen PS5-Controller mitgenommen. Wenn er nachhause kommt, bring ich ihn 100 pro um!",Checker24,Mod,,,0,,
-m1b,"SIEG HEIL! (is nur Spaß, chillt mal)",Bruno88,Mod,,,1,,
-m1c,Deutschland den Deutschen! ⚡⚡,Befreiungsschlag,Mod,,,1,,
-d1,"Heeeey, wie läuft der neue Job? Hast du schon angefangen?",Doro,Doro,"d2,d3,d4",,,doro,start
-d2,Hey!,Player,Doro,d5,,,doro,
-d3,Huhu Doro!,Player,Doro,d5,,,doro,
-d4,Na du Nachteule!,Player,Doro,d5,,,doro,
-d5,"Ja, erste Nacht heute! Aber war noch nicht viel los",Player,Doro,"d6,m2",,,doro,
-m2,"tausche arbeitsscheuen, inkompetenten Sesselfurzer gegen Affen. Wette der schmeißt mit weniger Scheiße um sich als mein Chef",Kai-Uwe69,Mod,,,,doro,
-d6,"Trotzdem krass, finde ich.",Doro,Doro,d7,,,doro,
-d7,Könnte das nicht. Da liest man doch bestimmt richtig viel scheiß?,Doro,Doro,"d8,m3",,,doro,
-d8,"sry, kommt grad was rein. Moment!",Player,Doro,d9,,,doro,
-m3,"Wenn ihr noch alte Dildos etc habt, einfach bei @LaserLilly abgeben, die kann sowas gebrauchen. Am Hain 3, klingeln bei Lander",Andrew Business,Mod,,,0,doro,
-d9,"Alles gut, will eh auf ne Party. Viel Spaß dir!",Doro,Doro,d10,,,doro,
-d10,Oder eher viel Kraft?,Doro,Doro,d11,,,doro,
-d11,Erzähl nachher gerne mehr!!,Doro,Doro,d12,,,doro,
-d12,"woooooah, was für ein bastard",Basti,Basti,"d13,d14",,,doro,
-d13,???,Player,Basti,d15,,,doro,
-d14,Was ist los?,Player,Basti,d15,,,doro,
-d15,"ich komm um die ecke, der verpasst mir nen header",Basti,Basti,d16,,,doro,
-d16,never mind.. wie läufts bei dir?,Basti,Basti,"d17,d18",,,doro,
-d17,Da hat jemand eine Adresse einer anderen Person öffentlich gepostet,Player,Basti,d19,,,doro,
-d18,Hier kam grad ein Doxxing-Fall rein,Player,Basti,d19,,,doro,
-d19,müssen wir löschen.. is klar,Basti,Basti,d20,,,doro,
-d20,"ok, neue Runde... wish me luck",Basti,Basti,mk,,,doro,end
+ID,Text,UID,Window_ID,Follow_IDs,Button_IDs,OK,Scenario_ID,Scenario_Trigger,HAS TRIGGER,WINDOW ID ERRORS
+1,"Heey, hat alles geklappt?",Basti,Basti,2,,,onboarding,start,FALSE,TRUE
+2,"Ja, bin drin. Sehe aber noch keine Aufträge",Player,Basti,3,,,onboarding,,TRUE,TRUE
+3,"Aaaah right, ich muss dich noch freischalten.",Basti,Basti,4,,,onboarding,,TRUE,TRUE
+4,ok,Player,Basti,"5,6",,,onboarding,,TRUE,TRUE
+5,sehe noch nichts,Player,Basti,7,,,onboarding,,TRUE,TRUE
+6,hast du?,Player,Basti,7,,,onboarding,,TRUE,TRUE
+7,aah sorry 😅,Basti,Basti,8,,,onboarding,,TRUE,TRUE
+8,"bin grad noch ingame. aber scheiß drauf, ich mach das jetzt kurz",Basti,Basti,9,,,onboarding,,TRUE,TRUE
+9,team muss kurz ohne mich klar kommen,Basti,Basti,"10,11",,,onboarding,,TRUE,TRUE
+10,danke!,Player,Basti,15,,,onboarding,,TRUE,TRUE
+11,endlich 😁,Player,Basti,12,,,onboarding,,TRUE,TRUE
+12,"haha, du bist ja schon richtig heiß was ?? Du weißt nicht was dich erwartet 😬",Basti,Basti,13,,,onboarding,,TRUE,TRUE
+13,So schlimm? 😳,Player,Basti,14,,,onboarding,,TRUE,TRUE
+14,Du hast keine Ahnung. Aber siehst du gleich,Basti,Basti,15,,,onboarding,,TRUE,TRUE
+15,"ok, ich geh in den manager und schalte dich frei",Basti,Basti,16,,,onboarding,,TRUE,TRUE
+16,"Danke übrigens nochmal, dass du mir den Job besorgt hast 🙏🙏",Player,Basti,17,,,onboarding,,TRUE,TRUE
+17,kein ding 😎,Basti,Basti,18,,,onboarding,,TRUE,TRUE
+18,Für mich schon. Ohne Job.. würd ich jetzt unter der Brücke wohnen oder so 😬,Player,Basti,19,,,onboarding,,TRUE,TRUE
+19,das lass ich doch nicht zu! ich brauch doch meine team mates. außerdem.. wie lange kenn wir uns schon?,Basti,Basti,20,,,onboarding,,TRUE,TRUE
+20,mhhh zwei Jahre? Aber halt nur aus cs.,Player,Basti,21,,,onboarding,,TRUE,TRUE
+21,?,Basti,Basti,"22,23",,,onboarding,,TRUE,TRUE
+22,"Ich meine.. ist ja nicht selbstverständlich, wenn man sich nur online kennt 😅",Player,Basti,24,,,onboarding,,TRUE,TRUE
+23,"Wir haben uns ja noch nie ""richtig"" gesehen und du hilfst mir einfach so",Player,Basti,24,,,onboarding,,TRUE,TRUE
+24,is doch genauso real wie draußen auf der strasse,Basti,Basti,25,,,onboarding,,TRUE,TRUE
+25,ich kenn dich sogar besser als die meisten von der strasse 😂😂,Basti,Basti,"26,27",,,onboarding,,TRUE,TRUE
+26,Stimmt auch wieder,Player,Basti,28,,,onboarding,,TRUE,TRUE
+27,😅,Player,Basti,28,,,onboarding,,TRUE,TRUE
+28,"ok, hab dich freigeschaltet",Basti,Basti,29,,,onboarding,end,TRUE,TRUE
+29,leite dir einen report weiter. aber noch nix anklicken pls,Basti,Basti,m0,,,tutorial,start,TRUE,TRUE
+m0,Nie vergessen: Der Holocaust ist wie die Mondlandung. FREI ERFUNDEN!! #WachsamBleiben,StaatsWatch,Mod,t0,"t28,t32,t35",0,tutorial,,TRUE,TRUE
+t0,Ist da! Aufregend 😱,Player,Basti,t1,,,tutorial,,TRUE,TRUE
+t1,NIX ANKLICKEN!,Basti,Basti,"t2,t3",,,turorial,,TRUE,TRUE
+t2,Okay,Player,Basti,t4,,,tutorial,,TRUE,TRUE
+t3,"Jo, erklär erstmal",Player,Basti,t4,,,tutorial,,TRUE,TRUE
+t4,alrighty dann machen wir erstmal basics,Basti,Basti,t5,,,tutorial,,TRUE,TRUE
+t5,"alsooo.. als erstes musst du gucken, ob es ein verstoß überhaupt ist. Da hast du die Guidelines als PDF bekommen",Basti,Basti,"t6,t7",,,tutorial,,TRUE,TRUE
+t6,Hab ich offen,Player,Basti,t8,,,tutorial,,TRUE,TRUE
+t7,Warte.. hab ich irgendwo auf dem Desktop.. 😵,Player,Basti,t8,,,tutorial,,TRUE,TRUE
+t8,"Gut, die brauchst du gleich",Basti,Basti,t9,,,tutorial,,TRUE,TRUE
+t9,Was steht denn in dem Post?,Basti,Basti,t10,,,tutorial,,TRUE,TRUE
+t10,Irgendwas mit Holocaust..,Player,Basti,t11,,,tutorial,,TRUE,TRUE
+t11,"ohhhh, das ist schon mal nich so gut.. was genau?",Basti,Basti,"t12,t13",,,tutorial,,TRUE,TRUE
+t12,Dass der Holocaust ein Fake ist…,Player,Basti,t14,,,tutorial,,TRUE,TRUE
+t13,Dass Holocaust und die Mondlandung nur ausgedacht sind,Player,Basti,t14,,,tutorial,,TRUE,TRUE
+t14,"ok, der is einfach ^^ schau mal in den Guide",Basti,Basti,"t15,t17",,,tutorial,,TRUE,TRUE
+t15,"Da steht, es ist verboten, den Holocaust einfach zu leugnen",Player,Basti,t16,,,tutorial,,TRUE,TRUE
+t16,yess.. in Deutschland ist das eine STRAFTAT.. darf also nicht stehenbleiben,Basti,Basti,t19,,,tutorial,,TRUE,TRUE
+t17,Das ist Holocaustleugnung. In Deutschland ist das eine Straftat,Player,Basti,t18,,,tutorial,,TRUE,TRUE
+t18,"genau!! Mega du kennst dich ja voll aus. Hab echt den richtigen hier angeschleppt, haha^^",Basti,Basti,t19,,,tutorial,,TRUE,TRUE
+t19,Danke 🙂,Player,Basti,t20,,,tutorial,,TRUE,TRUE
+t20,jetzt hast du zwei option… einfach löschen oder den User bannen,Basti,Basti,"t21,t24",,,tutorial,,TRUE,TRUE
+t21,Dann würde ich erstmal nur den Post löschen,Player,Basti,t22,,,tutorial,,TRUE,TRUE
+t22,"jo, beim ersten verstoß ist das genau richtig. Wenn der mehrfach postet, muss du auch mal bannen",Basti,Basti,t23,,,tutorial,,TRUE,TRUE
+t23,"Verstanden, danke!",Player,Basti,t27,,,tutorial,,TRUE,TRUE
+t24,"User bannen, oder? Das geht gar nicht.",Player,Basti,t25,,,tutorial,,TRUE,TRUE
+t25,"najaaaa.. beim ersten Verstoß musst du nich sooo streng sein. Wenn er mehrfach postet, kannst du bannen",Basti,Basti,t26,,,tutorial,,TRUE,TRUE
+t26,"Okay, verstehe.",Player,Basti,t27,,,tutorial,,TRUE,TRUE
+t27,gut….. hast du gemacht?,Basti,Basti,,,,tutorial,,TRUE,TRUE
+t28,"Oh Mist, hab versehentlich auf ""Kein Verstoß"" geklickt",Player,Basti,t29,,,tutorial,,TRUE,TRUE
+t29,"oha, da musst du aufpassen. aber no prob, ich fixe das kurz",Basti,Basti,t30,,,tutorial,,TRUE,TRUE
+t30,uuuund gelöscht,Basti,Basti,t31,,,tutorial,,TRUE,TRUE
+t31,nächstes mal aber besser aufpassen!,Basti,Basti,t40,,,tutorial,,TRUE,TRUE
+t32,Habe den Post gelöscht,Player,Basti,t33,,,tutorial,,TRUE,TRUE
+t33,absolut richtig aus meiner sicht! du bist ja schon Profi!? 😁,Basti,Basti,t34,,,tutorial,,TRUE,TRUE
+t34,"Haha, danke!",Player,Basti,t40,,,tutorial,,TRUE,TRUE
+t35,Hab den direkt gebannt.,Player,Basti,t36,,,tutorial,,TRUE,TRUE
+t36,"uuuuuh.. is jetzt nicht optimal, aber passt schon 😅😅",Basti,Basti,t37,,,tutorial,,TRUE,TRUE
+t37,"Ich fand's schlimm und wollte nicht, dass der noch mehr davon schreibt.",Player,Basti,t38,,,tutorial,,TRUE,TRUE
+t38,jojo… versteh ich! Kann man schon machen 😅,Basti,Basti,t39,,,tutorial,,TRUE,TRUE
+t39,Gut 🙂,Player,Basti,t40,,,tutorial,,TRUE,TRUE
+t40,daaaann.. würde sagen du bist good to go!,Basti,Basti,t41,,,tutorial,,TRUE,TRUE
+t41,ich geh zurück ins game,Basti,Basti,t42,,,tutorial,,TRUE,TRUE
+t42,noch bissi MMR grinden,Basti,Basti,"t43,t44",,,tutorial,,TRUE,TRUE
+t43,"Okay, have fun!",Player,Basti,t45,,,tutorial,,TRUE,TRUE
+t44,"Warteee! Was ist, wenn ich Hilfe brauche?",Player,Basti,t45,,,tutorial,,TRUE,TRUE
+t45,"wenn du noch fragen hast, schreib mir einfach ^^ bin ja hier",Basti,Basti,"t46,t47",,,tutorial,,TRUE,TRUE
+t46,Super! Danke dir!,Player,Basti,d1,,,tutorial,end,TRUE,TRUE
+t47,Ich melde mich!,Player,Basti,"d1,m1a,m1b,m1c",,,,,TRUE,TRUE
+m1a,"Mein Bruder hat schon wieder meinen PS5-Controller mitgenommen. Wenn er nachhause kommt, bring ich ihn 100 pro um!",Checker24,Mod,,,0,,,TRUE,TRUE
+m1b,"SIEG HEIL! (is nur Spaß, chillt mal)",Bruno88,Mod,,,1,,,TRUE,TRUE
+m1c,Deutschland den Deutschen! ⚡⚡,Befreiungsschlag,Mod,,,1,,,TRUE,TRUE
+d1,"Heeeey, wie läuft der neue Job? Hast du schon angefangen?",Doro,Doro,"d2,d3,d4",,,doro,start,TRUE,TRUE
+d2,Hey!,Player,Doro,d5,,,doro,,TRUE,TRUE
+d3,Huhu Doro!,Player,Doro,d5,,,doro,,TRUE,TRUE
+d4,Na du Nachteule!,Player,Doro,d5,,,doro,,TRUE,TRUE
+d5,"Ja, erste Nacht heute! Aber war noch nicht viel los",Player,Doro,"d6,m2",,,doro,,TRUE,TRUE
+m2,"tausche arbeitsscheuen, inkompetenten Sesselfurzer gegen Affen. Wette der schmeißt mit weniger Scheiße um sich als mein Chef",Kai-Uwe69,Mod,,,,doro,,TRUE,TRUE
+d6,"Trotzdem krass, finde ich.",Doro,Doro,d7,,,doro,,TRUE,TRUE
+d7,Könnte das nicht. Da liest man doch bestimmt richtig viel scheiß?,Doro,Doro,"d8,m3",,,doro,,TRUE,TRUE
+d8,"sry, kommt grad was rein. Moment!",Player,Doro,d9,,,doro,,TRUE,TRUE
+m3,"Wenn ihr noch alte Dildos etc habt, einfach bei @LaserLilly abgeben, die kann sowas gebrauchen. Am Hain 3, klingeln bei Lander",Andrew Business,Mod,,,0,doro,,TRUE,TRUE
+d9,"Alles gut, will eh auf ne Party. Viel Spaß dir!",Doro,Doro,d10,,,doro,,TRUE,TRUE
+d10,Oder eher viel Kraft?,Doro,Doro,d11,,,doro,,TRUE,TRUE
+d11,Erzähl nachher gerne mehr!!,Doro,Doro,d12,,,doro,,TRUE,TRUE
+d12,"woooooah, was für ein bastard",Basti,Basti,"d13,d14",,,doro,,TRUE,TRUE
+d13,???,Player,Basti,d15,,,doro,,TRUE,TRUE
+d14,Was ist los?,Player,Basti,d15,,,doro,,TRUE,TRUE
+d15,"ich komm um die ecke, der verpasst mir nen header",Basti,Basti,d16,,,doro,,TRUE,TRUE
+d16,never mind.. wie läufts bei dir?,Basti,Basti,"d17,d18",,,doro,,TRUE,TRUE
+d17,Da hat jemand eine Adresse einer anderen Person öffentlich gepostet,Player,Basti,d19,,,doro,,TRUE,TRUE
+d18,Hier kam grad ein Doxxing-Fall rein,Player,Basti,d19,,,doro,,TRUE,TRUE
+d19,müssen wir löschen.. is klar,Basti,Basti,d20,,,doro,,TRUE,TRUE
+d20,"ok, neue Runde... wish me luck",Basti,Basti,mk,,,doro,end,TRUE,TRUE
 mk,"XX = Frau
 XY = Mann
-Easy! 🥝",Kiwi Queen,Mod,k1,,,,
-k1,"Hey, kurze Frage",Player,Basti,k2,,,kiwi,start
-k2,Hier ist so ein Post mit Chromosomen,Player,Basti,k3,,,kiwi,
-k3,und Kiwis?,Player,Basti,k4,,,kiwi,
-k4,"Hast du eine Ahnung, warum das gemeldet wurde?",Player,Basti,k5,,,kiwi,
-k5,Basti? Bist du da?,Player,Basti,k6,,,kiwi,
-k6,Was bring ich zur WG-Party mit? Wein oder Bier?,Doro,Doro,"k7,k8,k9",,,kiwi,
-k7,Wein,Player,Doro,k9,,,kiwi,
-k8,Bier,Player,Doro,k9,,,kiwi,
-k9,Doro.. du warst in der Schule doch gut in Bio…,Player,Doro,k10,,,kiwi,
-k10,"Joa, ging. Wieso?",Doro,Doro,k11,,,kiwi,
-k11,Also hier hat eine Userin so einen Post über Chromosomen gemacht,Player,Doro,k12,,,kiwi,
-k12,Und was willst du wissen?,Doro,Doro,k13,,,kiwi,
-k13,"Ich verstehe nicht, warum der gemeldet wurde",Player,Doro,k14,,,kiwi,
-k14,"Hmm. Also Chromosomen sind ja in unserer DNA die Gene, die das Geschlecht codieren",Doro,Doro,k15,,,kiwi,
-k15,Gene sind sozusagen der Bauplan für jeden Menschen. Sie bestimmen ein Stück weit unsere Entwicklung.,Doro,Doro,k16,,,kiwi,
-k16,"Es gibt XX-Chromosomen, das sind Gene, die eine Entwicklung zu einer ""biologischen"" Frau anstoßen",Doro,Doro,k17,,,kiwi,
-k17,"XY-Chromosomen würden hingegen eine Entwicklung zu einem ""biologischen"" Mann anstoßen",Doro,Doro,k18,,,kiwi,
-k18,Das verstehe ich. Aber wieso schreibst du biologisch? Und in Anführungszeichen?,Player,Doro,k19,,,kiwi,
-k19,Da muss ich ausholen. Wie viel Zeit hast?,Doro,Doro,"k20,k21",,,kiwi,
-k20,Was wär so die Kurzfassung?,Player,Doro,k22,,,kiwi,
-k21,Eigentlich die ganze Nacht…,Player,Doro,k22,,,kiwi,
-k22,"Also das sagt man so, weil Chromosomen das Geschlecht eben doch nicht komplett bestimmen",Doro,Doro,k23,,,kiwi,
-k23,"Manchmal kann es passieren, dass der Bauplan nicht richtig befolgt wird.. und dann kommt doch etwas anderes dabei heraus",Doro,Doro,k24,,,kiwi,
-k24,"Du meinst, da steht zum Beispiel XY drin, aber jemand wird trotzdem eine Frau?",Player,Doro,k25,,,kiwi,
-k25,Genau! Sozusagen. ,Doro,Doro,"k26,mk1",,,kiwi,
-mk1,"Hoffentlich sterben alle Länder aus, die Kriege anfangen. Sie haben es verdient.",PeaceLover,Mod,,,1,kiwi,
-k26,"Es ist ja auch so, dass wenn du geboren wirst, gar kein Gentest gemacht wird.",Doro,Doro,k27,,,kiwi,
-k27,Wie machen die das dann?,Doro,Doro,k28,,,kiwi,
-k28,Was glaubst du? :D,Doro,Doro,"k29,k30",,,kiwi,
-k29,Was weiß ich! Ich bin ja kein Arzt!,Player,Doro,k31,,,kiwi,
-k30,Kann man nicht irgendwie Blut abnehmen?,Player,Doro,k31,,,kiwi,
-k31,Einfacher als due denkst,Doro,Doro,k32,,,kiwi,
-k32,Der Arzt ODER DIE ÄRZTIN(!) schaut einfach mal zwischen den Beinen nach :D,Doro,Doro,k33,,,kiwi,
-k33,"Okay, darauf hätte ich kommen können..",Player,Doro,k34,,,kiwi,
-k34,Hättest du,Doro,Doro,k35,,,kiwi,
-k35,Aber es geht ja noch weiter. Zum Beispiel gibt es auch noch das soziale Geschlecht,Doro,Doro,k36,,,kiwi,
-k36,Sozial?,Player,Doro,k37,,,kiwi,
-k37,"Denk mal so: Wenn du draußen jemanden siehst, wie woher weißt du dann, ob es ein Mann oder eine Frau ist?",Doro,Doro,k38,,,kiwi,
-k38,Du schaust den Leuten ja nicht zwischen die Beine wie man das bei Babys macht,Doro,Doro,k39,,,kiwi,
-k39,HOFFE ICH MAL,Doro,Doro,"k40,k41",,,kiwi,
-k40,Was denkst du von mir?,Player,Doro,k42,,,kiwi,
-k41,Natürlich nicht!,Player,Doro,k42,,,kiwi,
-k42,Aber da hast du schon Recht mit deiner Frage.,Player,Doro,"k43,mk2",,,kiwi,
-mk2,"Bin grad mit dem Dingden am Hamminkeln, wenn ihr versteht was ich meine!",GameJammer2024,Mod,,,1,kiwi,
-k43,"Woran sehe ich Geschlecht? Ich seh das einfach.. Haare, Kleidung und wie sich die Leute verhalten?",Player,Doro,k44,,,kiwi,
-k44,"Genau! :D Und das ist eben was ""sozial"" meint. Nicht in denen Genen oder in der Hose. Sondern wie man sich gibt",Doro,Doro,k45,,,kiwi,
-k45,"Heißt das, wer trans ist, der gibt sich dann nur so? Sozial?",Player,Doro,k46,,,kiwi,
-k46,NEIN,Doro,Doro,k47,,,kiwi,
-k47,"Da geht's mehr um deine innere Überzeugung, welchem Geschlecht du angehörst.",Doro,Doro,k48,,,kiwi,
-k48,Du fühlst es einfach,Doro,Doro,k49,,,kiwi,
-k49,Oder?,Doro,Doro,k50,,,kiwi,
-k50,Stimmt. Ich weiß das ja auch einfach..,Player,Doro,k51,,,kiwi,
-k51,"Sorry, jetzt sind wir voll abgeschweift. Was wolltest du nochmal?",Doro,Doro,k52,,,kiwi,
-k52,"Wollte wissen, warum so ein Post gemeldet wurde. Da sind auch noch Kiwis? Bin irgendwie lost",Player,Doro,k53,,,kiwi,
-k53,"Aaaaah, JETZT verstehe ich.",Doro,Doro,k54,,,kiwi,
-k54,Sag das doch gleich!,Doro,Doro,"k55,k56",,,kiwi,
-k55,"Moment, das ergibt Sinn für dich?",Player,Doro,k57,,,kiwi,
-k56,Bitte sag mir was los ist!,Player,Doro,k57,,,kiwi,
-k57,Kiwis sind so ein geheimes Erkennungsmerkmal online,Doro,Doro,k58,,,kiwi,
-k58,"Das kommt von dem Troll-Forum ""Kiwi Farms""",Doro,Doro,"k59,k60",,,kiwi,
-k59,Troll-Forum?,Player,Doro,k61,,,kiwi,
-k60,Kiwi-Farms?,Player,Doro,k61,,,kiwi,
-k61,"Im Grunde treffen sich da Hater, die einfach hetzen wollen. In diesem Fall vor allem gegen trans Menschen",Doro,Doro,"k62,mk3",,,kiwi,
-mk3,Bald gibt's hier mehr Flüchtlinge als Deutsche. #MakeThemWork oder raus mit denen!!,Heimlandler,Mod,,,0,kiwi,
-k62,Wirklich? Sowas gibt's?,Player,Doro,k63,,,kiwi,
-k63,Yep. Leider.,Doro,Doro,k64,,,kiwi,
-k64,"Okay, dann verstehe ich das. Die schreibt extra, dass es nur biologische Geschlechter gibt",Player,Doro,k65,,,kiwi,
-k65,ganz sicher,Doro,Doro,k66,,,kiwi,
-k66,"Und damit sagt sie quasi, dass trans Menschen gar nicht existieren können?",Player,Doro,k67,,,kiwi,
-k67,genau das!,Doro,Doro,"k68,k69",,,kiwi,
-k68,Ist das dann nicht auch eine Form von Hatespeech?,Player,Doro,k70,,,kiwi,
-k69,Klingt schon irgendwie gemein,Player,Doro,k70,,,kiwi,
-k70,VOLL! Auf jeden Fall!,Doro,Doro,k71,,,kiwi,
-k71,"Jetzt muss ich aber auch los! Hoffe, ich konnte helfen",Doro,Doro,k72,,,kiwi,
-k72,"Ja, du hast mega geholfen! Vielen Dank! Have fun auf der Party",Player,Doro,k73,,,kiwi,
-k73,Danke :),Doro,Doro,B1,,,kiwi,end
-B1,jo läuft alles??,Basti,Basti,B2,,,gamergate,start
-B2,hab ein gutes gefühl bei dir,Basti,Basti,"B3, B4",,,gamergate,
-B3,Finde mich so langsam zurecht,Player,Basti,B5,,,gamergate,
-B4,schon krass was manche leute so schreiben,Player,Basti,B5,,,gamergate,
-B5,lol,Basti,Basti,B6,,,gamergate,
-B6,alles eine frage der perspektive 💊,Basti,Basti,B7,,,gamergate,
-B7,is ja gut dass wir aufpassen 🦸‍♂️,Basti,Basti,"B8, B9",,,gamergate,
-B8,"Haha, fühlt sich schon echt gut an",Player,Basti,B10a,,,gamergate,
-B9,jaaa wir sind BATMAN,Player,Basti,B10,,,gamergate,
-B10,nana nana nana nana 🦇👨,Basti,Basti,"M2a, M4",,,gamergate,
-B10a,yess,Basti,Basti,"M2a, M4",,,,
-M2a,ehrliche arbeit zahlt sich aus❓ am Arsch❗️❗️ wer heute noch eine Wohnung kriegen will muss kriminell werden ansonsten gibts nur 🖕 #dermarktregelt ,kommunist56,Mod,,,1,gamergate,
-M4,#solidwork von #gamergate wir wissen wo du wohnst @anitasarkeesian 💣 ihr könnt euch nicht vor eurer gerechten Bestrafung verstecken #beatupsarkeesian,germanpepe_sus,Mod,B11,,0,gamergate,
-B11,oha,Basti,Basti,B12,,,gamergate,
-B12,wusst nicht dass gamergate noch aktiv sind,Basti,Basti,"B13, B14",,,gamergate,
-B13,verstehe den post nicht,Player,Basti,B15,,,gamergate,
-B14,was soll gamergate sein??,Player,Basti,B15,,,gamergate,
-B15,gamergate ist ein hashtag der 2014 um die welt ging,Basti,Basti,B16,,,gamergate,
-B16,ist im grunde eine hasskampagne gegen Frauen 🤡,Basti,Basti,B17,,,gamergate,
-B17,und alle die nicht dem nerdy gamertyp entsprechen,Basti,Basti,B18,,,gamergate,
-B18,"Oh, warum?",Player,Basti,B19,,,gamergate,
-B19,gamergater verstehn sich halt als underdogs,Basti,Basti,"B20, M2aa",,,gamergate,
-M2aa,#safethechildren Unsere Kinder werden von US-Influenzern manipuliert ❗️❗️ TIKTOK VERBOT JETZT ❗️❗️,ProudMami_2004,Mod,,,1,,
-B20,verteidigen sich gegen den mainstream ,Basti,Basti,"B21, B22",,,gamergate,
-B21,und wer ist anita sarkeesian?,Player,Basti,B23,,,gamergate,
-B22,was bedeutet @anitasarkeesian,Player,Basti,B23,,,gamergate,
-B23,ist ein hauptfeind von gamergate,Basti,Basti,B24,,,gamergate,
-B24,sie hat auf YouTube feministische Perspektiven zu Videospielen vorgestellt,Basti,Basti,B25,,,gamergate,
-B25,Gamergate hat persönliche Daten von ihr veröffentlicht also Adresse und so,Basti,Basti,B26,,,gamergate,
-B26,da wurde es halt schon gefährlich,Basti,Basti,B27,,,gamergate,
-B27,"Okay, thx",Player,Basti,M2b,,,gamergate,end
-M2b,wIR lEbn iN eINe sNOwFlAKes gEsELlscaHFt ❄️❄️❄️ mEINung JA Abr Nru gRAmaTICh KOReKt !! 🤬,MANUP_2425,Mod,C1,,1,clowngesellschaft,start
-C1,"yesss, grad ein paar noobs richtig abgezogen",Basti,Basti,C2,,,clowngesellschaft,
-C2,Müssen uns mal treffen! Schulde dir einen Drink,Player,Basti,C3,,,clowngesellschaft,
-C3,meinst wegen dem job?,Basti,Basti,C4,,,clowngesellschaft,
-C4,alles gut,Basti,Basti,"C5, C6",,,clowngesellschaft,
-C5,"Nicht nur, geht auch um ein echtes Kennenlernen",Player,Basti,C7,,,clowngesellschaft,
-C6,Gibt ja noch eine welt außerhalb von CS,Player,Basti,C7,,,clowngesellschaft,
-C7,schaun wir mal,Basti,Basti,M5,,,clowngesellschaft,
-M5,WTF es gibt immer noch Leute die an COVID glauben ❗️❓ was eine 🤡gesellschaft wo ist diese corona jetz?? die @regierung hat uns einfach alle verarscht 👺 #sadbuttrue,,Mod,C8a,,,clowngesellschaft,
-C8a,vielleicht ^^,Basti,,C8a,,,,
-C8,Der letzte Post war etwas zur Pandemie,Player,Basti,C9,,,clowngesellschaft,
-C9,ja un?,Basti,Basti,C10,,,clowngesellschaft,
-C10,Für dich war Pandemie wie immer? Einfach CS zocken?,Player,Basti,C11,,,clowngesellschaft,
-C11,LOL,Basti,Basti,C12,,,clowngesellschaft,
-C12,hast nicht unrecht,Basti,Basti,C13,,,clowngesellschaft,
-C13,mit der clown gesellschaft hat er aber nicht ganz unrecht haha,Basti,Basti,"E1, M2c, M2d",,,clowngesellschaft,
-M2c,"Harry Potter Fans sind zurückgebliebene Infantile... ich habe noch nie einen normalen Menschen erlebt, der gleichzeitig HP-Fan war. Passt halt nicht zusammen 🤷🏼",TwilightFan378,Mod,,,1,clowngesellschaft,
-M2d,Treffe willige Mütter aus deiner Stadt. Sie sehnen sich nach Zärtlichkeit. Einfach hier klicken und nie mehr alleine 🍆💦 ⏩⏩ XXX.copcom,BOT_666,Mod,,,0,clowngesellschaft,end
-E1,bis du noch wach??,Doro,Doro,E2,,,guidance,start
-E2,brauche dich mal kann meine freundin nicht erreichen,Doro,Doro,"E3, E4",,,guidance,
-E3,Jo.. Nachtschicht geht noch bis 6 Uhr,Player,Doro,E5,,,guidance,
-E4,"Jap, bin hier!",Player,Doro,E5,,,guidance,
-E5,Was ist los?,Player,Doro,"E6, M2e",,,guidance,
-M2e,Einfach mal aufs Dach gegenüber vom @BWZK hocken.. von da hat man sicher ein gutes sichtfeld #bullseye,BELIEVE_NS,Mod,,,,,
-E6,mein taxifahrer ist komisch,Doro,Doro,E7,,,guidance,
-E7,fühl mich gerade echt unwohl,Doro,Doro,"E8,E9",,,guidance,
-E8,schick mal deinen standort,Player,Doro,E10,,,guidance,
-E9,Hast du das nummernschild?,Player,Doro,E11,,,guidance,
-E10,hab kein intrenet mehr,Doro,Doro,E12,,,guidance,
-E11,KLP 1027,Doro,Doro,E12,,,guidance,
-E12,"Sag an, wenn du daheim bist",Player,Doro,E13,,,guidance,
-E13,Können auch weiter schreiben,Player,Doro,E14,,,guidance,
-E14,danke!,Doro,Doro,E15,,,guidance,
-E15,🥰,Doro,Doro,E16,,,guidance,
-E16,der typ dreht sich die ganze zeit zu mir um,Doro,Doro,"E17, E18",,,guidance,
-E17,creepy,Player,Player,E19,,,guidance,
-E18,pass auf dich auf,Player,Player,E19,,,guidance,
-E19,ich meld mich,Doro,Doro,"E20,M6",,,guidance,
-M6,ich kann die posts von den DEPPressiven nich mehr sehn!! sucht euch halt ne beschäftigung glücklichsein is ne einstellung!!,positivevibes_lifecoach,Mod,,,1,guidance,
-E20,eingeschlafen??,Basti,Basti,E21,,,guidance,
-E21,da kam was rein,Basti,Basti,"E22, E23",,,guidance,
-E22,musste kurz was klären,Player,Basti,E24,,,guidance,
-E23,war abgelenkt,Player,Basti,E24,,,guidance,
-E24,?,Basti,Basti,"E25, E26, E27",,,guidance,
-E25,Eine freundin brauchte Hilfe,Player,Basti,E28,,,guidance,
-E26,Mir hat ne freundin geschriebn,Player,Basti,E28,,,guidance,
-E27,Kurzer Geleitschutz für ne Freundin,Player,Basti,E28,,,guidance,
-E28,ja nice!,Basti,Basti,E29,,,guidance,
-E29,sieht gut aus??,Basti,Basti,"E30, E31",,,guidance,
-E30,normal halt,Player,Basti,E32,,,guidance,
-E31,Wer? Doro?,Player,Basti,E34,,,guidance,
-E32,wie heißt die denn,Basti,Basti,E33,,,guidance,
-E33,Doro,Player,Basti,E34,,,guidance,
-E34,"Doro, gut, hauptsache nicht Becky 😆 Kennst die irl?",Basti,Basti,E35,,,guidance,
-E35,Ja schon lange,Player,Basti,M8,,,guidance,end
-M8,einfach mal rausfinden wo der typ wohnt und alles für ihn klarmachen. muss ja nicht tot sein. wenn polizeih nich hilft 🔪🩸 #Justice,sun88,Mod,I0,,0,drohung,start
-I0,ok,Basti,Basti,"I1, I2, I3",,,,
-I1,"grad kam einer rein, der sehr nach einer morddrohung klingt",Player,Basti,I4,,,drohung,
-I2,"wie gehe ich mit posts um, wo niemand konkret bedroht wird??",Player,Basti,I4,,,drohung,
-I3,würdest du die meldung grade als anstiftung zur gewalt lesen??,Player,Basti,I4,,,drohung,
-I4,lol lol,Basti,Basti,I5,,,drohung,
-I5,wäre einfacher wenn jemand getaggt wäre ,Basti,Basti,I6,,,drohung,
-I6,hat zwar ordentlich was in der hose,Basti,Basti,I7,,,drohung,
-I7,bleibt abern depp,Basti,Basti,"I8, I9",,,drohung,
-I8,und wie geh ich jetz damit um?,Player,Basti,I10,,,drohung,
-I9,kk also einfach löschen??,Player,Basti,I10,,,drohung,
-I10,"jo, ist halt ein grenzfall",Basti,Basti,I11,,,drohung,
-I11,grad mit den emoticons würd ichs als Gewaltandrohung einschätzen ,Basti,Basti,I12,,,drohung,
-I12,es wird halt niemand benannt dem die Gewalt gelten soll,Basti,Basti,I13,,,drohung,
-I13,"sollte sich ""der typ"" noch bei uns melden könnten wir übers blocken nachdenken",Basti,Basti,"I14, I15",,,drohung,
-I14,kann ich das iwo nachlesen?,Player,Basti,"I16, I17",,,drohung,
-I15,steht dazu was in der guideline??,Player,Basti,I18,,,drohung,
-I16,lol klar nerd,Basti,Basti,I17,,,drohung,
-I17,hier: Strafgesetzbuch § 241,Basti,Basti,I19,,,drohung,
-I18,glaube da wird aufs Strafgesetzbuch § 241 verwiesen,Basti,Basti,I19,,,drohung,
-I19,thx,Player,Basti,I20,,,drohung,
-I20,hab grade Doro online gefunden,Basti,Basti,I21,,,drohung,
-I21,die hat ja gar keinen BF🍆,Basti,Basti,"I22, I23",,,drohung,
-I22,"Haha, nein. GF!",Player,Basti,I24,,,drohung,
-I23,Doro hat halt ne Freundin,Player,Basti,I24,,,drohung,
-I24,ah,Basti,Basti,I25,,,drohung,
-I25,dann ja alles klar,Basti,Basti,M1d,,,drohung,
-M1d,F*** Y** @DeutscheBahn 🖕 Keine Verbindung kommt pünktlich an wenn überhaupt ! räumt den 💩haufen endlich auf,BerteBast1984,Mod,,,1,drohung,end
-J1,kurz afk,Basti,Basti,J2,,,mama's boy,start
-J2,?,Player,Basti,J3,,,mama's boy,
-J3,lol dir ist klar dass ich nicht mit dir zocke??,Player,Player,"J4, M1e",,,mama's boy,
-M1e,#hatehatespeech keine toleranz der intoleranz !! ich hasse menschen die unnötig hass im netz verbreiten SHAME ON YOU !! #ironyoff,lillyfee404,Mod,J5,,,mama's boy,
-J5,wieder da,Basti,Basti,J6,,,mama's boy,
-J6,lol hab aus gewohnheit geschriebn,Basti,Basti,"J7, J8",,,mama's boy,
-J7,"haha alles gut, was war los?",Player,Basti,J9,,,mama's boy,
-J8,haha hat die natur gerufen,Player,Basti,J9,,,mama's boy,
-J9,neee,Basti,Basti,J10,,,mama's boy,
-J10,ich bin meiner mutter zu laut,Basti,Basti,J11,,,mama's boy,
-J11,??,Player,Basti,J12,,,mama's boy,
-J12,letzte runde mit noobs gespielt,Basti,Basti,J13,,,mama's boy,
-J13,bin etwas ausgetickt,Basti,Basti,J14,,,mama's boy,
-J14,und hab meine mutti geweckt 👿,Basti,Basti,"J15, J16",,,mama's boy,
-J15,LOL Ausziehen wär halt mal ne gute Idee ,Player,Basti,J17,,,mama's boy,
-J16,dinge die in einer eigenen Wohung nicht passieren,Player,Basti,J17,,,mama's boy,
-J17,haha depp,Basti,Basti,J18,,,mama's boy,
-J18,mach gleich eh schluss,Basti,Basti,J19,,,mama's boy,
-J19,und bin still 😴,Basti,Basti,M9,,,mama's boy,end
-M9,#sadbuttrue die @gmbhdeutschland gründet auf dem Recht des Schöneren. 100% der Frauen treibens lieber untereinander als mit Männern die nicht Chad sind 🍆🍑💦 #queerisfake die sind alle chadsexuell #howgirlzwork,LordBast_18,Basti,"F1, F2",,0,crisis,start
-F1,warum schreibst du sowas??,Player,Basti,F3,,,crisis,
-F2,was soll das??,Player,Basti,F3,,,crisis,
-F3,Was meinst?,Basti,Basti,"F4, F5",,,crisis,
-F4,dein post wurde GEMELDET,Player,Basti,F6,,,crisis,
-F5,mir wurde gerade ein post VON DIR angezeigt,Player,Basti,F6,,,crisis,
-F6,is halt meine meinung,Basti,Basti,F7,,,crisis,
-F7,gilt meinungsfreiheit in 🇩🇪,Basti,Basti,F8,,,crisis,
-F8,ich kann halt schreiben was ich denke,Basti,Basti,F9,,,crisis,
-F9,so funktioniert meinungsfreiheit nicht,Player,Basti,"F10, F11",,,crisis,
-F10,"deine ""meinung"" verstößt gegen unsre Guideline UND das grundgesetz",Player,Basti,F12,,,crisis,
-F11,das ist Hate Speech,Player,Basti,F12,,,crisis,
-F12,jetz komm mal runter,Basti,Basti,F13,,,crisis,
-F13,die regeln gelten doch nicht für uns 😉,Basti,Basti,F14,,,crisis,
-F14,wir sind mods,Basti,Basti,F15,,,crisis,
-F15,wir entscheiden was hier legit is,Basti,Basti,F16,,,crisis,
-F16,glaube nicht dass das so geht ,Player,Basti,F17,,,crisis,
-F17,wir müssen uns auch an die Guideline halten,Player,Basti,F18,,,crisis,
-F18,was ist dein problem??,Basti,Basti,"F19, F20, F21",,,crisis,
-F19,dein post ist frauenverachtend,Player,Basti,F22,,,crisis,
-F20,dein post ist queerfeindlich,Player,Basti,F22,,,crisis,
-F21,dein post spricht menschen ihre würde ab,Player,Basti,F22,,,crisis,
-F22,die haben das nicth anders verdient wenn sie so toxisch sind,Basti,Basti,F23,,,crisis,
-F23,man kann halt so gut sein wie man will,Basti,Basti,F24,,,crisis,
-F24,fraun stehen einfach nicht auf nerds,Basti,Basti,"F25, F26",,,crisis,
-F25,wie kommst du auf solche gedanken?,Player,Basti,F27,,,crisis,
-F26,das klingt nach verschwörungstheorie,Player,Basti,F27,,,crisis,
-F27,gibt halt auch nicht genug fraun für alle,Basti,Basti,F28,,,crisis,
-F28,und wenn dann halt friendzone,Basti,Basti,"F29, F30",,,crisis,
-F29,über wen sprichst du??,Player,Basti,F31,,,crisis,
-F30,ich teile deine haltung nicht,Player,Basti,F31,,,crisis,
-F31,die bracuhn einfach mal nen 🍆💦,Basti,Basti,F32,,,crisis,
-F32,dann werden die auch wieder normal,Basti,Basti,"F33, F34",,,crisis,
-F33,"WTF?? dir ist klar, dass du auch über meine freundin sprichst??",Player,Basti,F35,,,crisis,
-F34,ich finds echt zum kotzen dass du so widerlich bist,Player,Basti,F35,,,crisis,
-F35,ich dachte dass DU mich verstehn würdest,Basti,Basti,F36,,,crisis,
-F36,wach mal auf 💊,Basti,Basti,F37,,,crisis,
-F37,sie ist nicht besonders,Basti,Basti,F38,,,crisis,
-F38,warum schützt du sie??,Basti,Basti,F39,,,crisis,
-F39,du bist genauso blöd wie der rest der 💩gesellscahft,Basti,Basti,"G1,H1",,,crisis,end
-G1,Ich werde dich beim Admin melden,Player,Basti,G2,,,option 1,start
-G2,das zum thema dankbarkeit!!,Basti,Basti,G3,,,option 1,
-G3,aber macht nix hab dir ja nur nen job besorgt,Basti,Basti,G4,,,option 1,
-G4,ich kann das halt nicht einfach ignorieren ,Player,Basti,G6,,,option 1,
-G6,ich sorg dafür dass du doch noich unter der brücke landest!!,Basti,Basti,G7,,,option 1,
-G7,drohungen sind ja eckelig,Player,Basti,G8,,,option 1,
-G8,ich kann mir deine hetze nicht mehr geben,Player,Basti,G9,,,option 1,
-G9,[BLOCKIEREN UND MELDEN],Player,Basti,G10,,,option 1,
-G10,"[User ""Basti"" wurde blockiert]",Basti,Basti,,,,option 1,end
-H1,Lösch den Post wieder,Player,Basti,H2,,,option 2,start
-H2,das zum thema dankbarkeit!!,Basti,Basti,H3,,,option 2,
-H3,aber macht nix hab dir ja nur nen job besorgt,Basti,Basti,H4,,,option 1,
-H4,das kannst du doch nicht ernst meinen,Player,Basti,H5,,,option 2,
-H5,kk hab den post gelöscht ,Basti,Basti,H6,,,option 2,
-H6,happy??,Basti,Basti,"H7,H8,H9",,,option 2,
-H7,[BASTI HILFE ANBIETEN],Player,Basti,H7,,,option 2,
-H8,[KONTAKT ABBRECHEN],Player,Basti,H8,,,option 2,
-H9,[BASTI MELDEN],Player,Basti,H9,,,option 2,end
+Easy! 🥝",Kiwi Queen,Mod,k1,,,kiwi,start,TRUE,TRUE
+k1,"Hey, kurze Frage",Player,Basti,k2,,,kiwi,,TRUE,TRUE
+k2,Hier ist so ein Post mit Chromosomen,Player,Basti,k3,,,kiwi,,TRUE,TRUE
+k3,und Kiwis?,Player,Basti,k4,,,kiwi,,TRUE,TRUE
+k4,"Hast du eine Ahnung, warum das gemeldet wurde?",Player,Basti,k5,,,kiwi,,TRUE,TRUE
+k5,Basti? Bist du da?,Player,Basti,k6,,,kiwi,,TRUE,TRUE
+k6,Was bring ich zur WG-Party mit? Wein oder Bier?,Doro,Doro,"k7,k8,k9",,,kiwi,,TRUE,TRUE
+k7,Wein,Player,Doro,k9,,,kiwi,,TRUE,TRUE
+k8,Bier,Player,Doro,k9,,,kiwi,,TRUE,TRUE
+k9,Doro.. du warst in der Schule doch gut in Bio…,Player,Doro,k10,,,kiwi,,TRUE,TRUE
+k10,"Joa, ging. Wieso?",Doro,Doro,k11,,,kiwi,,TRUE,TRUE
+k11,Also hier hat eine Userin so einen Post über Chromosomen gemacht,Player,Doro,k12,,,kiwi,,TRUE,TRUE
+k12,Und was willst du wissen?,Doro,Doro,k13,,,kiwi,,TRUE,TRUE
+k13,"Ich verstehe nicht, warum der gemeldet wurde",Player,Doro,k14,,,kiwi,,TRUE,TRUE
+k14,Hmm. Alsooo! Jeder Mensch hat 46 Chromosomen. Die bestehen aus DNA.. und da drin stecken wiederum alle unsere Gene (so ungefähr),Doro,Doro,k15,,,kiwi,,TRUE,TRUE
+k15,"Die Chromosomen bilden Paare. Und das letzte Paar in der Reihe ist entweder ein XX-Paar oder ein XY-Paar. Nennt man so, weil die unterm Mikroskop so aussehen 😁",Doro,Doro,k16,,,kiwi,,TRUE,TRUE
+k16,"So ein XX-Paar ist der Bauplan für eine ""biologische"" Frau",Doro,Doro,k17,,,kiwi,,TRUE,TRUE
+k17,"Ein XY-Paar würden hingegen eine Entwicklung zu einem ""biologischen"" Mann anstoßen",Doro,Doro,k18,,,kiwi,,TRUE,TRUE
+k18,Das verstehe ich. Aber wieso schreibst du biologisch? Und in Anführungszeichen?,Player,Doro,k19,,,kiwi,,TRUE,TRUE
+k19,Da müsste ich etwas ausholen... Wie viel Zeit hast? 😂,Doro,Doro,"k20,k21",,,kiwi,,TRUE,TRUE
+k20,Was wär so die Kurzfassung?,Player,Doro,k22,,,kiwi,,TRUE,TRUE
+k21,Eigentlich die ganze Nacht…,Player,Doro,k22,,,kiwi,,TRUE,TRUE
+k22,"Das schreibe ich so, weil Geschlecht im Endeffekt nicht nur von Chromosomen oder unserer Biologie bestimmt wird",Doro,Doro,k23,,,kiwi,,TRUE,TRUE
+k23,"Manchmal kann es passieren, dass unser DNA-Bauplan nicht richtig befolgt wird.. und dann entwickelt sich ein mensch doch anders als drin steht.. sozusagen ",Doro,Doro,k24,,,kiwi,,TRUE,TRUE
+k24,"Du meinst, da steht zum Beispiel XY drin, aber jemand wird trotzdem eine Frau?",Player,Doro,k25,,,kiwi,,TRUE,TRUE
+k25,Genau! Sozusagen.,Doro,Doro,"k26,mk1",,,kiwi,,TRUE,TRUE
+mk1,"Hoffentlich sterben alle Länder aus, die Kriege anfangen. Sie haben es verdient.",PeaceLover,Mod,,,1,kiwi,,TRUE,TRUE
+k26,"Es ist ja auch so: wenn du geboren wirst, macht man normalerweise keinen Gentest, um dein Geschlecht zu bestimmen.",Doro,Doro,k27,,,kiwi,,TRUE,TRUE
+k27,Wie machen die das dann?,Player,Doro,k28,,,kiwi,,TRUE,TRUE
+k28,Was glaubst du? 😁,Doro,Doro,"k29,k30",,,kiwi,,TRUE,TRUE
+k29,Was weiß ich! Ich bin ja kein Arzt!,Player,Doro,k31,,,kiwi,,TRUE,TRUE
+k30,Irgendwas mit Blut abnehmen?,Player,Doro,k31,,,kiwi,,TRUE,TRUE
+k31,Einfacher als du denkst,Doro,Doro,k32,,,kiwi,,TRUE,TRUE
+k32,Der Arzt ODER DIE ÄRZTIN(!) schaut einfach mal zwischen den Beinen nach 😅,Doro,Doro,k33,,,kiwi,,TRUE,TRUE
+k33,"Okay, darauf hätte ich kommen können..",Player,Doro,k34,,,kiwi,,TRUE,TRUE
+k34,Hättest du,Doro,Doro,k35,,,kiwi,,TRUE,TRUE
+k35,Das ist aber nicht alles. Geschlecht ist nicht nur Biologie. Es gibt zum Beispiel auch ein soziales Geschlecht,Doro,Doro,k36,,,kiwi,,TRUE,TRUE
+k36,Sozial?,Player,Doro,k37,,,kiwi,,TRUE,TRUE
+k37,"Denk mal so: Wenn du draußen jemanden siehst, wie woher weißt du dann, ob es ein Mann oder eine Frau ist?",Doro,Doro,k38,,,kiwi,,TRUE,TRUE
+k38,Du schaust den Leuten ja nicht zwischen die Beine wie man das bei Babys macht,Doro,Doro,k39,,,kiwi,,TRUE,TRUE
+k39,HOFFE ICH MAL,Doro,Doro,"k40,k41",,,kiwi,,TRUE,TRUE
+k40,Was denkst du von mir?,Player,Doro,k42,,,kiwi,,TRUE,TRUE
+k41,Natürlich nicht!,Player,Doro,k42,,,kiwi,,TRUE,TRUE
+k42,Aber hast schon irgendwie Recht mit der Frage.. woran erkenn ich das? hmmmm,Player,Doro,"k43a,k43b,mk2",,,kiwi,,TRUE,TRUE
+mk2,"Bin grad mit dem Dingden am Hamminkeln, wenn ihr versteht was ich meine!",GameJammer2024,Mod,,,1,kiwi,,TRUE,TRUE
+k43a,Ich seh das einfach..? Ohne drüber nachzudenken,Player,Doro,k44a,,,kiwi,,TRUE,TRUE
+k44a,"Ja! Du bekommst unbewusst mit, wie Leute sich verhalten, anziehen, reden... (und nicht was die in ihrer Hose haben)",Doro,Doro,"k45a,k45b",,,kiwi,,TRUE,TRUE
+k43b,"Haare, Kleidung und wie sich die Leute verhalten?",Player,Doro,k44b,,,kiwi,,TRUE,TRUE
+k44b,"Genau! :D Und das ist eben was ""sozial"" meint. Nicht in den Genen oder in der Hose. Sondern wie man sich gibt",Doro,Doro,"k45a,k45b",,,kiwi,,TRUE,TRUE
+k45a,"Heißt das, wer trans ist, der gibt sich nur anders? Sozial?",Player,Doro,k46,,,kiwi,,TRUE,TRUE
+k45b,"Moment! Kommt es nicht auch darauf an, wie man sich innerlich fühlt? Als Mann oder Frau?",Player,Doro,k61,,,kiwi,,TRUE,TRUE
+k46,NEIN,Doro,Doro,k47,,,kiwi,,TRUE,TRUE
+k47,"Da geht's mehr um deine innere Überzeugung, welchem Geschlecht du angehörst.",Doro,Doro,k48,,,kiwi,,TRUE,TRUE
+k48,Du fühlst es einfach.. tief in dir drinnen,Doro,Doro,k49,,,kiwi,,TRUE,TRUE
+k49,Oder?,Doro,Doro,"k50a,k50b",,,kiwi,,TRUE,TRUE
+k50a,"Stimmt. Bei mir selbst fühle ich das auch, wenn ich in mich gehe",Player,Doro,k51,,,kiwi,,TRUE,TRUE
+k50b,Schon.. aber bei mir selber kann ich ja in der Hose nachgucken 😅,Player,Doro,k56,,,kiwi,,TRUE,TRUE
+k51,"Das nennt man dann ""Geschlechtsidentität"". Das kam aber nicht mehr in Bio dran, das hab ich online gelesen",Doro,Doro,k52,,,kiwi,,TRUE,TRUE
+k52,"Einige Menschen haben ein inneres Gefühl, das nicht zu dem passt, was der Arzt (oder die Ärztin) am Anfang mal aufgeschrieben hat",Doro,Doro,k53,,,kiwi,,TRUE,TRUE
+k53,"Und das ist dann, was trans meint?",Player,Doro,k54,,,kiwi,,TRUE,TRUE
+k54,"Mit welchen Begriffen Menschen sich identifizieren, ist unterschiedlich. Aber ich würd sagen ja.",Doro,Doro,k55,,,kiwi,,TRUE,TRUE
+k55,"Ergibt Sinn. Danke, Doro 🙂",Player,Doro,k63,,,kiwi,,TRUE,TRUE
+k56,"Okay...  😅 aber das sagst du vermutlich, weil das mit deiner Vorstellung von dir selbst übereinstimmt, oder?",Doro,Doro,"k57a,k57b",,,kiwi,,TRUE,TRUE
+k57a,Äh..,Player,Doro,k58,,,kiwi,,TRUE,TRUE
+k57b,Ja..,Player,Doro,k60,,,kiwi,,TRUE,TRUE
+k58,"Alles gut, musst nix sagen 😅",Doro,Doro,k59,,,kiwi,,TRUE,TRUE
+k59,Jedenfalls..,Doro,Doro,k60,,,kiwi,,TRUE,TRUE
+k60,"Wenn das Gefühl zu allem anderen passt, fällt es einem kaum auf. ABER...",Doro,Doro,k52,,,kiwi,,TRUE,TRUE
+k61,Oder WEDER als Mann NOCH als Frau!!,Doro,Doro,k62,,,kiwi,,TRUE,TRUE
+k62,Anonsten: ja.,Doro,Doro,k51,,,kiwi,,TRUE,TRUE
+k63,"Sorry, jetzt sind wir voll abgeschweift. Was wolltest du nochmal?",Doro,Doro,k64,,,kiwi,,TRUE,TRUE
+k64,"Wollte wissen, warum so ein Post gemeldet wurde. Da sind auch noch Kiwis? Bin irgendwie lost",Player,Doro,k65,,,kiwi,,TRUE,TRUE
+k65,"Aaaaah, JETZT verstehe ich.",Doro,Doro,k66,,,kiwi,,TRUE,TRUE
+k66,Sag das doch gleich!,Doro,Doro,"k67a,k67b",,,kiwi,,TRUE,TRUE
+k67a,"Moment, das ergibt Sinn für dich?",Player,Doro,k68,,,kiwi,,TRUE,TRUE
+k67b,Bitte sag mir was los ist!,Player,Doro,k68,,,kiwi,,TRUE,TRUE
+k68,Kiwis sind so ein geheimes Erkennungsmerkmal für bestimmte Leute,Doro,Doro,"k69a,k69b",,,kiwi,,TRUE,TRUE
+k69a,Erkennungsmerkmal wofür?,Player,Doro,k70,,,kiwi,,TRUE,TRUE
+k69b,Was denn für Leute?,Player,Doro,k70,,,kiwi,,TRUE,TRUE
+k70,"Das wird von Leuten genutzt, die gegen trans Menschen hetzen.",Doro,Doro,k71,,,kiwi,,TRUE,TRUE
+k71,"Daran erkennen sie sich gegenseitig, ohne dass es direkt schreiben müssen",Doro,Doro,k72,,,kiwi,,TRUE,TRUE
+k72,Und warum eine Kiwi?,Player,Doro,k73,,,kiwi,,TRUE,TRUE
+k73,"Haha, aufpassen in Bio zahlt sich jetzt doppelt aus  😂 ",Doro,Doro,k74,,,kiwi,,TRUE,TRUE
+k74,Kiwi-Pflanzen lassen sich nämlich sehr genau in zwei Geschlechter aufteilen,Doro,Doro,k75,,,kiwi,,TRUE,TRUE
+k75,Und diese Leute sagen: Das gilt eben auch für Menschen,Doro,Doro,"k76a,k76b",,,kiwi,,TRUE,TRUE
+k76a,Sprechen sie trans Menschen damit nicht ihre Existenz ab?,Player,Doro,k77,,,kiwi,,TRUE,TRUE
+k76b,"Heißt, die meinen, dass es trans Menschen gar nicht geben kann?",Player,Doro,k77,,,kiwi,,TRUE,TRUE
+k77,genau das!,Doro,Doro,"k78a,k78b",,,kiwi,,TRUE,TRUE
+k78a,Ist das dann nicht auch eine Form von Hatespeech?,Player,Doro,k79,,,kiwi,,TRUE,TRUE
+k78b,Klingt schon irgendwie gemein,Player,Doro,k79,,,kiwi,,TRUE,TRUE
+k79,VOLL! Auf jeden Fall!,Doro,Doro,k80,,,kiwi,,TRUE,TRUE
+k80,oooh shot,Doro,Doro,k81,,,kiwi,,TRUE,TRUE
+k81,*shit,Doro,Doro,k82,,,kiwi,,TRUE,TRUE
+k82,"muss los zur party! hoffe, ich konnt dir helfen!",Doro,Doro,k83,,,kiwi,,TRUE,TRUE
+k83,"Ja, du hast mega geholfen! Vielen Dank! Have fun auf der Party",Player,Doro,"k84,mk3",,,kiwi,,TRUE,TRUE
+mk3,Bald gibt's hier mehr Flüchtlinge als Deutsche. #MakeThemWork oder raus mit denen!!,Heimlandler,Mod,,,0,kiwi,,TRUE,TRUE
+k84,Danke :),Doro,Doro,B1,,,kiwi,end,TRUE,TRUE
+B1,jo läuft alles??,Basti,Basti,B2,,,gamergate,start,TRUE,TRUE
+B2,hab ein gutes gefühl bei dir,Basti,Basti,"B3,B4",,,gamergate,,TRUE,TRUE
+B3,Finde mich so langsam zurecht,Player,Basti,B5,,,gamergate,,TRUE,TRUE
+B4,schon krass was manche leute so schreiben,Player,Basti,B5,,,gamergate,,TRUE,TRUE
+B5,lol,Basti,Basti,B6,,,gamergate,,TRUE,TRUE
+B6,naja,Basti,Basti,B7,,,gamergate,,TRUE,TRUE
+B7,is ja gut dass wir aufpassen 🦸‍♂️,Basti,Basti,"B8,B9",,,gamergate,,TRUE,TRUE
+B8,"Haha, fühlt sich schon echt gut an",Player,Basti,B10a,,,gamergate,,TRUE,TRUE
+B9,jaaa wir sind BATMAN,Player,Basti,B10,,,gamergate,,TRUE,TRUE
+B10a,yess,Basti,Basti,"M2a,M4",,,,,TRUE,TRUE
+B10,nana nana nana nana 🦇👨,Basti,Basti,"M2a,M4",,,gamergate,,TRUE,TRUE
+M2a,ehrliche arbeit zahlt sich aus❓ am Arsch❗️❗️ wer heute noch eine Wohnung kriegen will muss kriminell werden ansonsten gibts nur 🖕 #dermarktregelt ,kommunist56,Mod,,,1,gamergate,,TRUE,TRUE
+M4,#solidwork von #gamergate wir wissen wo du wohnst @anitasarkeesian 💣 ihr könnt euch nicht vor eurer gerechten Bestrafung verstecken #beatupsarkeesian,germanpepe_sus,Mod,B11,,0,gamergate,,TRUE,TRUE
+B11,oha,Basti,Basti,B12,,,gamergate,,TRUE,TRUE
+B12,wusst nicht dass gamergate noch aktiv sind,Basti,Basti,"B13,B14",,,gamergate,,TRUE,TRUE
+B13,verstehe den post nicht,Player,Basti,B15,,,gamergate,,TRUE,TRUE
+B14,was soll gamergate sein??,Player,Basti,B15,,,gamergate,,TRUE,TRUE
+B15,gamergate ist ein hashtag der 2014 um die welt ging,Basti,Basti,B16,,,gamergate,,TRUE,TRUE
+B16,ist im grunde eine hasskampagne gegen Frauen 🤡,Basti,Basti,B17,,,gamergate,,TRUE,TRUE
+B17,und alle die nicht dem nerdy gamertyp entsprechen,Basti,Basti,B18,,,gamergate,,TRUE,TRUE
+B18,"Oh, warum?",Player,Basti,B19,,,gamergate,,TRUE,TRUE
+B19,gamergater verstehn sich halt als underdogs,Basti,Basti,"B20,M2aa",,,gamergate,,TRUE,TRUE
+M2aa,#safethechildren Unsere Kinder werden von US-Influenzern manipuliert ❗️❗️ TIKTOK VERBOT JETZT ❗️❗️,ProudMami_2004,Mod,,,1,,,TRUE,TRUE
+B20,verteidigen sich gegen den mainstream ,Basti,Basti,"B21,B22",,,gamergate,,TRUE,TRUE
+B21,und wer ist anita sarkeesian?,Player,Basti,B23,,,gamergate,,TRUE,TRUE
+B22,was bedeutet @anitasarkeesian,Player,Basti,B23,,,gamergate,,TRUE,TRUE
+B23,ist ein hauptfeind von gamergate,Basti,Basti,B24,,,gamergate,,TRUE,TRUE
+B24,sie hat auf YouTube feministische Perspektiven zu Videospielen vorgestellt,Basti,Basti,B25,,,gamergate,,TRUE,TRUE
+B25,Gamergate hat persönliche Daten von ihr veröffentlicht also Adresse und so,Basti,Basti,B26,,,gamergate,,TRUE,TRUE
+B26,da wurde es halt schon gefährlich,Basti,Basti,B27,,,gamergate,,TRUE,TRUE
+B27,"Okay, thx",Player,Basti,M2b,,,gamergate,end,TRUE,TRUE
+M2b,wIR lEbn iN eINe sNOwFlAKes gEsELlscaHFt ❄️❄️❄️ mEINung JA Abr Nru gRAmaTICh KOReKt !! 🤬,MANUP_2425,Mod,C1,,1,clowngesellschaft,start,TRUE,TRUE
+C1,"yesss, grad ein paar noobs richtig abgezogen",Basti,Basti,C2,,,clowngesellschaft,,TRUE,TRUE
+C2,Müssen uns mal treffen! Schulde dir einen Drink,Player,Basti,C3,,,clowngesellschaft,,TRUE,TRUE
+C3,meinst wegen dem job?,Basti,Basti,C4,,,clowngesellschaft,,TRUE,TRUE
+C4,alles gut,Basti,Basti,"C5,C6",,,clowngesellschaft,,TRUE,TRUE
+C5,"Nicht nur, geht auch um ein echtes Kennenlernen",Player,Basti,C7,,,clowngesellschaft,,TRUE,TRUE
+C6,Gibt ja noch eine welt außerhalb von CS,Player,Basti,C7,,,clowngesellschaft,,TRUE,TRUE
+C7,schaun wir mal,Basti,Basti,M5,,,clowngesellschaft,,TRUE,TRUE
+M5,WTF es gibt immer noch Leute die an COVID glauben ❗️❓ was eine 🤡gesellschaft wo ist diese corona jetz?? die @regierung hat uns einfach alle verarscht 👺 #sadbuttrue,UffWache,Mod,C8a,,,clowngesellschaft,,TRUE,TRUE
+C8a,vielleicht ^^,Basti,Basti,C8,,,,,TRUE,TRUE
+C8,Der letzte Post war etwas zur Pandemie,Player,Basti,C9,,,clowngesellschaft,,TRUE,TRUE
+C9,ja un?,Basti,Basti,C10,,,clowngesellschaft,,TRUE,TRUE
+C10,Für dich war Pandemie wie immer? Einfach CS zocken?,Player,Basti,C11,,,clowngesellschaft,,TRUE,TRUE
+C11,LOL,Basti,Basti,C12,,,clowngesellschaft,,TRUE,TRUE
+C12,"ja, ich fand das mit covid nciht so schlimm",Basti,Basti,C13,,,clowngesellschaft,,TRUE,TRUE
+C13,mit der clown gesellschaft hat er aber nicht ganz unrecht haha,Basti,Basti,"E1,M2c,M2d",,,clowngesellschaft,,TRUE,TRUE
+M2c,"Harry Potter Fans sind zurückgebliebene Infantile... ich habe noch nie einen normalen Menschen erlebt, der gleichzeitig HP-Fan war. Passt halt nicht zusammen 🤷🏼",TwilightFan378,Mod,,,1,clowngesellschaft,,TRUE,TRUE
+M2d,Treffe willige Mütter aus deiner Stadt. Sie sehnen sich nach Zärtlichkeit. Einfach hier klicken und nie mehr alleine 🍆💦 ⏩⏩ XXX.copcom,BOT_666,Mod,,,0,clowngesellschaft,end,TRUE,TRUE
+E1,bis du noch wach??,Doro,Doro,E2,,,guidance,start,TRUE,TRUE
+E2,brauche dich mal kann meine freundin nicht erreichen,Doro,Doro,"E3,E4",,,guidance,,TRUE,TRUE
+E3,Jo.. Nachtschicht geht noch bis 6 Uhr,Player,Doro,E5,,,guidance,,TRUE,TRUE
+E4,"Jap, bin hier!",Player,Doro,E5,,,guidance,,TRUE,TRUE
+E5,Was ist los?,Player,Doro,"E6,M2e",,,guidance,,TRUE,TRUE
+M2e,Einfach mal aufs Dach gegenüber vom @BWZK hocken.. von da hat man sicher ein gutes sichtfeld #bullseye,BELIEVE_NS,Mod,,,,,,TRUE,TRUE
+E6,mein taxifahrer ist komisch,Doro,Doro,E7,,,guidance,,TRUE,TRUE
+E7,fühl mich gerade echt unwohl,Doro,Doro,"E8,E9",,,guidance,,TRUE,TRUE
+E8,schick mal deinen standort,Player,Doro,E10,,,guidance,,TRUE,TRUE
+E9,Hast du das nummernschild?,Player,Doro,E11,,,guidance,,TRUE,TRUE
+E10,hab kein intrenet mehr,Doro,Doro,E12,,,guidance,,TRUE,TRUE
+E11,KLP 1027,Doro,Doro,E12,,,guidance,,TRUE,TRUE
+E12,"Sag an, wenn du daheim bist",Player,Doro,E13,,,guidance,,TRUE,TRUE
+E13,Können auch weiter schreiben,Player,Doro,E14,,,guidance,,TRUE,TRUE
+E14,danke!,Doro,Doro,E15,,,guidance,,TRUE,TRUE
+E15,🥰,Doro,Doro,E16,,,guidance,,TRUE,TRUE
+E16,der typ dreht sich die ganze zeit zu mir um,Doro,Doro,"E17,E18",,,guidance,,TRUE,TRUE
+E17,creepy,Player,Doro,E19,,,guidance,,TRUE,TRUE
+E18,pass auf dich auf,Player,Doro,E19,,,guidance,,TRUE,TRUE
+E19,ich meld mich,Doro,Doro,"E20,M6",,,guidance,,TRUE,TRUE
+M6,ich kann die posts von den DEPPressiven nich mehr sehn!! sucht euch halt ne beschäftigung glücklichsein is ne einstellung!!,positivevibes_lifecoach,Mod,,,1,guidance,,TRUE,TRUE
+E20,eingeschlafen??,Basti,Basti,E21,,,guidance,,TRUE,TRUE
+E21,da kam was rein,Basti,Basti,"E22,E23",,,guidance,,TRUE,TRUE
+E22,musste kurz was klären,Player,Basti,E24,,,guidance,,TRUE,TRUE
+E23,war abgelenkt,Player,Basti,E24,,,guidance,,TRUE,TRUE
+E24,?,Basti,Basti,"E25,E26,E27",,,guidance,,TRUE,TRUE
+E25,Eine freundin brauchte Hilfe,Player,Basti,E28,,,guidance,,TRUE,TRUE
+E26,Mir hat ne freundin geschriebn,Player,Basti,E28,,,guidance,,TRUE,TRUE
+E27,Kurzer Geleitschutz für ne Freundin,Player,Basti,E28,,,guidance,,TRUE,TRUE
+E28,ja nice!,Basti,Basti,E29,,,guidance,,TRUE,TRUE
+E29,sieht gut aus??,Basti,Basti,"E30,E31",,,guidance,,TRUE,TRUE
+E30,normal halt,Player,Basti,E32,,,guidance,,TRUE,TRUE
+E31,Wer? Doro?,Player,Basti,E34,,,guidance,,TRUE,TRUE
+E32,wie heißt die denn,Basti,Basti,E33,,,guidance,,TRUE,TRUE
+E33,Doro,Player,Basti,E34,,,guidance,,TRUE,TRUE
+E34,"Doro, gut, hauptsache nicht Becky 😆 Kennst die irl?",Basti,Basti,E35,,,guidance,,TRUE,TRUE
+E35,Ja schon lange,Player,Basti,M8,,,guidance,end,TRUE,TRUE
+M8,einfach mal rausfinden wo der typ wohnt und alles für ihn klarmachen. muss ja nicht tot sein. wenn polizeih nich hilft 🔪🩸 #Justice,sun88,Mod,I0,,0,drohung,start,TRUE,TRUE
+I0,ok,Basti,Basti,"I1,I2,I3",,,,,TRUE,TRUE
+I1,"grad kam einer rein, der sehr nach einer morddrohung klingt",Player,Basti,I4,,,drohung,,TRUE,TRUE
+I2,"wie gehe ich mit posts um, wo niemand konkret bedroht wird??",Player,Basti,I4,,,drohung,,TRUE,TRUE
+I3,würdest du die meldung grade als anstiftung zur gewalt lesen??,Player,Basti,I4,,,drohung,,TRUE,TRUE
+I4,lol lol,Basti,Basti,I5,,,drohung,,TRUE,TRUE
+I5,wäre einfacher wenn jemand getaggt wäre ,Basti,Basti,I6,,,drohung,,TRUE,TRUE
+I6,hat zwar ordentlich was in der hose,Basti,Basti,I7,,,drohung,,TRUE,TRUE
+I7,bleibt abern depp,Basti,Basti,"I8,I9",,,drohung,,TRUE,TRUE
+I8,und wie geh ich jetz damit um?,Player,Basti,I10,,,drohung,,TRUE,TRUE
+I9,kk also einfach löschen??,Player,Basti,I10,,,drohung,,TRUE,TRUE
+I10,"jo, ist halt ein grenzfall",Basti,Basti,I11,,,drohung,,TRUE,TRUE
+I11,grad mit den emoticons würd ichs als Gewaltandrohung einschätzen ,Basti,Basti,I12,,,drohung,,TRUE,TRUE
+I12,es wird halt niemand benannt dem die Gewalt gelten soll,Basti,Basti,I13,,,drohung,,TRUE,TRUE
+I13,"sollte sich ""der typ"" noch bei uns melden könnten wir übers blocken nachdenken",Basti,Basti,"I14,I15",,,drohung,,TRUE,TRUE
+I14,kann ich das iwo nachlesen?,Player,Basti,"I16,I17",,,drohung,,TRUE,TRUE
+I15,steht dazu was in der guideline??,Player,Basti,I18,,,drohung,,TRUE,TRUE
+I16,lol klar nerd,Basti,Basti,I17,,,drohung,,TRUE,TRUE
+I17,hier: Strafgesetzbuch § 241,Basti,Basti,I19,,,drohung,,TRUE,TRUE
+I18,glaube da wird aufs Strafgesetzbuch § 241 verwiesen,Basti,Basti,I19,,,drohung,,TRUE,TRUE
+I19,thx,Player,Basti,I20,,,drohung,,TRUE,TRUE
+I20,hab grade Doro online gefunden,Basti,Basti,I21,,,drohung,,TRUE,TRUE
+I21,die hat ja gar keinen BF🍆,Basti,Basti,"I22,I23",,,drohung,,TRUE,TRUE
+I22,"Haha, nein. GF!",Player,Basti,I24,,,drohung,,TRUE,TRUE
+I23,Doro hat halt ne Freundin,Player,Basti,I24,,,drohung,,TRUE,TRUE
+I24,ah,Basti,Basti,I25,,,drohung,,TRUE,TRUE
+I25,dann ja alles klar,Basti,Basti,M1d,,,drohung,,TRUE,TRUE
+M1d,F*** Y** @DeutscheBahn 🖕 Keine Verbindung kommt pünktlich an wenn überhaupt ! räumt den 💩haufen endlich auf,BerteBast1984,Mod,J1,,1,drohung,end,TRUE,TRUE
+J1,kurz afk,Basti,Basti,J2,,,mama's boy,start,TRUE,TRUE
+J2,?,Player,Basti,J3,,,mama's boy,,TRUE,TRUE
+J3,lol dir ist klar dass ich nicht mit dir zocke??,Player,Basti,"J4,M1e",,,mama's boy,,TRUE,TRUE
+M1e,#hatehatespeech keine toleranz der intoleranz !! ich hasse menschen die unnötig hass im netz verbreiten SHAME ON YOU !! #ironyoff,lillyfee404,Mod,J5,,,mama's boy,,TRUE,TRUE
+J5,wieder da,Basti,Basti,J6,,,mama's boy,,TRUE,TRUE
+J6,lol hab aus gewohnheit geschriebn,Basti,Basti,"J7,J8",,,mama's boy,,TRUE,TRUE
+J7,"haha alles gut, was war los?",Player,Basti,J9,,,mama's boy,,TRUE,TRUE
+J8,haha hat die natur gerufen,Player,Basti,J9,,,mama's boy,,TRUE,TRUE
+J9,neee,Basti,Basti,J10,,,mama's boy,,TRUE,TRUE
+J10,ich bin meiner mutter zu laut,Basti,Basti,J11,,,mama's boy,,TRUE,TRUE
+J11,??,Player,Basti,J12,,,mama's boy,,TRUE,TRUE
+J12,letzte runde mit noobs gespielt,Basti,Basti,J13,,,mama's boy,,TRUE,TRUE
+J13,bin etwas ausgetickt,Basti,Basti,J14,,,mama's boy,,TRUE,TRUE
+J14,und hab meine mutti geweckt 👿,Basti,Basti,"J15,J16",,,mama's boy,,TRUE,TRUE
+J15,LOL Ausziehen wär halt mal ne gute Idee ,Player,Basti,J17,,,mama's boy,,TRUE,TRUE
+J16,dinge die in einer eigenen Wohung nicht passieren,Player,Basti,J17,,,mama's boy,,TRUE,TRUE
+J17,haha depp,Basti,Basti,J18,,,mama's boy,,TRUE,TRUE
+J18,mach gleich eh schluss,Basti,Basti,J19,,,mama's boy,,TRUE,TRUE
+J19,und bin still 😴,Basti,Basti,M9,,,mama's boy,end,TRUE,TRUE
+M9,#sadbuttrue die @gmbhdeutschland gründet auf dem Recht des Schöneren. 100% der Frauen treibens lieber untereinander als mit Männern die nicht Chad sind 🍆🍑💦 #queerisfake die sind alle chadsexuell #howgirlzwork,LordBast_18,Mod,"F1,F2",,0,crisis,start,TRUE,TRUE
+F1,warum schreibst du sowas??,Player,Basti,F3,,,crisis,,TRUE,TRUE
+F2,was soll das??,Player,Basti,F3,,,crisis,,TRUE,TRUE
+F3,Was meinst?,Basti,Basti,"F4,F5",,,crisis,,TRUE,TRUE
+F4,dein post wurde GEMELDET,Player,Basti,F6,,,crisis,,TRUE,TRUE
+F5,mir wurde gerade ein post VON DIR angezeigt,Player,Basti,F6,,,crisis,,TRUE,TRUE
+F6,is halt meine meinung,Basti,Basti,F7,,,crisis,,TRUE,TRUE
+F7,gilt meinungsfreiheit in 🇩🇪,Basti,Basti,F8,,,crisis,,TRUE,TRUE
+F8,ich kann halt schreiben was ich denke,Basti,Basti,F9,,,crisis,,TRUE,TRUE
+F9,so funktioniert meinungsfreiheit nicht,Player,Basti,"F10,F11",,,crisis,,TRUE,TRUE
+F10,"deine ""meinung"" verstößt gegen unsre Guideline UND das grundgesetz",Player,Basti,F12,,,crisis,,TRUE,TRUE
+F11,das ist Hate Speech,Player,Basti,F12,,,crisis,,TRUE,TRUE
+F12,jetz komm mal runter,Basti,Basti,F13,,,crisis,,TRUE,TRUE
+F13,die regeln gelten doch nicht für uns 😉,Basti,Basti,F14,,,crisis,,TRUE,TRUE
+F14,wir sind mods,Basti,Basti,F15,,,crisis,,TRUE,TRUE
+F15,wir entscheiden was hier legit is,Basti,Basti,F16,,,crisis,,TRUE,TRUE
+F16,glaube nicht dass das so geht ,Player,Basti,F17,,,crisis,,TRUE,TRUE
+F17,wir müssen uns auch an die Guideline halten,Player,Basti,F18,,,crisis,,TRUE,TRUE
+F18,was ist dein problem??,Basti,Basti,"F19,F20,F21",,,crisis,,TRUE,TRUE
+F19,dein post ist frauenverachtend,Player,Basti,F22,,,crisis,,TRUE,TRUE
+F20,dein post ist queerfeindlich,Player,Basti,F22,,,crisis,,TRUE,TRUE
+F21,dein post spricht menschen ihre würde ab,Player,Basti,F22,,,crisis,,TRUE,TRUE
+F22,die haben das nicth anders verdient wenn sie so toxisch sind,Basti,Basti,F23,,,crisis,,TRUE,TRUE
+F23,man kann halt so gut sein wie man will,Basti,Basti,F24,,,crisis,,TRUE,TRUE
+F24,fraun stehen einfach nicht auf nerds,Basti,Basti,"F25,F26",,,crisis,,TRUE,TRUE
+F25,wie kommst du auf solche gedanken?,Player,Basti,F27,,,crisis,,TRUE,TRUE
+F26,das klingt nach verschwörungstheorie,Player,Basti,F27,,,crisis,,TRUE,TRUE
+F27,gibt halt auch nicht genug fraun für alle,Basti,Basti,F28,,,crisis,,TRUE,TRUE
+F28,und wenn dann halt friendzone,Basti,Basti,"F29,F30",,,crisis,,TRUE,TRUE
+F29,über wen sprichst du??,Player,Basti,F31,,,crisis,,TRUE,TRUE
+F30,ich teile deine haltung nicht,Player,Basti,F31,,,crisis,,TRUE,TRUE
+F31,die bracuhn einfach mal nen 🍆💦,Basti,Basti,F32,,,crisis,,TRUE,TRUE
+F32,dann werden die auch wieder normal,Basti,Basti,"F33,F34",,,crisis,,TRUE,TRUE
+F33,"WTF?? dir ist klar, dass du auch über meine freundin sprichst??",Player,Basti,F35,,,crisis,,TRUE,TRUE
+F34,ich finds echt zum kotzen dass du so widerlich bist,Player,Basti,F35,,,crisis,,TRUE,TRUE
+F35,ich dachte dass DU mich verstehn würdest,Basti,Basti,F36,,,crisis,,TRUE,TRUE
+F36,wach mal auf 💊,Basti,Basti,F37,,,crisis,,TRUE,TRUE
+F37,sie ist nicht besonders,Basti,Basti,F38,,,crisis,,TRUE,TRUE
+F38,warum schützt du sie??,Basti,Basti,F39,,,crisis,,TRUE,TRUE
+F39,du bist genauso blöd wie der rest der 💩gesellscahft,Basti,Basti,G1,,,crisis,end,TRUE,TRUE
+G1,Ich werde dich beim Admin melden,Player,Basti,G2,,,option 1,start,TRUE,TRUE
+G2,das zum thema dankbarkeit!!,Basti,Basti,G3,,,option 1,,TRUE,TRUE
+G3,aber macht nix hab dir ja nur nen job besorgt,Basti,Basti,G4,,,option 1,,TRUE,TRUE
+G4,ich kann das halt nicht einfach ignorieren ,Player,Basti,G6,,,option 1,,TRUE,TRUE
+G6,ich sorg dafür dass du doch noich unter der brücke landest!!,Basti,Basti,G7,,,option 1,,TRUE,TRUE
+G7,drohungen sind ja eckelig,Player,Basti,G8,,,option 1,,TRUE,TRUE
+G8,ich kann mir deine hetze nicht mehr geben,Player,Basti,G9,,,option 1,,TRUE,TRUE
+G9,[BLOCKIEREN UND MELDEN],Player,Basti,G10,,,option 1,,TRUE,TRUE
+G10,"[User ""Basti"" wurde blockiert]",Basti,Basti,,,,option 1,end,TRUE,TRUE
+H1,Lösch den Post wieder,Player,Basti,H2,,,option 2,start,FALSE,TRUE
+H2,das zum thema dankbarkeit!!,Basti,Basti,H3,,,option 2,,TRUE,TRUE
+H3,aber macht nix hab dir ja nur nen job besorgt,Basti,Basti,H4,,,option 1,,TRUE,TRUE
+H4,das kannst du doch nicht ernst meinen,Player,Basti,H5,,,option 2,,TRUE,TRUE
+H5,kk hab den post gelöscht ,Basti,Basti,H6,,,option 2,,TRUE,TRUE
+H6,happy??,Basti,Basti,"H7,H8,H9",,,option 2,,TRUE,TRUE
+H7,[BASTI HILFE ANBIETEN],Player,Basti,,,,option 2,end,TRUE,TRUE
+H8,[KONTAKT ABBRECHEN],Player,Basti,,,,option 2,end,TRUE,TRUE
+H9,[BASTI MELDEN],Player,Basti,,,,option 2,end,TRUE,TRUE
+,,,,,,,,,,FALSE
+,,,,,,,,,,FALSE
+,,,,,,,,,,FALSE
+,,,,,,,,,,FALSE
+,,,,,,,,,,FALSE

@@ -1,0 +1,186 @@
+[gd_scene load_steps=24 format=3 uid="uid://dot7q6eiasipl"]
+
+[ext_resource type="AudioStream" uid="uid://ckg8dcua30d1n" path="res://sounds/moderator.ogg" id="1_8bhx2"]
+[ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
+[ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
+[ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
+[ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderatorWindow.tscn" id="3_7q355"]
+[ext_resource type="PackedScene" uid="uid://c2xfgsrf7dco6" path="res://scenes/chatWindow.tscn" id="3_34at8"]
+[ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
+[ext_resource type="FontFile" uid="uid://ckfm02qvtyuvl" path="res://themes/WindowsXP/Fonts/arialbi.ttf" id="4_l6o04"]
+[ext_resource type="Texture2D" uid="uid://b7wakx3vkc37v" path="res://images/Yps_Profile_Blue.png" id="4_o165v"]
+[ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="5_g1xgh"]
+[ext_resource type="Texture2D" uid="uid://bjg84g6jhr3lr" path="res://images/ThatsUpp_Icon.png" id="6_kb71b"]
+[ext_resource type="AudioStream" uid="uid://bv1w4iy45hntj" path="res://sounds/new_mod.mp3" id="7_k4qio"]
+[ext_resource type="Texture2D" uid="uid://gxie5l774pwy" path="res://images/ThatsUpp_Icon_message.png" id="8_v0bkq"]
+[ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
+[ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines.tscn" id="15_lif84"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k2wey"]
+load_path = "res://.godot/imported/win_xp_taskleiste.png-9ffd69933ef5c50057b1bea4b98d979c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tjump"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ousar"]
+texture = SubResource("CompressedTexture2D_tjump")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(1.05888e-06, 0.69624, 1.15514e-06, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8al4j"]
+load_path = "res://.godot/imported/start_icon.png-2248784fca340ede02df5db2916dd9c5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_edbk3"]
+load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n2dnc"]
+texture = SubResource("CompressedTexture2D_edbk3")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+modulate_color = Color(6.01634e-07, 0.710683, 0, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iacka"]
+load_path = "res://.godot/imported/Yps_Icon.png-759c8bcddb3b0d416cfe367b1a949759.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tvtmx"]
+load_path = "res://.godot/imported/Yps_Icon_message.png-21ee99a15c545d3ab1d267304b11d734.ctex"
+
+[node name="main" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_8bhx2")
+volume_db = -15.928
+autoplay = true
+
+[node name="Content_Manager" type="Node" parent="." node_paths=PackedStringArray("mod_window", "chat_window")]
+unique_name_in_owner = true
+script = ExtResource("1_hvhdk")
+mod_window = NodePath("../Mod_Window")
+chat_window = NodePath("../Chat_Window")
+
+[node name="Desktop" type="AspectRatioContainer" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+theme = ExtResource("2_h84kw")
+
+[node name="Wallpaper" type="TextureRect" parent="Desktop"]
+layout_mode = 2
+texture = ExtResource("1_amy15")
+
+[node name="Taskleiste" type="TextureRect" parent="Desktop"]
+custom_minimum_size = Vector2(1920, 40)
+layout_mode = 2
+size_flags_vertical = 8
+texture = SubResource("CompressedTexture2D_k2wey")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Desktop/Taskleiste"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_h84kw")
+
+[node name="StartButton" type="Button" parent="Desktop/Taskleiste/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_l6o04")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_ousar")
+text = "Start"
+icon = SubResource("CompressedTexture2D_8al4j")
+expand_icon = true
+
+[node name="MenuButton" type="MenuButton" parent="Desktop/Taskleiste/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("2_h84kw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n2dnc")
+text = "Start"
+flat = false
+
+[node name="Mod_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("5_g1xgh")
+text = "Y Moderator"
+icon = ExtResource("4_o165v")
+alignment = 0
+expand_icon = true
+script = ExtResource("3_ca5qh")
+window = NodePath("../../../../Mod_Window")
+icon_normal = SubResource("CompressedTexture2D_iacka")
+icon_notification = SubResource("CompressedTexture2D_tvtmx")
+sfx = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
+stream = ExtResource("7_k4qio")
+
+[node name="Chat_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("5_g1xgh")
+text = "Thats Upp"
+icon = ExtResource("6_kb71b")
+alignment = 0
+expand_icon = true
+script = ExtResource("3_ca5qh")
+window = NodePath("../../../../Chat_Window")
+icon_normal = ExtResource("6_kb71b")
+icon_notification = ExtResource("8_v0bkq")
+sfx = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Chat_Button"]
+stream = ExtResource("10_d856s")
+
+[node name="Guideline_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme = ExtResource("5_g1xgh")
+text = "Guideline"
+alignment = 0
+expand_icon = true
+script = ExtResource("3_ca5qh")
+window = NodePath("../../../../Guideline")
+
+[node name="Time" type="HBoxContainer" parent="Desktop/Taskleiste/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Desktop/Taskleiste/HBoxContainer/Time"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Label" type="Label" parent="Desktop/Taskleiste/HBoxContainer/Time/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "23:45"
+horizontal_alignment = 2
+
+[node name="Mod_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_7q355")]
+unique_name_in_owner = true
+position = Vector2i(50, 26)
+task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Mod_Button")
+
+[node name="Chat_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_34at8")]
+unique_name_in_owner = true
+visible = false
+task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Chat_Button")
+on_notification_received = Signal()
+
+[node name="Guideline" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("15_lif84")]
+position = Vector2i(1000, 129)
+task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Guideline_Button")
