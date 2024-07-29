@@ -109,7 +109,7 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_n2dnc")
 text = "Start"
 flat = false
 
-[node name="Mod_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx")]
+[node name="Mod_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx", "timer")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
@@ -123,11 +123,15 @@ window = NodePath("../../../../Mod_Window")
 icon_normal = SubResource("CompressedTexture2D_iacka")
 icon_notification = SubResource("CompressedTexture2D_tvtmx")
 sfx = NodePath("AudioStreamPlayer")
+timer = NodePath("Timer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
 stream = ExtResource("7_k4qio")
 
-[node name="Chat_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx")]
+[node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
+wait_time = 0.5
+
+[node name="Chat_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx", "timer")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
@@ -141,11 +145,15 @@ window = NodePath("../../../../Chat_Window")
 icon_normal = ExtResource("6_kb71b")
 icon_notification = ExtResource("8_v0bkq")
 sfx = NodePath("AudioStreamPlayer")
+timer = NodePath("Timer")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Chat_Button"]
 stream = ExtResource("10_d856s")
 
-[node name="Guideline_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window")]
+[node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Chat_Button"]
+wait_time = 0.5
+
+[node name="Guideline_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "timer")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
@@ -155,6 +163,10 @@ alignment = 0
 expand_icon = true
 script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Guideline")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Guideline_Button"]
+wait_time = 0.5
 
 [node name="Clock" type="HBoxContainer" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("timer", "label")]
 layout_mode = 2

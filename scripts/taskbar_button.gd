@@ -4,6 +4,7 @@ extends Button
 @export var icon_normal : Texture2D
 @export var icon_notification : Texture2D
 @export var sfx : AudioStreamPlayer
+@export var timer : Timer
 
 var normal_style
 var hover_style
@@ -27,6 +28,7 @@ func _ready():
 		hidden_windows.append(self)
 	
 	pressed.connect(handle_click)
+	timer.timeout.connect(blink_button)
 
 func _process(delta):
 	if !window.is_visible():
@@ -95,22 +97,41 @@ func open():
 func set_button_style_focused(focus : bool):
 	#print(name, " SET BUTTON FOCUS STYLE ", focus)
 	if(focus):
-			add_theme_stylebox_override("normal", focus_style)
+		add_theme_stylebox_override("normal", focus_style)
 	else:
-			remove_theme_stylebox_override("normal")
+		remove_theme_stylebox_override("normal")
 
 func notify():
 	set_notification(true)
 
 func set_notification(notify : bool):
 	if notify:
-		add_theme_stylebox_override("normal", hover_style)
+		start_blinking()
+		
 		if(icon_notification != null):
 			set_button_icon(icon_notification)
+			
 		if(sfx != null):
 			sfx.play()
 	else:
-		if(get_theme_stylebox("normal") == hover_style):
-			remove_theme_stylebox_override("normal")
+		stop_blinking()
+		
 		if(icon_normal != null):
 			set_button_icon(icon_normal)
+
+func start_blinking():
+	blink_button()
+	timer.start()
+	
+func stop_blinking():
+	timer.stop()
+	blink = true
+	blink_button()
+
+var blink = false
+func blink_button():
+	blink = !blink
+	if(blink):
+			add_theme_stylebox_override("normal", hover_style)
+	elif get_theme_stylebox("normal") == hover_style:
+			remove_theme_stylebox_override("normal")
