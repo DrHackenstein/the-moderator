@@ -118,3 +118,11 @@ func save_start(id : String):
 	start = id
 	saves.set_value("main", "start", id)
 	saves.save("user://saves.cfg")
+	
+func save_time(hour : int, minute : int):
+	saves.set_value("main", "hour", hour)
+	saves.set_value("main", "minute", minute)
+	saves.save("user://saves.cfg")
+	
+func load_time():
+	return [saves.get_value("main", "hour", 22), saves.get_value("main", "minute", 1)]

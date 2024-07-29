@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=25 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="AudioStream" uid="uid://ckg8dcua30d1n" path="res://sounds/moderator.ogg" id="1_8bhx2"]
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bv1w4iy45hntj" path="res://sounds/new_mod.mp3" id="7_k4qio"]
 [ext_resource type="Texture2D" uid="uid://gxie5l774pwy" path="res://images/ThatsUpp_Icon_message.png" id="8_v0bkq"]
 [ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
+[ext_resource type="Script" path="res://scripts/clock_controller.gd" id="13_t63ui"]
 [ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines_window.tscn" id="15_lif84"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k2wey"]
@@ -155,17 +156,24 @@ expand_icon = true
 script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Guideline")
 
-[node name="Time" type="HBoxContainer" parent="Desktop/Taskleiste/HBoxContainer"]
+[node name="Clock" type="HBoxContainer" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("timer", "label")]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
+script = ExtResource("13_t63ui")
+timer = NodePath("Timer")
+label = NodePath("MarginContainer/Label")
 
-[node name="MarginContainer" type="MarginContainer" parent="Desktop/Taskleiste/HBoxContainer/Time"]
+[node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Clock"]
+wait_time = 60.0
+autostart = true
+
+[node name="MarginContainer" type="MarginContainer" parent="Desktop/Taskleiste/HBoxContainer/Clock"]
 layout_mode = 2
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_right = 10
 
-[node name="Label" type="Label" parent="Desktop/Taskleiste/HBoxContainer/Time/MarginContainer"]
+[node name="Label" type="Label" parent="Desktop/Taskleiste/HBoxContainer/Clock/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_colors/font_color = Color(1, 1, 1, 1)
