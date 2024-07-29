@@ -8,13 +8,16 @@ var content : Content
 func _ready():
 	button.button_down.connect(select)
 
-func load(new_content : Content):
+func load(new_content : Content, debug : bool = false):
 	content = new_content
-	message.text = content.text
+	if debug:
+		message.text = content.id + ": " + content.text
+	else:
+		message.text = content.text
 
 func select():
-	if content.follow.is_empty():
-		return
+	
+	print("Select  Answer  ", content.id, ": ", content.text)
 	
 	# Add self as response message
 	var chat_window = get_tree().current_scene.get_node("%Chat_Window")
@@ -24,6 +27,8 @@ func select():
 	chat_window.remove_response_buttons()
 	
 	# Load button follow ids
-	for id in content.follow:
-		var content_manager = get_tree().current_scene.get_node("%Content_Manager")
-		content_manager.load_content(id, true)
+	if content.follow.size() > 0:
+		print("Loading Answer  ", content.id, " Followers:")
+		for id in content.follow:
+			var content_manager = get_tree().current_scene.get_node("%Content_Manager")
+			content_manager.load_content(id, true)

@@ -51,7 +51,7 @@ func load_message_nodes():
 		message_other_typing = load("res://scenes/chat_messages_other_typing.tscn")
 
 func load(content : Content):
-	print("Loading Chat: " + content.id + " " + content.text)
+	print("Process Message " + content.id + ": " + content.text)
 	await get_tree().create_timer(0.5).timeout
 	
 	load_message_nodes()
@@ -66,14 +66,14 @@ func load(content : Content):
 		"Player":
 			match content.wid:
 				"Doro":
-					await get_tree().create_timer(waiting_times[0]+1).timeout
+					await get_tree().create_timer(waiting_times[0]+1.5).timeout
 					display_message(content, message_response.instantiate(), doro_chat_container, true)
 			
 				"Basti":
-					await get_tree().create_timer(waiting_times[1]+1).timeout
+					await get_tree().create_timer(waiting_times[1]+1.5).timeout
 					display_message(content, message_response.instantiate(), basti_container, true)
 		_:
-			print("Couldn't match uid: " + content.uid + " for id " + content.id)
+			print("Process Message " + content.id + ": FAILED! Couldn't match uid: " + content.uid)
 
 func load_message_others(id : int, content : Content):
 	var wait_time = content.text.split(" ").size() * randf_range(wait_min_mod, wait_max_mod)
@@ -92,17 +92,14 @@ func load_message_others(id : int, content : Content):
 
 func display_message(content : Content, message : Node, container : VBoxContainer, response : bool = false):
 		
-		if debug:
-			content.text = content.id + ": " + content.text
-		
-		message.load(content)
+		message.load(content, debug)
 		container.add_child(message)
 		
 		if( response ):
 			# Remove Previous responses
 			if responses.size() > 0 and responses[0].content.parent != message.content.parent:
 				remove_response_buttons()
-			print("DISPLAY RESPONSE")
+			
 			responses.append(message)
 		else:
 			if ! has_focus() || ((content.uid == "Doro" && ! doro_chat.is_visible()) || (content.uid == "Basti" && ! basti_chat.is_visible()) ):

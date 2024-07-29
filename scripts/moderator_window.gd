@@ -48,7 +48,7 @@ func _ready():
 
 
 func load(new_content : Content):
-	print("Loading " + new_content.id)
+	print("Process Report  " + new_content.id + ": " + new_content.text)
 	var time = randf_range(wait_min, wait_max)
 	wait_time += time
 	await get_tree().create_timer(wait_time).timeout
@@ -59,13 +59,15 @@ func load(new_content : Content):
 	content_lock.hide()
 
 func select(i : int):
-	print("Selected ", i)
 	active_id = i
 	active = content[i]
 	username.text = active.uid
 	post.text = active.text
 	
+	print("Select  Report  ", active.id)
+	
 	if(active.follow.size() > 0):
+		print("Loading Report  ", active.id, " followers:")
 		content_manager.load_content(active.follow[0], true)
 		active.follow.clear()
 	
@@ -74,19 +76,19 @@ func select(i : int):
 	ban.show()
 	
 func okay_report():
-	print("Okay")
+	print("Allow   Report  ", active.id)
 	if(active.buttons.size() > 0):
 		content_manager.load_content(active.buttons[0], true)
 	process_active()
 	
 func delete_report():
-	print("Delete")
+	print("Delete  Report  ", active.id)
 	if(active.buttons.size() > 1):
 		content_manager.load_content(active.buttons[1], true)
 	process_active()
 	
 func ban_report():
-	print("Ban")
+	print("BanUser Report  ", active.id)
 	if(active.buttons.size() > 2):
 		content_manager.load_content(active.buttons[2], true)
 	process_active()

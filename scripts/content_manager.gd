@@ -16,7 +16,7 @@ func _ready():
 
 	#Load Start Message
 	self.load_content(content[start].id, true)
-	#self.load_content(content["M2b"].id, true)
+	#self.load_content(content["M5"].id, true)
 	#self.load_content(content["C1"].id, true)
 	#self.load_content(content["E1"].id, true)
 
@@ -65,17 +65,17 @@ func load_content( id : String, follow : bool, parent : String = "" ):
 	
 	# Catch Loading Errors 
 	if !content.has(id):
-		print("Couldn't find ", id, " (Parent=",parent,")")
+		print("Loading Content ", id, " FAILED (Parent=",parent,")")
 		return
-	
-	print("Loading ", id)
+	else:
+		print("Loading Content ", id)
 	
 	var content : Content = self.content[id]
 	
 	if content.trigger == "start":
 		save_start(content.id)
 	
-	if content.trigger == "end" && content.follow.size() < 1:
+	if content.trigger == "end" && content.follow.is_empty() && content.buttons.is_empty():
 		reset_saves()
 	
 	if parent != "":
@@ -94,9 +94,10 @@ func load_content( id : String, follow : bool, parent : String = "" ):
 	
 	#Load Follow Ups
 	if follow && content.follow.size() > 0:
-		print("Loading follows of ", id, ":")
+		print("Loading Content ", id, " Followers:")
 		for i in content.follow:
 			load_content( i, false, id )
+		content.follow.clear()
 
 func load_save():
 	saves = ConfigFile.new()
@@ -111,8 +112,8 @@ func reset_saves():
 	saves.save("user://saves.cfg")
 
 func save_start(id : String):
-	if(scenarios.find(id) <= scenarios.find(start)):
-		return
+	#if(scenarios.find(id) <= scenarios.find(start)):
+		#return
 	print("Save: ", id)
 	start = id
 	saves.set_value("main", "start", id)
