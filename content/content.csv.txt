@@ -27,8 +27,8 @@ ID,Text,UID,Window_ID,Follow_IDs,Button_IDs,OK,Scenario_ID,Scenario_Trigger,HAS 
 26,Stimmt auch wieder,Player,Basti,28,,,onboarding,,TRUE,TRUE
 27,😅,Player,Basti,28,,,onboarding,,TRUE,TRUE
 28,"ok, hab dich freigeschaltet",Basti,Basti,29,,,onboarding,end,TRUE,TRUE
-29,leite dir einen report weiter. aber noch nix anklicken pls,Basti,Basti,"m0,t0",,,tutorial,start,TRUE,TRUE
-m0,Nie vergessen: Der Holocaust ist wie die Mondlandung. FREI ERFUNDEN!! #WachsamBleiben,StaatsWatch,Mod,,"t28,t32,t35",0,tutorial,,TRUE,TRUE
+29,leite dir einen report weiter. aber noch nix anklicken pls,Basti,Basti,m0,,,tutorial,start,TRUE,TRUE
+m0,Nie vergessen: Der Holocaust ist wie die Mondlandung. FREI ERFUNDEN!! #WachsamBleiben,StaatsWatch,Mod,t0,"t28,t32,t35",0,tutorial,,TRUE,TRUE
 t0,Ist da! Aufregend 😱,Player,Basti,t1,,,tutorial,,TRUE,TRUE
 t1,NIX ANKLICKEN!,Basti,Basti,"t2,t3",,,turorial,,TRUE,TRUE
 t2,Okay,Player,Basti,t4,,,tutorial,,TRUE,TRUE
