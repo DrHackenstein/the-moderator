@@ -26,10 +26,10 @@ ID,Text,UID,Window_ID,Follow_IDs,Button_IDs,OK,Scenario_ID,Scenario_Trigger,HAS 
 25,ich kenn dich sogar besser als die meisten von der strasse 😂😂,Basti,Basti,"26,27",,,onboarding,,TRUE,TRUE
 26,Stimmt auch wieder,Player,Basti,28,,,onboarding,,TRUE,TRUE
 27,😅,Player,Basti,28,,,onboarding,,TRUE,TRUE
-28,"ok, hab dich freigeschaltet",Basti,Basti,29,,,onboarding,,TRUE,TRUE
-29,leite dir einen report weiter. aber noch nix anklicken pls,Basti,Basti,"m0,t0",,,onboarding,,TRUE,TRUE
-m0,Nie vergessen: Der Holocaust ist wie die Mondlandung. FREI ERFUNDEN!! #WachsamBleiben,StaatsWatch,Mod,,"t28,t32,t35",0,onboarding,end,TRUE,TRUE
-t0,Ist da! Aufregend 😱,Player,Basti,t1,,,tutorial,start,TRUE,TRUE
+28,"ok, hab dich freigeschaltet",Basti,Basti,29,,,onboarding,end,TRUE,TRUE
+29,leite dir einen report weiter. aber noch nix anklicken pls,Basti,Basti,"m0,t0",,,tutorial,start,TRUE,TRUE
+m0,Nie vergessen: Der Holocaust ist wie die Mondlandung. FREI ERFUNDEN!! #WachsamBleiben,StaatsWatch,Mod,,"t28,t32,t35",0,tutorial,,TRUE,TRUE
+t0,Ist da! Aufregend 😱,Player,Basti,t1,,,tutorial,,TRUE,TRUE
 t1,NIX ANKLICKEN!,Basti,Basti,"t2,t3",,,turorial,,TRUE,TRUE
 t2,Okay,Player,Basti,t4,,,tutorial,,TRUE,TRUE
 t3,"Jo, erklär erstmal",Player,Basti,t4,,,tutorial,,TRUE,TRUE
@@ -104,8 +104,8 @@ d19,müssen wir löschen.. is klar,Basti,Basti,d20,,,doro,,TRUE,TRUE
 d20,"ok, neue Runde... wish me luck",Basti,Basti,mk,,,doro,end,TRUE,TRUE
 mk,"XX = Frau
 XY = Mann
-Easy! 🥝",Kiwi Queen,Mod,k1,,,,,TRUE,TRUE
-k1,"Hey, kurze Frage",Player,Basti,k2,,,kiwi,start,TRUE,TRUE
+Easy! 🥝",Kiwi Queen,Mod,k1,,,kiwi,start,TRUE,TRUE
+k1,"Hey, kurze Frage",Player,Basti,k2,,,kiwi,,TRUE,TRUE
 k2,Hier ist so ein Post mit Chromosomen,Player,Basti,k3,,,kiwi,,TRUE,TRUE
 k3,und Kiwis?,Player,Basti,k4,,,kiwi,,TRUE,TRUE
 k4,"Hast du eine Ahnung, warum das gemeldet wurde?",Player,Basti,k5,,,kiwi,,TRUE,TRUE
