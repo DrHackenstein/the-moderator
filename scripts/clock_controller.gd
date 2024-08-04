@@ -2,7 +2,6 @@ extends HBoxContainer
 
 @export var timer : Timer
 @export var label : Label
-@onready var content_manager = %Content_Manager
 
 var hour = 22
 var minute = 1
@@ -11,7 +10,7 @@ var text
 func _ready():
 	timer.timeout.connect(add_minute)
 	
-	var start_values = content_manager.load_time()
+	var start_values = Save_Controller.load_time(hour, minute)
 	hour = start_values[0]
 	minute = start_values[1]
 	
@@ -27,7 +26,7 @@ func add_minute():
 	if hour == 24:
 		hour = 0
 	
-	content_manager.save_time(hour, minute)
+	Save_Controller.save_time(hour, minute)
 	update_label()
 
 

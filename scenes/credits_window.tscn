@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs57lmf7q1cw7"]
+
+[ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_i8cxg"]
+[ext_resource type="Script" path="res://scripts/guideline_window.gd" id="2_kfth6"]
+
+[node name="Credits" type="Window"]
+title = "Credits"
+position = Vector2i(750, 200)
+size = Vector2i(500, 600)
+theme = ExtResource("1_i8cxg")
+script = ExtResource("2_kfth6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 1
+theme_override_constants/margin_bottom = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_i8cxg")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "The Moderator was made by:
+
+Benjamin Strobel
+Jan Lachnit
+René Lang
+Tony
+Valeriya
+
+Music by Hannes \"Crabman\" Flor"
