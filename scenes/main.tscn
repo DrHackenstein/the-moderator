@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=32 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="AudioStream" uid="uid://ckg8dcua30d1n" path="res://sounds/moderator.ogg" id="1_8bhx2"]
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
@@ -17,6 +17,7 @@
 [ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
 [ext_resource type="Script" path="res://scripts/clock_controller.gd" id="13_t63ui"]
 [ext_resource type="PackedScene" uid="uid://dhkl0f8dnt4fc" path="res://scenes/volume_slider.tscn" id="14_hy262"]
+[ext_resource type="Texture2D" uid="uid://m6gvtk0hnmqr" path="res://images/iconmonstr-document-thin-240.png" id="14_xgls3"]
 [ext_resource type="Texture2D" uid="uid://cwpblv2nqo8hl" path="res://images/iconmonstr-audio-4-icon-256.png" id="15_hacuj"]
 [ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines_window.tscn" id="15_lif84"]
 [ext_resource type="PackedScene" uid="uid://cs57lmf7q1cw7" path="res://scenes/credits_window.tscn" id="18_0au8w"]
@@ -101,6 +102,7 @@ menu = NodePath("../../../../Start Menu")
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
+theme_override_constants/h_separation = 10
 action_mode = 0
 text = "Y Moderator"
 icon = ExtResource("4_o165v")
@@ -125,6 +127,7 @@ wait_time = 0.5
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
+theme_override_constants/h_separation = 10
 action_mode = 0
 text = "Thats Upp"
 icon = ExtResource("6_kb71b")
@@ -149,8 +152,10 @@ wait_time = 0.5
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
+theme_override_constants/h_separation = 10
 action_mode = 0
 text = "Guideline"
+icon = ExtResource("14_xgls3")
 alignment = 0
 expand_icon = true
 script = ExtResource("3_ca5qh")
