@@ -42,3 +42,23 @@ func load_time(default_hour : int, default_minute : int):
 	load_save()
 	return [saves.get_value("main", "hour", default_hour), saves.get_value("main", "minute", default_minute)]
 
+func save_music_volume(value : float, muted : bool):
+	load_save()
+	saves.set_value("main", "music_volume", value)
+	saves.set_value("main", "music_muted", muted)
+	saves.save("user://saves.cfg")
+
+func load_music_volume(default_volume : float, default_muted : bool):
+	load_save()
+	return [saves.get_value("main", "music_volume", default_volume), saves.get_value("main", "music_muted", default_muted)]
+
+func save_effects_volume(value : float, muted : bool):
+	load_save()
+	saves.set_value("main", "effects_volume", value)
+	saves.set_value("main", "effects_muted", muted)
+	saves.save("user://saves.cfg")
+
+func load_effects_volume(default_volume : float, default_muted : bool):
+	load_save()
+	return [saves.get_value("main", "effects_volume", default_volume), saves.get_value("main", "effects_muted", default_muted)]
+	
