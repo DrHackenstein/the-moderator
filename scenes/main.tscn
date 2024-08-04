@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=31 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="AudioStream" uid="uid://ckg8dcua30d1n" path="res://sounds/moderator.ogg" id="1_8bhx2"]
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
@@ -21,6 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines_window.tscn" id="15_lif84"]
 [ext_resource type="PackedScene" uid="uid://cs57lmf7q1cw7" path="res://scenes/credits_window.tscn" id="18_0au8w"]
 [ext_resource type="PackedScene" uid="uid://cd6v2xxuf0a81" path="res://scenes/start_menu.tscn" id="18_oudrg"]
+[ext_resource type="Texture2D" uid="uid://drs3hj7licdxu" path="res://images/progress_spinner.png" id="22_7ehvy"]
+[ext_resource type="Script" path="res://scripts/booting.gd" id="23_w6ulw"]
+[ext_resource type="AudioStream" uid="uid://cl78imv65ps3k" path="res://sounds/booting.wav" id="24_46725"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k2wey"]
 load_path = "res://.godot/imported/win_xp_taskleiste.png-9ffd69933ef5c50057b1bea4b98d979c.ctex"
@@ -48,12 +51,12 @@ load_path = "res://.godot/imported/Yps_Icon_message.png-21ee99a15c545d3ab1d26730
 [node name="main" type="Node2D"]
 
 [node name="Content_Manager" parent="." instance=ExtResource("3_2hj5r")]
+unique_name_in_owner = true
 
 [node name="Music_Player" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("1_8bhx2")
 volume_db = -10.0
-autoplay = true
 bus = &"Music"
 
 [node name="Desktop" type="AspectRatioContainer" parent="."]
@@ -193,6 +196,7 @@ horizontal_alignment = 2
 
 [node name="Mod_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_7q355")]
 unique_name_in_owner = true
+visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Mod_Button")
 
 [node name="Chat_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_34at8")]
@@ -201,6 +205,8 @@ visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Chat_Button")
 
 [node name="Guideline" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("15_lif84")]
+unique_name_in_owner = true
+visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Guideline_Button")
 
 [node name="Credits" parent="." instance=ExtResource("18_0au8w")]
@@ -212,3 +218,67 @@ visible = false
 
 [node name="Start Menu" parent="." instance=ExtResource("18_oudrg")]
 visible = false
+
+[node name="Bootup" type="Popup" parent="." node_paths=PackedStringArray("background", "progress_spinner", "audio_player", "text")]
+transparent_bg = true
+mode = 2
+size = Vector2i(1920, 1080)
+visible = true
+always_on_top = true
+theme = ExtResource("5_g1xgh")
+script = ExtResource("23_w6ulw")
+background = NodePath("ColorRect")
+progress_spinner = NodePath("TextureProgressBar")
+audio_player = NodePath("AudioStreamPlayer")
+text = NodePath("Label")
+
+[node name="ColorRect" type="ColorRect" parent="Bootup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Bootup"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -290.0
+offset_right = 256.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(256, 256)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("22_7ehvy")
+radial_fill_degrees = 74.9
+
+[node name="Label" type="Label" parent="Bootup"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 160.0
+offset_right = 98.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Booting..."
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bootup"]
+stream = ExtResource("24_46725")

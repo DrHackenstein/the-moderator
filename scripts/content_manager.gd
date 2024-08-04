@@ -13,6 +13,7 @@ func _ready():
 	start = Save_Controller.load_start(start)
 	load_content_file()
 
+func start_game():
 	#Load Start Message
 	load_content(content[start].id, true)
 
