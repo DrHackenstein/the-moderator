@@ -1,5 +1,7 @@
 extends Window
 
+@export var content_manager : Node
+
 @export var task_button : Button
 
 @export var content_lock : Node
@@ -13,8 +15,6 @@ extends Window
 @export var okay : Button
 @export var delete : Button
 @export var ban : Button
-
-@onready var content_manager = %Content_Manager
 
 signal on_notification_received
 
