@@ -1,9 +1,8 @@
-class_name Content_Manager extends Node
+extends Node
 
-@export var mod_window : Window
-@export var chat_window : Window
+@onready var mod_window : Window = %Mod_Window
+@onready var chat_window : Window = %Chat_Window
 
-var saves : ConfigFile
 var content = {}
 
 var start = "1"
@@ -11,14 +10,12 @@ var scenarios = []
 var scenario = ""
 
 func _ready():
-	load_save()
+	start = Save_Controller.load_start(start)
 	load_content_file()
 
+func start_game():
 	#Load Start Message
-	self.load_content(content[start].id, true)
-	#self.load_content(content["M5"].id, true)
-	#self.load_content(content["C1"].id, true)
-	#self.load_content(content["E1"].id, true)
+	load_content(content[start].id, true)
 
 func load_content_file():
 	var count = 0
@@ -70,13 +67,14 @@ func load_content( id : String, follow : bool, parent : String = "" ):
 	else:
 		print("Loading Content ", id)
 	
-	var content : Content = self.content[id]
+	var content : Content = content[id]
 	
 	if content.trigger == "start":
-		save_start(content.id)
+		start = content.id
+		Save_Controller.save_start(content.id)
 	
 	if content.trigger == "end" && content.follow.is_empty() && content.buttons.is_empty():
-		reset_saves()
+		Save_Controller.reset_saves()
 	
 	if parent != "":
 		content.parent = parent
@@ -84,9 +82,9 @@ func load_content( id : String, follow : bool, parent : String = "" ):
 	#Inform Windows
 	match content.wid:
 		'Mod':
-			self.mod_window.load(content)
+			mod_window.load(content)
 		'Basti', 'Doro':
-			self.chat_window.load(content)
+			chat_window.load(content)
 			if content.uid == 'Player':
 				follow = false
 			else:
@@ -99,30 +97,4 @@ func load_content( id : String, follow : bool, parent : String = "" ):
 			load_content( i, false, id )
 		content.follow.clear()
 
-func load_save():
-	saves = ConfigFile.new()
-	var load = saves.load("user://saves.cfg")
-	
-	if load == OK:
-		start = saves.get_value("main", "start", "1")
 
-func reset_saves():
-	print("Reset saves")
-	saves.clear()
-	saves.save("user://saves.cfg")
-
-func save_start(id : String):
-	#if(scenarios.find(id) <= scenarios.find(start)):
-		#return
-	print("Save: ", id)
-	start = id
-	saves.set_value("main", "start", id)
-	saves.save("user://saves.cfg")
-	
-func save_time(hour : int, minute : int):
-	saves.set_value("main", "hour", hour)
-	saves.set_value("main", "minute", minute)
-	saves.save("user://saves.cfg")
-	
-func load_time():
-	return [saves.get_value("main", "hour", 22), saves.get_value("main", "minute", 1)]

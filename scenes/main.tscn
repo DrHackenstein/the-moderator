@@ -1,21 +1,30 @@
-[gd_scene load_steps=25 format=3 uid="uid://dot7q6eiasipl"]
+[gd_scene load_steps=32 format=3 uid="uid://dot7q6eiasipl"]
 
 [ext_resource type="AudioStream" uid="uid://ckg8dcua30d1n" path="res://sounds/moderator.ogg" id="1_8bhx2"]
 [ext_resource type="Texture2D" uid="uid://114xckq5dveh" path="res://images/wallpaper.jpg" id="1_amy15"]
-[ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_hvhdk"]
 [ext_resource type="Theme" uid="uid://cycenb0gvsi2l" path="res://themes/Classic311/Classic311.tres" id="2_h84kw"]
+[ext_resource type="PackedScene" uid="uid://cflmddf22msjo" path="res://scenes/content_manager.tscn" id="3_2hj5r"]
 [ext_resource type="PackedScene" uid="uid://dmutxnmvl1k4h" path="res://scenes/moderator_window.tscn" id="3_7q355"]
 [ext_resource type="PackedScene" uid="uid://c2xfgsrf7dco6" path="res://scenes/chat_window.tscn" id="3_34at8"]
 [ext_resource type="Script" path="res://scripts/taskbar_button.gd" id="3_ca5qh"]
 [ext_resource type="FontFile" uid="uid://ckfm02qvtyuvl" path="res://themes/WindowsXP/Fonts/arialbi.ttf" id="4_l6o04"]
 [ext_resource type="Texture2D" uid="uid://b7wakx3vkc37v" path="res://images/Yps_Profile_Blue.png" id="4_o165v"]
 [ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="5_g1xgh"]
+[ext_resource type="Script" path="res://scripts/menu_button.gd" id="6_jev4q"]
 [ext_resource type="Texture2D" uid="uid://bjg84g6jhr3lr" path="res://images/ThatsUpp_Icon.png" id="6_kb71b"]
 [ext_resource type="AudioStream" uid="uid://bv1w4iy45hntj" path="res://sounds/new_mod.mp3" id="7_k4qio"]
 [ext_resource type="Texture2D" uid="uid://gxie5l774pwy" path="res://images/ThatsUpp_Icon_message.png" id="8_v0bkq"]
 [ext_resource type="AudioStream" uid="uid://iv1hnf08t3qq" path="res://sounds/new_message.wav" id="10_d856s"]
 [ext_resource type="Script" path="res://scripts/clock_controller.gd" id="13_t63ui"]
+[ext_resource type="PackedScene" uid="uid://dhkl0f8dnt4fc" path="res://scenes/volume_slider.tscn" id="14_hy262"]
+[ext_resource type="Texture2D" uid="uid://m6gvtk0hnmqr" path="res://images/iconmonstr-document-thin-240.png" id="14_xgls3"]
+[ext_resource type="Texture2D" uid="uid://cwpblv2nqo8hl" path="res://images/iconmonstr-audio-4-icon-256.png" id="15_hacuj"]
 [ext_resource type="PackedScene" uid="uid://cqoifvv46hybw" path="res://scenes/guidelines_window.tscn" id="15_lif84"]
+[ext_resource type="PackedScene" uid="uid://cs57lmf7q1cw7" path="res://scenes/credits_window.tscn" id="18_0au8w"]
+[ext_resource type="PackedScene" uid="uid://cd6v2xxuf0a81" path="res://scenes/start_menu.tscn" id="18_oudrg"]
+[ext_resource type="Texture2D" uid="uid://drs3hj7licdxu" path="res://images/progress_spinner.png" id="22_7ehvy"]
+[ext_resource type="Script" path="res://scripts/booting.gd" id="23_w6ulw"]
+[ext_resource type="AudioStream" uid="uid://cl78imv65ps3k" path="res://sounds/booting.wav" id="24_46725"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k2wey"]
 load_path = "res://.godot/imported/win_xp_taskleiste.png-9ffd69933ef5c50057b1bea4b98d979c.ctex"
@@ -34,17 +43,6 @@ modulate_color = Color(1.05888e-06, 0.69624, 1.15514e-06, 1)
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8al4j"]
 load_path = "res://.godot/imported/start_icon.png-2248784fca340ede02df5db2916dd9c5.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_edbk3"]
-load_path = "res://.godot/imported/yps_post_bg.png-2ceb8aa420aaa3492814351ae1baa874.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n2dnc"]
-texture = SubResource("CompressedTexture2D_edbk3")
-texture_margin_left = 8.0
-texture_margin_top = 8.0
-texture_margin_right = 8.0
-texture_margin_bottom = 8.0
-modulate_color = Color(6.01634e-07, 0.710683, 0, 1)
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iacka"]
 load_path = "res://.godot/imported/Yps_Icon.png-759c8bcddb3b0d416cfe367b1a949759.ctex"
 
@@ -53,16 +51,14 @@ load_path = "res://.godot/imported/Yps_Icon_message.png-21ee99a15c545d3ab1d26730
 
 [node name="main" type="Node2D"]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("1_8bhx2")
-volume_db = -15.928
-autoplay = true
-
-[node name="Content_Manager" type="Node" parent="." node_paths=PackedStringArray("mod_window", "chat_window")]
+[node name="Content_Manager" parent="." instance=ExtResource("3_2hj5r")]
 unique_name_in_owner = true
-script = ExtResource("1_hvhdk")
-mod_window = NodePath("../Mod_Window")
-chat_window = NodePath("../Chat_Window")
+
+[node name="Music_Player" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("1_8bhx2")
+volume_db = -10.0
+bus = &"Music"
 
 [node name="Desktop" type="AspectRatioContainer" parent="."]
 offset_right = 1920.0
@@ -89,7 +85,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_h84kw")
 
-[node name="StartButton" type="Button" parent="Desktop/Taskleiste/HBoxContainer"]
+[node name="StartButton" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("menu")]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -99,20 +95,14 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_ousar")
 text = "Start"
 icon = SubResource("CompressedTexture2D_8al4j")
 expand_icon = true
-
-[node name="MenuButton" type="MenuButton" parent="Desktop/Taskleiste/HBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-theme = ExtResource("2_h84kw")
-theme_override_styles/normal = SubResource("StyleBoxTexture_n2dnc")
-text = "Start"
-flat = false
+script = ExtResource("6_jev4q")
+menu = NodePath("../../../../Start Menu")
 
 [node name="Mod_Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer" node_paths=PackedStringArray("window", "sfx", "timer")]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
+theme_override_constants/h_separation = 10
 action_mode = 0
 text = "Y Moderator"
 icon = ExtResource("4_o165v")
@@ -122,11 +112,13 @@ script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Mod_Window")
 icon_normal = SubResource("CompressedTexture2D_iacka")
 icon_notification = SubResource("CompressedTexture2D_tvtmx")
-sfx = NodePath("AudioStreamPlayer")
+sfx = NodePath("Mod_Audio_Player")
 timer = NodePath("Timer")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
+[node name="Mod_Audio_Player" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
+unique_name_in_owner = true
 stream = ExtResource("7_k4qio")
+bus = &"Effects"
 
 [node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Mod_Button"]
 wait_time = 0.5
@@ -135,6 +127,7 @@ wait_time = 0.5
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
+theme_override_constants/h_separation = 10
 action_mode = 0
 text = "Thats Upp"
 icon = ExtResource("6_kb71b")
@@ -144,11 +137,13 @@ script = ExtResource("3_ca5qh")
 window = NodePath("../../../../Chat_Window")
 icon_normal = ExtResource("6_kb71b")
 icon_notification = ExtResource("8_v0bkq")
-sfx = NodePath("AudioStreamPlayer")
+sfx = NodePath("Chat_Audio_Player")
 timer = NodePath("Timer")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Chat_Button"]
+[node name="Chat_Audio_Player" type="AudioStreamPlayer" parent="Desktop/Taskleiste/HBoxContainer/Chat_Button"]
+unique_name_in_owner = true
 stream = ExtResource("10_d856s")
+bus = &"Effects"
 
 [node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Chat_Button"]
 wait_time = 0.5
@@ -157,8 +152,10 @@ wait_time = 0.5
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme = ExtResource("5_g1xgh")
+theme_override_constants/h_separation = 10
 action_mode = 0
 text = "Guideline"
+icon = ExtResource("14_xgls3")
 alignment = 0
 expand_icon = true
 script = ExtResource("3_ca5qh")
@@ -175,6 +172,15 @@ alignment = 2
 script = ExtResource("13_t63ui")
 timer = NodePath("Timer")
 label = NodePath("MarginContainer/Label")
+
+[node name="Volume Button" type="Button" parent="Desktop/Taskleiste/HBoxContainer/Clock" node_paths=PackedStringArray("menu")]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+theme = ExtResource("5_g1xgh")
+icon = ExtResource("15_hacuj")
+expand_icon = true
+script = ExtResource("6_jev4q")
+menu = NodePath("../../../../../Volume_Slider")
 
 [node name="Timer" type="Timer" parent="Desktop/Taskleiste/HBoxContainer/Clock"]
 wait_time = 60.0
@@ -193,8 +199,10 @@ theme_override_font_sizes/font_size = 20
 text = "23:45"
 horizontal_alignment = 2
 
-[node name="Mod_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_7q355")]
+[node name="Mod_Window" parent="." node_paths=PackedStringArray("content_manager", "task_button") instance=ExtResource("3_7q355")]
 unique_name_in_owner = true
+visible = false
+content_manager = NodePath("../Content_Manager")
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Mod_Button")
 
 [node name="Chat_Window" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("3_34at8")]
@@ -203,4 +211,80 @@ visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Chat_Button")
 
 [node name="Guideline" parent="." node_paths=PackedStringArray("task_button") instance=ExtResource("15_lif84")]
+unique_name_in_owner = true
+visible = false
 task_button = NodePath("../Desktop/Taskleiste/HBoxContainer/Guideline_Button")
+
+[node name="Credits" parent="." instance=ExtResource("18_0au8w")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Volume_Slider" parent="." instance=ExtResource("14_hy262")]
+visible = false
+
+[node name="Start Menu" parent="." instance=ExtResource("18_oudrg")]
+visible = false
+
+[node name="Bootup" type="Popup" parent="." node_paths=PackedStringArray("background", "progress_spinner", "audio_player", "text")]
+transparent_bg = true
+mode = 2
+size = Vector2i(1920, 1080)
+visible = true
+always_on_top = true
+theme = ExtResource("5_g1xgh")
+script = ExtResource("23_w6ulw")
+background = NodePath("ColorRect")
+progress_spinner = NodePath("TextureProgressBar")
+audio_player = NodePath("AudioStreamPlayer")
+text = NodePath("Label")
+
+[node name="ColorRect" type="ColorRect" parent="Bootup"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Bootup"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -290.0
+offset_right = 256.0
+offset_bottom = 222.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(256, 256)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 100.0
+fill_mode = 4
+texture_progress = ExtResource("22_7ehvy")
+radial_fill_degrees = 74.9
+
+[node name="Label" type="Label" parent="Bootup"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 160.0
+offset_right = 98.0
+offset_bottom = 205.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 32
+text = "Booting..."
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Bootup"]
+stream = ExtResource("24_46725")

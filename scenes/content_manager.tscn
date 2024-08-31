@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cflmddf22msjo"]
+
+[ext_resource type="Script" path="res://scripts/content_manager.gd" id="1_s01d7"]
+
+[node name="Content_Manager" type="Node" node_paths=PackedStringArray("mod_window", "chat_window")]
+script = ExtResource("1_s01d7")
+mod_window = NodePath("")
+chat_window = NodePath("")

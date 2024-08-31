@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhkl0f8dnt4fc"]
+
+[ext_resource type="Theme" uid="uid://c74ffppbp6j7i" path="res://themes/WindowsXP/windows_xp.tres" id="1_3xho6"]
+[ext_resource type="Script" path="res://scripts/volume_menu.gd" id="1_4p7ci"]
+
+[node name="Volume_Menu" type="Popup" node_paths=PackedStringArray("music_mute_button", "music_volume_slider", "music_volume_label", "effects_mute_button", "effects_volume_slider", "effects_volume_label")]
+position = Vector2i(1620, 960)
+size = Vector2i(300, 80)
+visible = true
+script = ExtResource("1_4p7ci")
+music_mute_button = NodePath("Panel/MarginContainer/VBoxContainer/Music/Button")
+music_volume_slider = NodePath("Panel/MarginContainer/VBoxContainer/Music/HSlider")
+music_volume_label = NodePath("Panel/MarginContainer/VBoxContainer/Music/Label")
+effects_mute_button = NodePath("Panel/MarginContainer/VBoxContainer/Sound Effects/Button")
+effects_volume_slider = NodePath("Panel/MarginContainer/VBoxContainer/Sound Effects/HSlider")
+effects_volume_label = NodePath("Panel/MarginContainer/VBoxContainer/Sound Effects/Label")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(300, 80)
+offset_right = 300.0
+offset_bottom = 80.0
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Sound Effects" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/Sound Effects"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_3xho6")
+toggle_mode = true
+text = "E"
+
+[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Sound Effects"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_3xho6")
+max_value = 2.0
+step = 0.2
+value = 1.0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Sound Effects"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_3xho6")
+text = "5"
+horizontal_alignment = 1
+
+[node name="Music" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer/Music"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_vertical = 4
+theme = ExtResource("1_3xho6")
+toggle_mode = true
+text = "M"
+
+[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Music"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme = ExtResource("1_3xho6")
+max_value = 2.0
+step = 0.2
+value = 1.0
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Music"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_3xho6")
+text = "5"
+horizontal_alignment = 1
